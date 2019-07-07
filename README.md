@@ -96,7 +96,6 @@
 ## trades
 |Column|Type|Options|
 |------|----|-------|
-|buyer|string|null: false|
 |exhibitor|string|null: false, unique: true|
 |date|datetime|null: false|
 
@@ -105,6 +104,7 @@
 - belongs_to :address
 - belongs_to :credit_card
 - has_one :item
+- has_one :buyer
 
 ## categories
 |Column|Type|Options|
@@ -125,3 +125,10 @@
 ### Assosiation
 - belongs_to :item
 - belongs_to :user
+
+## buyers
+|Column|Type|Options|
+|------|----|-------|
+
+### Assosiation
+- has_one :trade
