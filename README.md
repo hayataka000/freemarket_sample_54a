@@ -3,7 +3,7 @@
 |------|----|-------|
 |name|string|null: false|
 |name_furigana|string|null: false|
-|password|string|null: false, limit: =>|
+|password|string|null: false|
 |mail|string|null: false, unique: true|
 |nickname|string|null: false|
 |tel|string|null: false, unique: true|
@@ -122,6 +122,6 @@
 |user_id|integer|null: false|
 |item_id|integer|null: false|
 
-###Assosiation
+### Assosiation
 - belongs_to :item
 - belongs_to :user
