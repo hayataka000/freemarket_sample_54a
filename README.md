@@ -16,10 +16,9 @@
 - has_many :trades, through: :users_trades
 - has_many :addresses
 - has_many :nices
+- has_many :trades
+- has_many :evaluations
 - has_one :credit_card
-- has_one :evaluation
-- 
-
 
 ## items
 |Column|Type|Options|
@@ -39,20 +38,18 @@
 ### Assosiation
 - has_many :comments
 - has_many :nices
-- belongs_to :users
-
+- has_many :brands
+- belongs_to :user
+- belongs_to :category
+- has_one :trade
 
 ## evaluations
 |Column|Type|Options|
 |------|----|-------|
-|good|string|null: true|
-|normal|string|null: true|
-|bad|string|null: true|
-|total|string|null: false|
+|score|string|null: false|
 
 ### Assosiation
 - belongs_to :user
-
 
 ## addresses
 |Column|Type|Options|
@@ -66,6 +63,8 @@
 
 
 ### Assosiation
+- belongs_to :user
+- has_many :trades
 
 ## comments
 |Column|Type|Options|
@@ -81,6 +80,7 @@
 |name|string|null: false, unique: true|
 
 ### Assosiation
+- belongs_to :item
 
 ## credit_cards
 |Column|Type|Options|
@@ -90,13 +90,21 @@
 |security_code|integer|null: false|
 
 ### Assosiation
+- has_one :user
+- has_many :trades
 
 ## trades
 |Column|Type|Options|
 |------|----|-------|
-|buyer|string|null: false, unique: true|
+|buyer|string|null: false|
 |exhibitor|string|null: false, unique: true|
 |date|datetime|null: false|
+
+### Assosiation
+- belongs_to :user, through: :users_trades
+- belongs_to :address
+- belongs_to :credit_card
+- has_one :item
 
 ## categories
 |Column|Type|Options|
@@ -105,6 +113,8 @@
 |category_middle|string|null: false|
 |category_small|string|null: false|
 
+### Assosiation
+- has_many: items
 
 ## nices
 |Column|Type|Options|
@@ -113,4 +123,5 @@
 |item_id|integer|null: false|
 
 ###Assosiation
+- belongs_to :item
 - belongs_to :user
