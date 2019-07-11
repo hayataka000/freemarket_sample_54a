@@ -188,3 +188,52 @@ width: 42%;
 .footer-nav-lang {
   width: auto;
 }
+.far.fa-file-alt:before {
+  content: "\f099";
+}
+
+// . {
+//   display: inline-block;
+//   font-family: 'icon-font';
+//   speak: none;
+//   font-style: normal;
+//   font-weight: 400;
+//   font-variant: normal;
+//   text-transform: none;
+//   line-height: 1;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+.footer__bottom--icon {
+  display: inline-block;
+  margin-right: 10px;
+  width: auto;
+}
+
+i[class*=footer-link] {
+  display: inline-block;
+  font-family: 'icon-font';
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.footer-link i {
+  background: transparent;
+  margin: 16px 18px 0 0;
+  font-size:26px;
+}
+.footer-sell-btn i {
+  margin: 8px 0 0;
+  font-size: 54px;
+}
+.fab fa-twitter{
+background: transparent;
+margin: 16px 18px 0 0;
+font-size:26px;
+}
