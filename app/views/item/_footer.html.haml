@@ -15,15 +15,11 @@
         %li
           %a{href: ""} メルカリロゴ利用ガイドライン
         %li.footer-link  
-        %a{:href => "https://twitter.com/mercari_jp", :target => "_blank"}
-          -# %a{href:""} アイコン
-          %i.fab.fa-twitter
-          -# = icon 'far', 'file-alt'
-          -# =fa_icon 'fab fa-twitter'
+          %a{href: "https://twitter.com/mercari_jp", target: "_blank"}
+            %i.fab.fa-twitter
         %li.footer-link
-        %a{:href => "https://www.facebook.com/mercarijp", :target => "_blank"}
-          %i.fab.fa-facebook-square
-          -# %a{href:""} アイコン
+          %a{href: "https://www.facebook.com/mercarijp", target: "_blank"}
+            %i.fab.fa-facebook-square
     .footer__top--head
       %h2.footer__top--head--head ヘルプ＆ガイド
       %ul
@@ -78,7 +74,8 @@
   
   .footer__bottom
     .footer__bottom--icon
-      %img{:alt => "mercari", :height => "33", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-white.svg?2927923569", :width => "124"}/
+      %a.footer-logo{href: "https://www.mercari.com/jp/"}
+        %img{alt: "mercari",height: "33",src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-white.svg?2927923569",width: "124"}/
     -# mercariロゴ
     -# %img{alt: "", height: "33", src: "", width: "124"}/
     %span.footer__bottom--copyright
