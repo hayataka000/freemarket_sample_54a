@@ -1,0 +1,38 @@
+.header__bottom{
+    margin: 8px 200px 0;
+    height:67px;
+    width:1020px;
+    &__left{
+        &__nav{
+            display:flex;
+            &__icon{    
+                           
+                
+            }
+            
+        }
+            
+    }
+  
+
+}
+.material-icons{
+color:red;
+display: inline-block;
+font-family: 'icon-font';
+speak: none;
+font-style: normal;
+font-weight: 400;
+font-variant: normal;
+text-transform: none;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+}
+span{
+    font-size:14px;
+    vertical-align: 7px;
+    color:black;
+    font-weight:bold;
+}
+
+
