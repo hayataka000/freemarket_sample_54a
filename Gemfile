@@ -77,3 +77,5 @@ end
 
 gem 'haml-rails'
 gem 'erb2haml'
+gem 'carrierwave'
+gem 'fog-aws'
