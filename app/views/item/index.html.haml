@@ -1,20 +1,5 @@
-!!!
-%html
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %meta{:charset => "UTF-8"}/
-    %title
-    %link{:href => "reset.css", :rel => "stylesheet"}/
-    %link{:href => "style.css", :rel => "stylesheet"}/
-  %body
-    .container
-      .header
-        .header__inner
-          .header__inner-top
-          .header__inner-nav-box.clearfix
-
-      = render 'item/main'
-    .banner
-    .footer__bottom
-      = render partial: "footer"
+.container
+  = render 'item/header'
+  = render 'item/main'
+  = render partial: "footer"
 
