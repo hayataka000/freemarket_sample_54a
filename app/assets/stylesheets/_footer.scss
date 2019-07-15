@@ -39,7 +39,7 @@ li {
   margin: 30px auto 20px;
   width: 1020px;
   .small{
-    font-size: 12px;  
+    font-size: 12px;
     }
  }
 
@@ -49,6 +49,10 @@ li {
   margin: 8px 0 0;
   text-align: center;
   vertical-align: sub;
+}
+
+.footer__bottom--copyright small {
+  color: white;
 }
 
 .footer__bottom--icon{
