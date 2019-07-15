@@ -272,3 +272,67 @@ ul {
 .l-side {
    margin: 40px auto 0; 
 }
+.mypage-user-icon {
+  position: relative;
+  height: 155px;
+  padding: 20px;
+  background: url(/jp/assets/img/mypage/user-bg.jpg?45965488);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.modal-banner-eye-catch img:first-child {
+  width: auto;
+  height: 100%;
+}
+img {
+  vertical-align: middle;
+}
+.mypage-nav-list-item.active {
+  background: #eee; 
+  font-weight: 600;
+}
+.mypage-nav-list-item {
+  /* position: relative; */
+  display: block;
+  min-height: 48px;
+  padding: 16px;
+  background: #fff;
+  font-size: 14px;
+  color: #333;
+}
+
+.mypage-item-list li:last-child {
+  border: 0;
+}
+.mypage-go-list {
+  padding: 16px;
+}
+.mypage-item-list li {
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+.mypage-go-list a {
+  display: block;
+  height: 56px;
+  margin: 0 auto;
+  background: #eee;
+  color: #333;
+  line-height: 56px;
+  text-align: center;
+}
+.tab-content .tab-pane.active {
+  display: block;
+}
+.mypage-item-not-found {
+  padding: 160px 0 60px;
+  background: url(/jp/assets/img/common/common/logo-gray-icon.svg?45965488);
+  background-repeat: no-repeat;
+  background-position: center 40px;
+  background-size: 78px 85px;
+  text-align: center;
+  font-size: 16px;
+  color: #ccc;
+}
+
+
