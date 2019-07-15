@@ -1,4 +1,16 @@
-%main.cards_container
-  %section.payment_container
-    %h2
-      支払い方法
+%main.cards-container
+  %section.rside-box
+    %h2.rside-box__top 支払い方法
+    .content-inner
+      .section
+        .content-inner__list
+          %h3.content-inner__list--h3 クレジットカード一覧
+      .section.inner-interval
+        .content-inner__list
+          %a.btn-default.btn-red.submit_button{href: "#", target: "_blank"}
+            %i.icon-card
+            クレジットカードを追加する
+      .not-regist
+        %a{href: "#", target: "_blank"}
+          支払い方法について
+          %i.icon-arrow
