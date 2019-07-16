@@ -6,9 +6,11 @@
     .profile__info--box
       .user-icon
       .user-name
+        %input{name: "user-name", type: "text", id: "profile-name"}
 
   .profile__content
     .profile__content--box
       .textbox
-        = text_field :profile, class: 'content--textbox', placeholder: '例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。'
-      .save-btn 変更する
+        %textarea{name: "introduction", placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。", cols: "105", rows: "18", id: "profile-introduction"}
+      .save-btn
+        %button{id: "profile-edit-btn"} 変更する
