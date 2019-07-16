@@ -1,6 +1,39 @@
-.container
-  = render 'item/header'
-  = render 'item/main'
-  = render 'aside'
-  = render "footer"
+= render 'header'
 
+.body
+  .container
+    .mypage マイページ部分
+    .main
+      .main__title 本人情報の登録
+      .main__content
+        %div
+          %P
+            お客さまの本人情報をご登録ください。<br>登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+          %P.text-right 
+            %a(href='https://www.mercari.com/jp/help_center/article/495/' target='_blank')
+              本人確認書類のアップロードについて>
+          .main__content__name.form
+            %l お名前
+            %p 小松崎
+          .main__content__kana.form
+            %l お名前カナ
+            %P コマツザキ
+          .main__content__birth.form
+            %l 生年月日
+            %p 1965/06/17
+          .main__content__zipcode.form
+            %lavel(for='zip_code')
+              郵便番号
+            %span.form-arbitrary
+              任意
+            %input(type='text' value='' name='zip_code' placeholder="例)1234567")
+
+
+          .main__content__prefecture.form
+          .main__content__city.form
+          .main__content__adress.form
+          .main__content__building.form
+          .main__content__subnmit-btn
+
+= render 'aside'
+= render "footer"

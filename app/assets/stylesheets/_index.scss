@@ -1,0 +1,143 @@
+p {
+  width: 572px;
+  height: 42px;
+  margin: 8px 0 0;
+
+
+}
+
+.p.form {
+  height: 14px;
+  width: 43px;
+  font: 14px;
+  font-weight: 600;
+  
+}
+
+.form l {
+  height: 14px;
+  width: 43px;
+  font: 14px;
+  font-weight: 600;
+
+}
+
+.body {
+  background-color: antiquewhite;
+
+}
+.container {
+  margin: 24px auto 0; 
+  padding: 0 0 40px; 
+  margin: 40px 210px 0px;
+  display: flex;
+
+
+  .mypage {
+    width: 280px;
+    height: 1252px;
+    float: left;
+    margin: 0 40px 0 0;
+    border: solid #808000;
+    background-color: white
+
+
+  }
+
+  .main {
+    width: 700px;
+    height: 1208px;
+    background-color: white;
+
+    &__title {
+      height: 50px;
+      width: 700px;
+      padding: 8px 24px;
+      font-size: 24px;
+      font-weight: 600;
+      text-align: center;
+      border-bottom: 1px solid #f5f5f5;
+
+    }
+
+    &__content {
+      padding: 40px;
+
+      p.text-right {
+        margin: 8px 0 0;
+        height: 21px;
+        line-height: 1.5;
+        text-align: right;
+      }
+      
+
+      &__form {
+        height: 43px;
+        width: 572px;
+        margin: 40px 0 0;
+
+
+        }
+
+        
+
+      
+
+      &__kana {
+
+      }
+
+      &__birth {
+
+      }
+
+      &__zipcode {
+        margin: 40px 0 0;
+        
+        lavel {
+          display: inline-block;
+
+        }
+
+
+
+        span {
+          background: #ccc;
+
+        }
+
+      
+
+
+      }
+
+      &__prefecture {
+
+      }
+
+      &__city {
+
+      }
+
+      &__adress {
+
+      }
+      
+      &__building {
+
+      }
+
+      &__submit-btn {
+
+      }
+
+
+    }
+
+  }
+
+
+
+} 
+
+
