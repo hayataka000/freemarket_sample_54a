@@ -430,3 +430,25 @@ a {
   font-size: 16px;
   line-height: 72px;
 }
+.mypage-tab-container {
+  margin: 40px 0 0;
+  background: #fff;
+}
+.mypage-tab-head {
+  padding: 0 16px;
+  background: #fafafa;
+  font-size: 16px;
+  line-height: 72px;
+}
+* {
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+.mypage-item-link.fa-caret-right {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
