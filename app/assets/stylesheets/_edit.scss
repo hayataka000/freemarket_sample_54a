@@ -1,14 +1,71 @@
 .profile {
+  width: 700px;
+  border: black solid 1px;
+  height: auto;
 
   &__head{
-    
+    text-align: center;
+    height: 50px;
+    font-size: 22px;
+    padding: 8px, 24px;
+    line-height: 50px;
+    font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+    font-weight: bold;
   }
 
+  &__info {
+    background-color: pink;
+    height: 150px;
+    margin: 72px, 0px, 0px, 16px;
 
 
+    &--box {
+      height: 60px;
+      display: flex;
+      justify-content: center;
+
+      .user-icon {
+        width: 60px;
+        height: 60px;
+        background-color:white;
+        border-radius: 50%;
+        // background-image: url(); あとで画像は入れます
+      }
+
+      .user-name {
+        width: 220px;
+        height: 40px;
+        border: grey solid 1px;
+        margin: 10px;
+        border-radius: 5px;
+        background-color: white;
+      }
+    }
+  }
+
+  &__content {
+    height: 360px;
+    margin: 40px, 15px;
 
 
+    &--box {
+      width: 670px;
+      margin: 0 auto;
 
+      .textbox {
+        height: 250px;
+        border: grey solid 1px;
 
-  
+      }
+      .save-btn{
+        margin-top: 14px;
+        height: 50px;
+        background-color: red;
+        color: white;
+        font-size: 14px;
+        text-align: center;
+        line-height: 50px;
+      }
+    }
+  }
 }
