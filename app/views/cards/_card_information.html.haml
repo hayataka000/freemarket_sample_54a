@@ -8,7 +8,7 @@
           %label{for: "payment_card_no"} カード番号
           %span.form-group__require 必須
           %br
-          %input.form-group__input-card_number.input-default{maxlength: "16", class: "card_number", name: "card_number", placeholder: "半角数字のみ", type: "text"}
+          %input.form-group__input-number.input-default{maxlength: "16", class: "card_number", name: "card_number", placeholder: "半角数字のみ", type: "text"}
           %ul.form-group__ul
             %li
               = image_tag "visa.svg", size: "49x20"
@@ -66,10 +66,8 @@
         .form-group
           %label{for: "security_code"} セキュリティコード
           %span.form-group__require 必須
-          %input.form-group__input-security_code.input-default{maxlength: "4", class: "security_code", name: "security_code", placeholder: "カード背面4桁もしくは3桁の番号", type: "text"}/
+          %input.form-group__security-code.input-default{maxlength: "4", class: "security_code", name: "security_code", placeholder: "カード背面4桁もしくは3桁の番号", type: "text"}/
           .form-group__text
-            .span.form-ghroup__info-question>
             カード裏面の番号とは？
-        .single-main__container__form__content
           %a.btn-default.btn-red.submit_button.card-add-button{href: "#", target: "_blank"}
             追加する
