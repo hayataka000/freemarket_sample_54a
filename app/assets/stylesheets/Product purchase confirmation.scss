@@ -1,0 +1,204 @@
+body{
+    position: relative;
+    min-height: 100%;
+    background: #f5f5f5;
+    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+    font-size: 14px;
+    color: #333;
+    line-height: 1;
+    .container{
+        background-color: #f5f5f5;
+        background-repeat: no-repeat;
+        header{
+            height:128px;
+            .top{
+                text-align:center;
+                line-height:49px;
+                h1{
+                    padding-top:40px;
+                }
+                    img{
+                        height:49px;             
+                    }
+                }
+            }
+        .main{
+            .item-container{
+                background-color:white;
+                width:700px;
+                margin:0 auto;
+                .single-head{
+                    border-bottom: 1px solid #f5f5f5;
+                    font-size:22px;
+                    line-height:1.5;
+                    text-align:center;
+                    padding:16px;
+                    font-weight:bold;
+                }
+                .buy-item{
+                    padding-top:24px;
+                    padding-right:12.5%;
+                    padding-left:12.5%;
+                    .item-container__buy__inner{
+                        display: flex;
+                        max-width:320px;
+                        margin: 0 auto;    
+                        flex-wrap: wrap;          
+                        h3{
+                            height:61px;
+                            img{
+                                width:64px;
+                            }         
+                        }   
+                        .buy-item-name{
+                            font-size:16px;
+                            font-weight:bold;
+                            width: calc(100% - 80px);
+                            margin-left:16px;
+                        }       
+                    }
+                }
+            }
+        }
+                        .buy-form{
+                            text-align:center;
+                            width:100%;
+                            .buy-price{
+                                font-size:20px;
+                                margin-top:8px;
+                                line-height:1.5;
+                                font-weight:bold;
+                                span{
+                                    font-weight:400;
+                                    vertical-align: middle;
+                                    margin-left:8px;
+                                }
+                            }
+                            .point-parent{
+                                margin-top:16px;
+                            .point{
+                                padding:16px;
+                            }
+                        }
+                            .buy-price-row{
+                                font-size:18px;
+                                font-weight:bold;
+                                display: table;
+                                width:100%;
+                                .buy-price-second{
+                                    text-align:left;
+                                    display: table-cell;
+                                    padding:16px 0;
+                                }
+                                .buy-price-second2{
+                                    text-align:right;
+                                    font-size:26px;
+                                    padding:16px 0;
+                                }
+                            }
+                        .error-text{
+                            color:red;
+                            margin-top:8px;
+                        }
+                        .btn-default{
+                            font-size:14px;
+                            background-color:#888;
+                            line-height:48px;
+                            width:100%;
+                            color:white;
+                            margin-top:8px;
+                        }    
+                    }
+                }
+            }
+.buy-user{
+    margin-top:40px;
+    background-color:white;
+    &__info{
+        margin:0 auto;
+        max-width:320px;
+        cursor: auto;
+        h3{
+        font-size:14px;
+        }
+        &__text{
+            margin-top:8px;
+        }
+    }
+}    
+.buy-user-info-fix{
+    display: block;
+    height:16px;
+    text-align:center;
+    position:relative;  
+    margin-top:8px;
+        span{
+            color:#0099e8;
+            float:right;        
+            position:absolute;    
+            right:15px;
+            font-weight:normal;  
+        }
+        .angle-right{
+            float:right;
+            margin-left:8px;
+            font-size:20px;
+            position:absolute;
+            bottom:-1px;
+            right:1px;
+            font-weight:normal;  
+        }
+    }
+.PaymentMethod{
+    padding: 24px 12.5% 40px;
+    margin-top:40px;
+    border-top: 1px solid #f5f5f5;
+    &__inner{
+        max-width:320px;
+        margin:0 auto;
+        h3{
+            font-size:14px;
+        }
+        &__text{
+            font-size:16px;
+            margin: 8px 0 0;
+            font-size: 14px;
+            line-height: 1.4;
+            cursor: auto;
+        }
+    }
+}
+.bottom{
+    padding:40px 0;
+    width: 456px;
+    height: 220px;
+    margin: 0 auto;
+    position:relative;
+    .list{
+        padding-left:38px;
+        display:flex;
+        a{
+            color:black;
+            font-weight:normal;  
+            font-size:12px;
+        }
+        .margin{
+            margin-left:16px;
+        }
+    }
+    .logo{
+        height:65px;
+        img{
+        position:absolute;
+        left:185px;
+        margin-top:40px;
+        // right:30px;
+        }
+    }
+}
+.moji{
+    position:absolute;
+    left:185px;
+    bottom:38px;
+    font-size:12px;
+}

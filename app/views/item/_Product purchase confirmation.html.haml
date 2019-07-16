@@ -1,0 +1,61 @@
+%header
+  .top
+    %h1
+      %a{:href => "https://www.mercari.com/jp/"}
+        %img{:alt => "mercari", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?2927923569"}/
+.main
+  .item-container
+    %h2.single-head 購入内容の確認
+    .buy-item
+      .item-container__buy__inner
+        %h3.buy-item-image 
+          %img.item{:alt => "item", :src => "https://static.mercdn.net/thumb/photos/m24504139973_1.jpg?1563145720", }/
+        %p.buy-item-name 新品未使用！計40kg ダンベルセット
+        %form.buy-form{:action => "https://www.mercari.com/jp/transaction/buy/done/m24504139973/", :method => "POST", :novalidate => "novalidate"}
+          %p.buy-price
+            ¥ 6,900
+            %span.item-shipping 送料込み
+          .point-parent
+            .point ポイントはありません
+          .buy-price-row
+            .buy-price-second 支払い金額
+            .buy-price-second2 ￥ 6,900
+          .error-text 配送先と支払い方法の入力を完了してください。
+          %button.btn-default{:disabled => "", :type => "submit"} 購入する
+    .buy-user
+      .buy-user__info
+        %h3 配送先
+        .buy-user__info__text
+          〒000-0000
+          %br/
+          滋賀県 大津市志賀
+          000
+          %br/
+          メルカリ 太郎
+        %a.buy-user-info-fix{:href => "https://www.mercari.com/jp/"}
+          %span 変更する
+          = fa_icon 'angle-right', class: "angle-right"
+    .PaymentMethod
+      .PaymentMethod__inner
+        %h3 支払い方法
+        %p.PaymentMethod__inner__text 
+          ************1234
+          %br/
+          01/01
+        %figure
+          %img{:alt => "visa", :height => "15", :src => "//www-mercari-jp.akamaized.net/assets/img/card/visa.svg?2927923569", :width => "49"}/
+        %a.buy-user-info-fix{:href => "https://www.mercari.com/jp/"}
+          %span 変更する
+          = fa_icon 'angle-right', class: "angle-right"
+  .bottom
+    %ul.list
+      %li.Exclusion
+        %a{:href => "https://www.mercari.com/jp/privacy/"} プライバシーポリシー
+      %li.margin
+        %a{:href => "https://www.mercari.com/jp/tos/"} メルカリ利用規約
+      %li.margin
+        %a{:href => "https://www.mercari.com/jp/tokutei/"} 特定商取引に関する表記
+    %a.logo{:href => "https://www.mercari.com/jp/"}
+      %img{:alt => "mercari", :height => "65", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2927923569", :width => "80"}/
+    %p.moji © 2019 Mercari
+
