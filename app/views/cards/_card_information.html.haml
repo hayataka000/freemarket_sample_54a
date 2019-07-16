@@ -3,9 +3,7 @@
     %h2.rside-box__top
       クレジットカード情報入力
     = form_tag('/cards/purchase', method:"POST", id: "payment-form", class: "single-main__container__form") do
-      %span.single-main__container__form
-      .single-main__container__form__content
-
+      .single-main__container--form
         .form-group
           %label{for: "payment_card_no"} カード番号
           %span.form-group__require 必須
@@ -73,5 +71,5 @@
             .span.form-ghroup__info-question>
             カード裏面の番号とは？
         .single-main__container__form__content
-          %a.btn-default.btn-red.submit_button{href: "#", target: "_blank"}
+          %a.btn-default.btn-red.submit_button.card-add-button{href: "#", target: "_blank"}
             追加する
