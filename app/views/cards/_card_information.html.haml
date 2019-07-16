@@ -9,7 +9,8 @@
         .form-group
           %label{for: "payment_card_no"} カード番号
           %span.form-group__require 必須
-          %input.form-group__input-card_number{maxlength: "16", class: "card_number", name: "card_number", placeholder: "半角数字のみ", type: "text"}
+          %br
+          %input.form-group__input-card_number.input-default{maxlength: "16", class: "card_number", name: "card_number", placeholder: "半角数字のみ", type: "text"}
           %ul.form-group__ul
             %li
               = image_tag "visa.svg", size: "49x20"
@@ -31,7 +32,7 @@
           %span.form-group__require 必須
           %br
           .select-wrap
-            %select.select-wrap__default-month{type: "text", maxlength: "2", class: "expiration_month", name: "expiration_month"}
+            %select.select-wrap__default-month.input-default{type: "text", maxlength: "2", class: "expiration_month", name: "expiration_month"}
               %option{value: "1"} 01
               %option{value: "2"} 02
               %option{value: "3"} 03
@@ -44,12 +45,12 @@
               %option{value: "10"} 10
               %option{value: "11"} 11
               %option{value: "12"} 12
-            %i.fas.fa-chevron-down
-          .span
+              %i.fas.fa-chevron-down
+          %span
             月
           %ul
           .select-wrap
-            %select.select-wrap__default-year{maxlength: "4", class: "expiration_year", name: "expiration_year", type: "text", }
+            %select.select-wrap__default-year.input-default{maxlength: "4", class: "expiration_year", name: "expiration_year", type: "text", }
               %option{value: "1"} 19
               %option{value: "2"} 20
               %option{value: "3"} 21
@@ -61,13 +62,13 @@
               %option{value: "9"} 27
               %option{value: "10"} 28
               %option{value: "11"} 29
-            %i.fas.fa-chevron-down
-          .span
+              %i.fas.fa-chevron-down
+          %span
             年
         .form-group
           %label{for: "security_code"} セキュリティコード
           %span.form-group__require 必須
-          %input.form-group__input-security_code{maxlength: "3", class: "security_code", name: "security_code", placeholder: "カード背面4桁もしくは3桁の番号", type: "text"}/
+          %input.form-group__input-security_code.input-default{maxlength: "4", class: "security_code", name: "security_code", placeholder: "カード背面4桁もしくは3桁の番号", type: "text"}/
           .form-group__text
             .span.form-ghroup__info-question>
             カード裏面の番号とは？

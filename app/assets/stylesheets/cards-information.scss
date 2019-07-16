@@ -1,32 +1,11 @@
-.right-content-addcard{
-  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-  margin: 0 0 0 50px;
-  height: 100%;
-  padding-bottom: 30px;
-  background-color: white;
-  float: left;
-  width: 70%;
-  .right-content-top{
-    &__head{
-      text-align: center;
-      font-weight: bold;
-      font-size: 25px;
-      border-bottom: 2px solid #f5f5f5;
-      padding: 15px 0 15px 0;
-      margin-bottom: 30px;
-    }
-  }
-  .right-content-bottom{
-    border-top: 2px solid #f5f5f5;    
-    width: 100%;
-    margin-top: 30px;
-    span{
-      color: #0099e8;
-      float: right;
-      padding: 45px 45px 15px 0;
-      font-size: 15px;
-    }
-  }
+.input-default {
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 16px;
 }
 .single-main{
   &__container{
@@ -111,39 +90,8 @@
               font-size: 16px;
               line-height: 1.5;
               cursor: pointer;
-              -webkit-appearance: none;
-            }
-            .fa-chevron-down{
-              position: absolute;
-              right: 16px;
-              top: 50%;
-              z-index: 2;
-              color: #888;
-              font-size: 20px;
-              -webkit-transform: translate(0, -50%);
-              transform: translate(0, -50%);
-              display: inline-block;
-              font-style: normal;
-              font-variant: normal;
-              text-transform: none;
-              line-height: 1;
-              -webkit-font-smoothing: antialiased;
             }
           }
-        }
-        &__btn{
-          margin: 40px 0 0;
-          background: red;
-          border: 1px solid red;
-          color: white;
-          display: block;
-          width: 100%;
-          line-height: 48px;
-          font-size: 14px;
-          -webkit-transition: all ease-out .3s;
-          transition: all ease-out .3s;
-          cursor: pointer;
-          text-align: center;
         }
       }
     }
