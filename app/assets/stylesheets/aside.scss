@@ -1,9 +1,9 @@
-.banner {
+.ban {
   background-image:url("https://mercarinews.files.wordpress.com/2019/07/1_ng_individuallywrapped_m18809276325_1.jpg?w=463&h=346");
   background-position: center;
   background-size: cover;
   display: block;
-  &__pc{
+  .banner__pc {
     overflow: hidden;
     position: relative;
     display: block;
@@ -11,6 +11,7 @@
     height: 260px;
     margin: 0 auto;
     color: #fff;
+
     &__figure{
       position: absolute;
       top: 0;
