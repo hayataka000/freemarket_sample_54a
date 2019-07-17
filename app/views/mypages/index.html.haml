@@ -68,20 +68,6 @@
               %li.mypage-go-list
                 %a{:href => "/jp/mypage/todo/"} 一覧を見る
         %section.mypage-tab-container
-          %h2.mypage-tab-head 購入した商品
-          %ul.mypage-tabs
-            %li.active
-              %h3
-                %a{"data-toggle" => "tab", :href => "#mypage-tab-transaction-now"}
-                  取引中
-            %li
-              %h3
-                %a{"data-toggle" => "tab", :href => "#mypage-tab-transaction-old"}
-                  過去の取引
-          .tab-content
-            %ul#mypage-tab-transaction-now.mypage-item-list.tab-pane.active
-              %li.mypage-item-not-found.bold 取引中の商品がありません
-            %ul#mypage-tab-transaction-old.mypage-item-list.tab-pane
-              %li.mypage-item-not-found.bold 過去に取引した商品がありません
-      .l-side
+        = render partial:"trade__container"
+      .mypages-side
         = render partial: "mypages-side"
