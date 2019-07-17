@@ -9,17 +9,7 @@
     %main.l-container.clearfix
       .l-content
         %section.mypage-user-icon
-          %a{:href => "https://www.mercari.com/jp/u/188544359/"}
-            %figure
-              %img{:alt => "", :height => "60", :src => "//static.mercdn.net/images/member_photo_noimage_thumb.png", :width => "60"}/
-            %h2.bold shohei25342
-            .mypage-number
-              %div
-                評価
-                %span.bold 0
-              %div
-                出品数
-                %span.bold 0
+          = render partial: "mypages__user"
         %section.mypage-tab-container-notification-todo
           %ul.mypage-tabs
             %li.active
