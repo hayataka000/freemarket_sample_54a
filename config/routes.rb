@@ -3,3 +3,4 @@ Rails.application.routes.draw do
   get 'item/users'  =>  'item#users'
   # get 'users', to: 'users#create'
 end
+
