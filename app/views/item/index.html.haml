@@ -14,19 +14,19 @@
               本人確認書類のアップロードについて>
           .main__content__name.form
             %l お名前
-            %p 小松崎
+            %p 鈴木 一郎
           .main__content__kana.form
             %l お名前カナ
-            %P コマツザキ
+            %P スズキ イチロー
           .main__content__birth.form
             %l 生年月日
             %p 1965/06/17
-          .main__content__zipcode.form
-            %l(for='zip_code')
+          .main__content__post-number.form
+            %l(for='post-number')
               郵便番号
             %span.form-arbitrary
               任意
-            %input(type='text' value='' name='zip_code' placeholder="例)1234567" class='input-default')
+            %input(type='text' value='' name='post-number' placeholder="例)1234567" class='input-default')
 
           .main__content__prefecture.form
             %l(for='prefecture')
@@ -89,7 +89,7 @@
               市区町村
             %span.form-arbitrary
               任意
-            %input.input-default(type='text' value='' name='' placeholder='大阪市中央区')
+            %input.input-default(type='text' value='' name='city' placeholder='大阪市中央区')
 
           
           .main__content__adress.form
@@ -97,7 +97,7 @@
               番地
             %span.form-arbitrary
               任意
-            %input.input-default(type='text' value='' name='address1' placeholder='TECH::EXPERT')
+            %input.input-default(type='text' value='' name='address1' placeholder='5-1-1')
 
           .main__content__building.form
             %l(for='address2_lavel')
