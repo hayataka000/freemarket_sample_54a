@@ -1,13 +1,13 @@
-.container
+.items-other-container
   = render 'item/header'
-  %main.item-container.l-container.clearfix
-    .l-content
-      %h2.deleted-item-name m70068440240 この商品は削除されました
-      %section.items-box-container.clearfix.items-box-overflow
-        %h2.items-box-head
+  %main.item-container.item-other-container.clearfix
+    .item-other-content
+      %h2.item-other-content__delete m70068440240 この商品は削除されました
+      %section.clearfix.item-other-content__box
+        %h2.item-other-content__box--h2
           %a{href: ""}
             コーチのショルダーバッグ その他の商品
-        .items-box-content.clearfix
+        .item-other-content__box--all.clearfix
           %section.items-box
             %a{href: ""}
               %figure.items-box-photo
@@ -74,9 +74,9 @@
                   .font-2
                     %i.icon-like-border ハート
                     %span
-    .l-side
-      .l-visible-large
-        %a.side-banner{href: "", target: "_blank"}
+    .lside-advertisement
+      .lside-advertisement__box
+        %a.lside-advertisement__box--banner{href: "", target: "_blank"}
           %img(src="//www-mercari-jp.akamaized.net/assets/img/common/jp/side_banner.jpg?2927923569" alt="Download Mercari Now")/
   = render 'aside'
-  = render "footer"
+  = render 'footer'

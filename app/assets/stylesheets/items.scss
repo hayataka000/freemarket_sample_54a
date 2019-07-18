@@ -1,26 +1,34 @@
-
-.l-container {
+.item-other-container {
   margin: 40px auto 0;
   width: 1020px;
 }
 
-.l-content {
+.item-other-content {
   float: right;
   width: 700px;
+  &__delete {
+    background: #fff;
+    padding: 24px 16px;
+    font-size: 16px;
+    text-align: center;
+  }
+  &__box {
+    overflow: hidden;
+    padding: 0;
+    margin: 0 0 20px;
+    &--h2 {
+      font-size: 22px;
+      margin: 24px 0 8px;
+      line-height: 1.4;
+    }
+    &--all {
+      padding: 0;
+    }
+  }
 }
 
-.deleted-item-name {
-  background: #fff;
-  padding: 24px 16px;
-  font-size: 16px;
-  text-align: center;
-}
 
-.items-box-overflow {
-  overflow: hidden;
-}
-
-.items-box-overflow .items-box {
+.item-other-content__box .items-box {
   float: left;
   display: block;
   width: 220px;
@@ -28,20 +36,7 @@
   vertical-align: inherit;
 }
 
-
-
-
-.items-box-head {
-  font-size: 22px;
-  margin: 24px 0 8px;
-  line-height: 1.4;
-}
-
-.items-box-overflow .items-box-content {
-  padding: 0;
-}
-
-.items-box-overflow .items-box:nth-child(3n+1) {
+.items-box:nth-child(3n+1) {
   margin: 0 0 20px;
 }
 
@@ -53,7 +48,8 @@
   padding: 0 0 100%;
 }
 
-.items-box-overflow .items-box img {
+
+.items-box img {
   width: 220px;
 }
 
@@ -73,14 +69,6 @@
   width: 100%;
 }
 
-.items-box-body {
-  padding: 16px;
-}
-
-.items-box-body {
-  padding: 8px;
-  height: 110px;
-}
 
 .items-box-name {
   overflow: hidden;
@@ -109,9 +97,9 @@
   font-size: 17px;
 }
 
-i[class^='icon-'], i[class*='icon-'] {
+i[class^=‘icon-’], i[class*=‘icon-’] {
   display: inline-block;
-  font-family: 'icon-font';
+  font-family: ‘icon-font’;
   speak: none;
   font-style: normal;
   font-weight: 400;
@@ -126,20 +114,17 @@ i[class^='icon-'], i[class*='icon-'] {
   color: #ccc;
 }
 
-.l-side {
+.lside-advertisement {
   float: left;
   width: 280px;
   margin: 0 40px 0 0;
-}
-
-.l-visible-large {
-  display: block;
-}
-
-.side-banner {
-  display: block;
-}
-
-.side-banner img {
-  width: 100%;
+  &__box {
+    display: block;
+    &--banner {
+      display: block;
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
