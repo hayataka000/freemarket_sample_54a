@@ -1,0 +1,88 @@
+
+.profile {
+  width: 700px;
+  border: black solid 1px;
+  height: auto;
+
+  &__head{
+    text-align: center;
+    height: 50px;
+    font-size: 18px;
+    padding: 8px, 24px;
+    line-height: 50px;
+    font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+    font-weight: bold;
+  }
+
+  &__info {
+    background-image: url(https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?36380069);
+    height: 150px;
+
+
+    &--box {
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      padding-top: 70px;
+
+      .user-icon {
+        width: 60px;
+        height: 60px;
+        background-color:white;
+        border-radius: 50%;
+        border: grey solid 1px;
+        // background-image: url(); あとで画像は入れます
+      }
+
+      .user-name {
+        input#profile-name {
+        width: 220px;
+        height: 40px;
+        border: grey solid 1px;
+        margin: 10px;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &__content {
+    height: auto;
+    padding-top: 30px;
+
+    &--box {
+      width: 670px;
+      margin: 0 auto;
+
+      .textbox {
+        textarea#profile-introduction {
+          width: 670px;
+          resize: vertical;
+          min-height: 250px;
+          border: grey solid 1px;
+          font-size: 14px;
+        }
+
+        .text_field {
+          height: 240px;
+        }
+      }
+      
+      .save-btn{
+        button#profile-edit-btn {
+          margin-top: 14px;
+          margin-bottom: 14px;
+          height: 50px;
+          width: 670px;
+          background-color: #ea352d;
+          color: white;
+          font-size: 14px;
+          text-align: center;
+          line-height: 50px;
+        }
+      }
+    }
+  }
+}
