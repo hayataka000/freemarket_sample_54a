@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'item#index'
-  get 'item/users'  =>  'item#users'
+  get 'item/new'  =>  'item#new'
 
 end
 

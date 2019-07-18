@@ -2,6 +2,6 @@ class ItemController < ApplicationController
   def index
   end
 
-  def users
+  def new
   end
 end

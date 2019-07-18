@@ -100,13 +100,13 @@
           .machine__check--info
             .machine__check--info-text
               %p.machine__check--info-text 「次へ進む」のボタンを押すことにより、
-              %a{href: "/jp/tos_list/", target: "_blank"}> 利用規約
+              = link_to '利用規約', 'リンク'
               に同意したものとみなします
             %button.btn-red-next{type: "submit"} 次へ進む
             .text__right
               .text__right--inner
                 .text__right--inner-target
-                  %a{href: "/jp/help_center/article/423/", target: "_blank"}　本人情報の登録について
+                  = link_to '本人情報の登録について', 'リンク'
 
     .sign-up-footer
       .sign-up-nav
@@ -115,37 +115,5 @@
           .nav__clearfix--middle メルカリ利用規約
           .nav__clearfix--right 特定商取引に関する表記
       .sign-up-footer-logo
-        %img{alt: "mercari", height: "65", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2927923569", width: "80"}/
+        = image_tag "logo-gray.svg", alt: "mercari"
       %small © 2019 Mercari
-
-
-
-
-
-
-
-
-
--# コントローラー作成をしていない為1つのビューページで複数のマークアップをしていますので、ここよりしたの記述も確認お願いします。
--# .sign-up-container
--#   .sign-up-header
--#     .sign-up-header__main
--#       %img{alt: "mercari", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?2927923569"}/
--#   .sign-up-main
--#     .sign-up-main__content
--#       .sign-up-main__content__head 新規会員登録
--#       .sign-up-main__content__bottom
--#         .sign-up-main__content__bottom-inner
--#           .mail-btn メールアドレスで登録する
--#           .facebook-btn Facebookで登録する
--#           .google-btn Googleで登録する
-
--#   .sign-up-footer
--#     .sign-up-nav
--#       .sign-up-nav__clearfix
--#         .sign-up-nav__clearfix__left プライバシーポリシー
--#         .sign-up-nav__clearfix__middle メルカリ利用規約
--#         .sign-up-nav__clearfix__right 特定商取引に関する表記
--#     .footer-logo
--#       = image_tag "logo.svg", alt: "mercari"
--#     %small © 2019 Mercari
