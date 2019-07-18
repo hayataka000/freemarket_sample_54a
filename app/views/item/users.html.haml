@@ -27,8 +27,8 @@
 
   .new-member-main
     .new-member-main__inner
-      .new-member-main__inner__top 会員情報入力
-      .new-member-main__inner__form
+      .new-member-main__inner--top 会員情報入力
+      .new-member-main__inner--form
         .form__inner
           .form__inner-group
             %label{:for => "nickname"} ニックネーム
@@ -94,27 +94,27 @@
           .form-info ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
         .machine__check
           %input{:name => "after_save_callback", :type => "hidden", :value => ""}/
-          .machine__check__inner
+          .machine__check--inner
             .g-recaptcha.signup-recaptcha{"data-sitekey" => "6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc"}
               %iframe{:frameborder => "0", :height => "78", :name => "a-7185d0xislnq", :role => "presentation", :sandbox => "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox", :scrolling => "no", :src => "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc&co=aHR0cHM6Ly93d3cubWVyY2FyaS5jb206NDQz&hl=ja&v=v1562567553145&size=normal&cb=a7n6h5ugmfrx", :width => "304"}
                 %textarea#g-recaptcha-response.g-recaptcha-response{:name => "g-recaptcha-response", :style => "width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"}
-          .machine__check__info
-            .machine__check__info-text
-              %p.machine__check__info-text 「次へ進む」のボタンを押すことにより、
+          .machine__check--info
+            .machine__check--info-text
+              %p.machine__check--info-text 「次へ進む」のボタンを押すことにより、
               %a{:href => "/jp/tos_list/", :target => "_blank"}> 利用規約
               に同意したものとみなします
             %button.btn-red-next{:type => "submit"} 次へ進む 
             .text__right
-              .text__right__inner
-                .text__right__inner-target 
+              .text__right--inner
+                .text__right--inner-target 
                   %a{:href => "/jp/help_center/article/423/", :target => "_blank"}　本人情報の登録について
 
     .footer
       .nav
         .nav__clearfix
-          .nav__clearfix__left プライバシーポリシー
-          .nav__clearfix__middle メルカリ利用規約
-          .nav__clearfix__right 特定商取引に関する表記
+          .nav__clearfix--left プライバシーポリシー
+          .nav__clearfix--middle メルカリ利用規約
+          .nav__clearfix--right 特定商取引に関する表記
       .footer-logo
         %img{:alt => "mercari", :height => "65", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2927923569", :width => "80"}/
       %small © 2019 Mercari
