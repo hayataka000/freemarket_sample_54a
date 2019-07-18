@@ -1,65 +1,67 @@
 body{
     position: relative;
     min-height: 100%;
-    background: #f5f5f5;
+    background-color: #f5f5f5;
     font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
     font-size: 14px;
     color: #333;
     line-height: 1;
+}
     .container{
         background-color: #f5f5f5;
         background-repeat: no-repeat;
-        header{
-            height:128px;
-            .top{
-                text-align:center;
-                line-height:49px;
-                h1{
-                    padding-top:40px;
-                }
-                    img{
-                        height:49px;             
-                    }
-                }
-            }
-        .main{
-            .item-container{
-                background-color:white;
-                width:700px;
-                margin:0 auto;
-                .single-head{
-                    border-bottom: 1px solid #f5f5f5;
-                    font-size:22px;
-                    line-height:1.5;
-                    text-align:center;
-                    padding:16px;
-                    font-weight:bold;
-                }
-                .buy-item{
-                    padding-top:24px;
-                    padding-right:12.5%;
-                    padding-left:12.5%;
-                    .item-container__buy__inner{
-                        display: flex;
-                        max-width:320px;
-                        margin: 0 auto;    
-                        flex-wrap: wrap;          
-                        h3{
-                            height:61px;
-                            img{
-                                width:64px;
-                            }         
-                        }   
-                        .buy-item-name{
-                            font-size:16px;
-                            font-weight:bold;
-                            width: calc(100% - 80px);
-                            margin-left:16px;
-                        }       
-                    }
-                }
+    }
+header{
+    height:128px;
+    .top{
+        text-align:center;
+        line-height:49px;
+        h1{
+            padding-top:40px;
+        }
+            img{
+                height:49px;             
             }
         }
+    }
+.main{
+    .item-container{
+        background-color:white;
+        width:700px;
+        margin:0 auto;
+        .single-head{
+            border-bottom: 1px solid #f5f5f5;
+            font-size:22px;
+            line-height:1.5;
+            text-align:center;
+            padding:16px;
+            font-weight:bold;
+        }
+        .buy-item{
+            padding-top:24px;
+            padding-right:12.5%;
+            padding-left:12.5%;
+            .item-container__buy__inner{
+                display: flex;
+                max-width:320px;
+                margin: 0 auto;    
+                flex-wrap: wrap;          
+                h3{
+                    height:61px;
+                    img{
+                        width:64px;
+                    }         
+                }   
+                .buy-item-name{
+                    font-size:16px;
+                    font-weight:bold;
+                    width: calc(100% - 80px);
+                    margin-left:16px;
+                }       
+            }
+        }
+    
+}
                         .buy-form{
                             text-align:center;
                             width:100%;
@@ -80,7 +82,7 @@ body{
                                 padding:16px;
                                 background-color:#ccc;
                             }
-                        }
+                            }
                             .buy-price-row{
                                 font-size:18px;
                                 font-weight:bold;
@@ -109,9 +111,8 @@ body{
                             color:white;
                             margin-top:8px;
                         }    
-                    }
-                }
-            }
+        }
+    }
 .buy-user{
     margin-top:40px;
     background-color:white;
@@ -120,7 +121,7 @@ body{
         max-width:320px;
         cursor: auto;
         h3{
-        font-size:14px;
+            font-size:14px;
         }
         &__text{
             margin-top:8px;

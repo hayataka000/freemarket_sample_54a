@@ -1,0 +1,215 @@
+%header
+  .top
+    %h1
+      %a{:href => "https://www.mercari.com/jp/"}
+        %img{:alt => "mercari", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?2927923569"}/
+.main 
+  .main-buy-item
+    .main-buy-item__container
+      %h2.main-buy-item__container__head 商品の情報を入力
+      %form.main-buy-item__container__form
+        .main-buy-item__container__form__box
+          %h3.main-buy-item__container__form__box__picture
+            出品画像
+          %span
+            必須
+          %p.main-buy-item__container__form__box__upload 最大10枚までアップロードできます
+          .main-buy-item__container__form__box__drag-and-drop
+            .main-buy-item__container__form__box__drag-and-drop__item
+              %p.main-buy-item__container__form__box__drag-and-drop__item__font
+                ドラッグアンドドロップ
+                %br/
+                またはクリックしてファイルをアップロード
+      .main-buy-item__container-product-datails
+        .main-buy-item__container-product-datails__form
+          %h3
+            商品名
+          %span
+            必須
+        %input.main-buy-item__container-product-datails__input{:placeholder => "商品名（必須 40文字まで)", :value => ""}/
+        .main-buy-item__container-product-datails__description
+          %h3 
+            商品の説明
+          %span
+            必須
+        %textarea.main-buy-item__container-product-datails__textarea{:placeholder => "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", :rows => "5"}
+    .main-buy-item__container-product-condition
+      .main-buy-item__container-product-condition__state
+        %h3 
+          商品の詳細
+        .main-buy-item__container-product-condition__state__box
+          .main-buy-item__container-product-condition__state__box__category
+            %h3 
+              カテゴリー
+            %span.category
+              必須
+            .main-buy-item__container-product-condition__state__box__category__select
+              %i.icon-arrow-bottom
+              %select.main-buy-item__container-product-condition__state__box__category__select__default
+                %option{:value => ""} ---
+                %option{:value => "1"} レディース
+                %option{:value => "2"} メンズ
+                %option{:value => "3"} ベビー・キッズ
+                %option{:value => "4"} インテリア・住まい・小物
+                %option{:value => "5"} 本・音楽・ゲーム
+                %option{:value => "1328"} おもちゃ・ホビー・グッズ
+                %option{:value => "6"} コスメ・香水・美容
+                %option{:value => "7"} 家電・スマホ・カメラ
+                %option{:value => "8"} スポーツ・レジャー
+                %option{:value => "9"} ハンドメイド
+                %option{:value => "1027"} チケット
+                %option{:value => "1318"} 自動車・オートバイ
+                %option{:value => "10"} その他
+          .main-buy-item__container-product-condition__state__box__condition
+            %h3
+              商品の状態
+            %span.condition
+              必須
+            .main-buy-item__container-product-condition__state__box__condition__select
+              %i.icon-arrow-bottom
+              %select.main-buy-item__container-product-condition__state__box__condition__select__default
+                %option.a{:value => ""} ---
+                %option{:value => "1"} 新品、未使用
+                %option{:value => "2"} 未使用に近い
+                %option{:value => "3"} 目立った傷や汚れなし
+                %option{:value => "4"} やや傷や汚れあり
+                %option{:value => "5"} 傷や汚れあり
+                %option{:value => "6"} 全体的に状態が悪い
+    .main-buy-item__container-product-condition__delivery
+      %h3.main-buy-item__container-product-condition__delivery__sub
+        配送について
+        %a.main-buy-item__container-product-condition__delivery__sub__question{:href => "/jp/help_center/article/68/", :target => "_blank"} ?
+      .main-buy-item__container-product-condition__delivery__form
+        .main-buy-item__container-product-condition__delivery__form__group
+          %h3 
+            配送料の負担
+          %span.a
+            必須
+        .main-buy-item__container-product-condition__delivery__form__select
+          %i.icon-arrow-bottom
+          %select.main-buy-item__container-product-condition__delivery__form__select__2
+            %option{:value => ""} ---
+            %option{:value => "2"} 送料込み(出品者負担)
+            %option{:value => "1"} 着払い(購入者負担)
+        .main-buy-item__container-product-condition__delivery__form__group__second
+          %h3 
+            発送元の地域
+          %span.b
+            必須
+        .main-buy-item__container-product-condition__delivery__form__select
+          %i.icon-arrow-bottom
+          %select.main-buy-item__container-product-condition__delivery__form__select__2
+            %option{:value => ""} ---
+            %option{:value => "1"} 北海道
+            %option{:value => "2"} 青森県
+            %option{:value => "3"} 岩手県
+            %option{:value => "4"} 宮城県
+            %option{:value => "5"} 秋田県
+            %option{:value => "6"} 山形県
+            %option{:value => "7"} 福島県
+            %option{:value => "8"} 茨城県
+            %option{:value => "9"} 栃木県
+            %option{:value => "10"} 群馬県
+            %option{:value => "11"} 埼玉県
+            %option{:value => "12"} 千葉県
+            %option{:value => "13"} 東京都
+            %option{:value => "14"} 神奈川県
+            %option{:value => "15"} 新潟県
+            %option{:value => "16"} 富山県
+            %option{:value => "17"} 石川県
+            %option{:value => "18"} 福井県
+            %option{:value => "19"} 山梨県
+            %option{:value => "20"} 長野県
+            %option{:value => "21"} 岐阜県
+            %option{:value => "22"} 静岡県
+            %option{:value => "23"} 愛知県
+            %option{:value => "24"} 三重県
+            %option{:value => "25"} 滋賀県
+            %option{:value => "26"} 京都府
+            %option{:value => "27"} 大阪府
+            %option{:value => "28"} 兵庫県
+            %option{:value => "29"} 奈良県
+            %option{:value => "30"} 和歌山県
+            %option{:value => "31"} 鳥取県
+            %option{:value => "32"} 島根県
+            %option{:value => "33"} 岡山県
+            %option{:value => "34"} 広島県
+            %option{:value => "35"} 山口県
+            %option{:value => "36"} 徳島県
+            %option{:value => "37"} 香川県
+            %option{:value => "38"} 愛媛県
+            %option{:value => "39"} 高知県
+            %option{:value => "40"} 福岡県
+            %option{:value => "41"} 佐賀県
+            %option{:value => "42"} 長崎県
+            %option{:value => "43"} 熊本県
+            %option{:value => "44"} 大分県
+            %option{:value => "45"} 宮崎県
+            %option{:value => "46"} 鹿児島県
+            %option{:value => "47"} 沖縄県
+            %option{:value => "99"} 未定
+        .main-buy-item__container-product-condition__delivery__form__group__third
+          %h3 
+            発送までの日数
+          %span.c
+            必須
+        .main-buy-item__container-product-condition__delivery__form__select
+          %i.icon-arrow-bottom
+          %select.main-buy-item__container-product-condition__delivery__form__select__2
+            %option{:value => ""} ---
+            %option{:value => "2"} 送料込み(出品者負担)
+            %option{:value => "1"} 着払い(購入
+    .main-buy-item__container-product-condition__price
+      %h3.price 販売価格(300~9,999,999)
+      .main-buy-item__container-product-condition__price__box
+        %ul.main-buy-item__container-product-condition__price__box__ul
+          %li.main-buy-item__container-product-condition__price__box__ul__price
+            %h3.main-buy-item__container-product-condition__price__box__ul__price__left
+              価格
+            %span
+              必須
+            .main-buy-item__container-product-condition__price__box__ul__price__right
+              .main-buy-item__container-product-condition__price__box__ul__price__right
+                .main-buy-item__container-product-condition__price__box__ul__price__right__input
+                  ¥
+                %input.main-buy-item__container-product-condition__price__box__ul__price__right__default{:placeholder => "例）300", :value => ""}/
+          %li.main-buy-item__container-product-condition__price__box__ul__fee
+            .main-buy-item__container-product-condition__price__box__ul__fee__left
+              販売手数料
+            .main-buy-item__container-product-condition__price__box__ul__fee__right
+              %h3 -
+          %li.main-buy-item__container-product-condition__price__box__ul__profit
+            .main-buy-item__container-product-condition__price__box__ul__profit__profit 販売利益
+            .main-buy-item__container-product-condition__price__box__ul__profit__- -
+
+    .main-buy-item__container-product-condition__price__btn
+      .main-buy-item__container-product-condition__price__btn__box
+      %p
+        %a{:href => "/jp/help_center/getting_started/prohibited_items/", :target => "_blank"} 禁止されている出品
+        、
+        %a{:href => "/jp/help_center/getting_started/prohibited_conduct/", :target => "_blank"} 行為
+        を必ずご確認ください
+      %p 
+        またブランド品でシリアルナンバー等がある場合はご記載ください。
+        %a{:href => "/jp/help_center/getting_started/counterfeit_goods/", :target => "_blank"} 偽ブランドの販売
+        は犯罪あり処罰される可能性があります。
+      %p 
+        また、出品をもちまして
+        %a{:href => "/jp/seller_terms/"} 加盟店規約
+        に同意したことになります。
+      %button.btn-default.btn-red{:type => "submit"}
+        出品する
+      .btn-default.btn-gray もどる
+
+  .bottom
+    %ul.list
+      %li.Exclusion
+        %a{:href => "https://www.mercari.com/jp/privacy/"} プライバシーポリシー
+      %li.margin
+        %a{:href => "https://www.mercari.com/jp/tos/"} メルカリ利用規約
+      %li.margin
+        %a{:href => "https://www.mercari.com/jp/tokutei/"} 特定商取引に関する表記
+    %a.logo{:href => "https://www.mercari.com/jp/"}
+      %img{:alt => "mercari", :height => "65", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2927923569", :width => "80"}/
+    %p.moji © 2019 Mercari
+
