@@ -321,7 +321,7 @@ select {
 
 
 
-.footer {
+.sign-up-footer {
   width: 456px;
   height: 200px;
   margin: 0 auto;
@@ -335,7 +335,7 @@ select {
   position: absolute;
 }
 
-.nav {
+.sign-up-nav {
   display: block;
 }
 
@@ -368,7 +368,7 @@ select {
  }
 }
 
-.footer-logo {
+.sign-up-footer-logo {
     width: 80px;
     height: 80px;
     margin: 40px auto 0;
@@ -485,21 +485,23 @@ small {
 
 // .sign-up-footer {
 //   width: 456px;
+//   height: 200px;
 //   margin: 0 auto;
 //   right: 0;
 //   bottom: 0;
 //   left: 0;
 //   padding: 40px 0;
 //   text-align: center;
-//   background-color: #f1f1f1;
+//   background-color: #f5f5f5;
 //   margin-bottom: 20px;
+//   position: absolute;
 // }
 
 // .sign-up-nav {
 //   display: block;
 // }
 
-// .sign-up-nav__clearfix {
+// .nav__clearfix {
 //   color: black;
 //   position: center;
 //   font-size: 11px;
@@ -513,21 +515,22 @@ small {
 //   width: 456px;
 //   height: 12px;
 //   margin-top: 40px;
-// }
 
-// .sign-up-nav__clearfix__left {
+
+// &--left {
 //   display: block;
 // }
 
-// .sign-up-nav__clearfix__middle {
+// &--middle {
 //   margin-left: 9px;
 // }
 
-// .sign-up-nav__clearfix__right {
+// &--right {
 //   margin-left: 9px;
+//  }
 // }
 
-// .footer-logo {
+// .sign-up-footer-logo {
 //     width: 80px;
 //     height: 80px;
 //     margin: 40px auto 0;

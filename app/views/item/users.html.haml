@@ -35,7 +35,7 @@
             %span.form-require 必須
             %input.input-default{name: "nickname", placeholder: "例) メルカリ太郎", type: "text", value: ""}/
           .form__inner-group
-            %label{:for: "email"} メールアドレス
+            %label{for: "email"} メールアドレス
             %span.form-require 必須
             %input.input-default{name: "email", placeholder: "PC・携帯どちらでも可", type: "email", value: ""}/
           %input{name: "login_type", type: "hidden", value: ""}/
@@ -44,7 +44,7 @@
             %span.form-require 必須
             %input.input-default{name: "password", placeholder: "6文字以上", type: "password"}/
           .form__inner-group
-            %label{:for: "password"} パスワード(確認)
+            %label{for: "password"} パスワード(確認)
             %span.form-require 必須
             %input.input-default{name: "password", placeholder: "6文字以上", type: "password"}/
           .form__inner-group
@@ -88,7 +88,7 @@
                 -# ここにアイコン入れたいよー
                 .select-default
                   %select.select-default{name: "year"}
-                    %option{:value: ""} --
+                    %option{value: ""} --
               .birth-day 日
             %input{name: "birthday", type: "hidden", value: ""}/
           .form-info ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
@@ -109,13 +109,13 @@
                 .text__right--inner-target 
                   %a{href: "/jp/help_center/article/423/", target: "_blank"}　本人情報の登録について
 
-    .footer
-      .nav
+    .sign-up-footer
+      .sign-up-nav
         .nav__clearfix
           .nav__clearfix--left プライバシーポリシー
           .nav__clearfix--middle メルカリ利用規約
           .nav__clearfix--right 特定商取引に関する表記
-      .footer-logo
+      .sign-up-footer-logo
         %img{alt: "mercari", height: "65", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2927923569", width: "80"}/
       %small © 2019 Mercari
 
