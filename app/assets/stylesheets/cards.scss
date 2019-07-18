@@ -1,0 +1,64 @@
+// Place all the styles related to the cards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  position: relative;
+  min-height: 100%;
+  background: #f5f5f5;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+}
+.cards-container {
+  margin: 40px auto 0;
+  width: 1020px;
+  padding: 0 0 40px;
+}
+.rside-box {
+  margin: 0;
+  background: #fff;
+  &__top {
+    padding: 8px 24px;
+    border-top: 40px solid #f5f5f5;
+    border-bottom: 1px solid #f5f5f5;
+    text-align: center;
+  }
+}
+.content-inner {
+  padding: 64px;
+  border-top: 1px solid #f5f5f5;
+  &__list{
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+.inner-interval {
+  padding: 24px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 8px !important;
+}
+.btn-default {
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+}
+.inner-interval a i {
+  margin-right: 16px;
+}
+.icon-card {
+  content: '\e00c';
+}
+.not-regist a {
+  display: block;
+  margin: 40px 0 0;
+  text-align: right;
+  color: #0099e8;
+  text-decoration: none;
+}
+.lside-list {
+  float: left;
+  width: 280px;
+  margin: 0 40px 0 0;
+}
