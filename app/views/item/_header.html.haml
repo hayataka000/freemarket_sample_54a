@@ -1,0 +1,27 @@
+.container
+  .header
+    .inner
+      .inner__top
+        %img{:alt => "mercari", :height => "36", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?4104386162", :width => "134"}/
+        .inner__top-form
+          %input.input-default{:name => "keyword", :placeholder => "何をお探しですか？", :type => "search", :value => ""}/
+          %i.icon-search
+            %i.material-icons search
+      .inner__nav__box
+        .inner__nav__box-right
+          .inner__nav__box-right-signup
+            .signup__btn-red 新規会員登録
+            .login__btn-blue ログイン
+        .header__bottom
+          .header__bottom__left
+            %ul.header__bottom__left__nav
+              %li
+                %h2
+                  %a.header__bottom__left__nav__icon{:href => "https://www.mercari.com/jp/category/"}
+                    %i.material-icons list
+                    %span カテゴリーから探す
+              %li
+                %h2
+                  %a.header__bottom__left__nav__icon2{:href => "https://www.mercari.com/jp/brand/"}
+                    %i.material-icons pageview
+                    %span ブランドから探す
