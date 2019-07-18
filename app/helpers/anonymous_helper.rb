@@ -1,2 +1,0 @@
-module AnonymousHelper
-end

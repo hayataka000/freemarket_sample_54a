@@ -2,7 +2,8 @@
   .new-member-header
     .header__left
       .header__left-inner
-        %img{alt: "mercari", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?2927923569"}/
+        -# %img{alt: "mercari", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?2927923569"}/
+        = image_tag "logo.svg", alt: "mercari"
     .header__right
       .header__right-inner
         .point-red 会員情報
@@ -147,5 +148,5 @@
 -#         .sign-up-nav__clearfix__middle メルカリ利用規約
 -#         .sign-up-nav__clearfix__right 特定商取引に関する表記
 -#     .footer-logo
--#       %img{alt: "mercari", height: "65", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2927923569", width: "80"}/
+-#       = image_tag "logo.svg", alt: "mercari"
 -#     %small © 2019 Mercari
