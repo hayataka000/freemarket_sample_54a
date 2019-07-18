@@ -10,38 +10,38 @@
         やることリスト
 .tab-content
   %ul#mypage-tab-notification.mypage-item-list.tab-pane.active
-  %li
-    %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/news/"}
-      %figure
-        %img.lazyload{:alt => "", "src" => "http://static.mercdn.net/images/mercari_profile.png"}/
-      .mypage-item-body
-        .mypage-item-text 事務局から個別メッセージ「ログイン通知」
-        %time
-          %i.fas.fa-clock
-          %span 21 時間前
-      %i.fas.fa-caret-right
-  %li
-    %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/news/"}
-      %figure
-        %img.lazyload{:alt => "", "src" => "http://static.mercdn.net/images/mercari_profile.png"}/
-      .mypage-item-body
-        .mypage-item-text 事務局から個別メッセージ「本人確認書類ご提出のお願い」
-        %time
-          %i.fas.fa-clock
-          %span 6 日前
-      %i.fas.fa-caret-right
-  %li.mypage-go-list
-    %a{:href => "/jp/mypage/notification/"} 一覧を見る
-%ul#mypage-tab-todo.mypage-item-list.tab-pane
-  %li
-    %a.mypage-item-link{"data-modal" => "banner", "data-open" => "modal", :href => ""}
-      %figure
-        %img.lazyload{:alt => "", "data-src" => "//static.mercdn.net/images/mercari_profile.png"}/
-      .mypage-item-body
-        .mypage-item-text 本人確認書類を提出してください
-        %time
-          %i.fas.fa-caret-right
+    %li
+      %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/news/"}
+        %figure
+          %img.lazyload{:alt => "", "src" => "http://static.mercdn.net/images/mercari_profile.png"}/
+        .mypage-item-body
+          .mypage-item-text 事務局から個別メッセージ「ログイン通知」
+          %time
+            %i.fas.fa-clock
+            %span 21 時間前
+        %i.fas.fa-caret-right
+    %li
+      %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/news/"}
+        %figure
+          %img.lazyload{:alt => "", "src" => "http://static.mercdn.net/images/mercari_profile.png"}/
+        .mypage-item-body
+          .mypage-item-text 事務局から個別メッセージ「本人確認書類ご提出のお願い」
+          %time
+            %i.fas.fa-clock
             %span 6 日前
-          %i.fas.fa-caret-right
-  %li.mypage-go-list
-    %a{:href => "/jp/mypage/todo/"} 一覧を見る
+        %i.fas.fa-caret-right
+    %li.mypage-go-list
+      %a{:href => "/jp/mypage/notification/"} 一覧を見る
+-# %ul#mypage-tab-todo.mypage-item-list.tab-pane
+-#   %li
+-#     %a.mypage-item-link{"data-modal" => "banner", "data-open" => "modal", :href => ""}
+-#       %figure
+-#         %img.lazyload{:alt => "", "src" => "http://static.mercdn.net/images/mercari_profile.png"}/
+-#       .mypage-item-body
+-#         .mypage-item-text 本人確認書類を提出してください
+-#         %time
+-#           %i.fas.fa-clock
+-#             %span 6 日前
+-#           %i.fas.fa-caret-right
+-#   %li.mypage-go-list
+-#     %a{:href => "/jp/mypage/todo/"} 一覧を見る

@@ -126,7 +126,7 @@ border-top: 2px solid #ea352d;
   z-index: 1;
   width: 100%;
 }
-.lazyloaded {
+.lazyload {
   opacity: 1;
   -webkit-transition: opacity .3s;
   transition: opacity .3s;
@@ -237,6 +237,7 @@ ul {
   h2 {
     margin: 8px 0 0;
     font-size: 14px;
+    color:black;
   }
 }
 .modal-banner-eye-catch img:first-child {
@@ -323,6 +324,7 @@ li {
 .mypage-number {
   margin: 8px 0 0;
   font-size: 0;
+  color:black;
 }
 .mypage-number div {
   display: inline-block;
@@ -423,4 +425,24 @@ a:hover {
 // }
 .tab-content li{
   list-style: none;
+}
+
+.mypage-item-link time {
+  display: inline-block;
+  color: #888;
+}
+.tab-content .tab-pane {
+  display: none;
+}
+.tab-content .tab-pane.active {
+  display: block;
+}
+// .tab-content{
+//   background-color:white;
+// }
+.mypage-item-list tab-pane{
+  background-color: #eee;
+}
+.trade__container{
+  background-color: white;
 }
