@@ -33,7 +33,8 @@
 |delivery_method|string|null: false|
 |shipping_area|string|null: false|
 |content|text|null: false|
-
+|user_id|integer|foreign_key: true|
+|category_id|integer|foreign_key: true|
 
 ### Assosiation
 - has_many :comments
