@@ -69,5 +69,5 @@
           %input.form-group__security-code.input-default{maxlength: "4", class: "security_code", name: "security_code", placeholder: "カード背面4桁もしくは3桁の番号", type: "tel"}/
           .form-group__text
             カード裏面の番号とは？
-          %a.btn-default.btn-red.submit_button.card-add-button{href: "#", target: "_blank"}
-            追加する
+          .btn-default.btn-red.card-add-button
+            = link_to "追加する"
