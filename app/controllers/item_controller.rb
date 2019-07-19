@@ -2,6 +2,7 @@ class ItemController < ApplicationController
   def index
   end
 
+
   def items
   end
 
