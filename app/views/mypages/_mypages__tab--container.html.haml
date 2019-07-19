@@ -2,12 +2,10 @@
 %ul.mypage-tabs
   %li.active
     %h3
-      %a{"data-toggle" => "tab",href: "#mypage-tab-notification"}
-        お知らせ
+      = link_to'お知らせ',"リンク"
   %li
     %h3
-      %a{"data-toggle" => "tab",href: "#mypage-tab-todo"}
-        やることリスト
+      = link_to'やることリスト',"リンク"
 .tab-content
   %ul#mypage-tab-notification.mypage-item-list.tab-pane.active
     %li
