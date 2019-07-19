@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  
-  devise_for :users
   root 'item#index'
-  resources :cards, only: [:index]
+  get '/confirm/index'
+  devise_for :users
+  resources :cards, only: [:index] do
+  end
 
 end
