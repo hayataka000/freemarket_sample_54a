@@ -5,4 +5,12 @@ Rails.application.routes.draw do
   resources :cards, only: [:index] do
   end
 
+  resources :confirm, only: [:index] do
+  end
+  resources :profile, only: [:index] do
+  end
+
+  resources :item, only: [:new] do
+  end
+
 end
