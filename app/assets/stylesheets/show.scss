@@ -314,6 +314,11 @@ i[class^='icon-'], i[class*='icon-'] {
   transition: all ease-out .3s;
 }
 
+.item-buy-btn a {
+  color: #fff;
+  font-size: 24px;
+}
+
 .item-btn-client {
   color: #fff;
   display: block;
@@ -331,6 +336,7 @@ i[class^='icon-'], i[class*='icon-'] {
 
 .item-description-inner {
   white-space: pre-wrap;
+  font-size: 18px;
 }
 
 .item-button-container {
