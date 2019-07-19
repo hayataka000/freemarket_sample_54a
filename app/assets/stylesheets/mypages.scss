@@ -223,7 +223,15 @@ i[class^='icon-'], i[class*='icon-'] {
     margin: 8px 0 0;
     font-size: 14px;
     color:black;
+  img{
+    overflow: hidden; 
+    width: 60px;
+    height: 60px; 
+    margin: 0 auto;
+    border-radius: 50%;
   }
+  }
+  
 }
 .modal-banner-eye-catch img:first-child {
   width: auto;
@@ -413,4 +421,11 @@ body {
 
 .mypages-side-nav{
   margin:50px auto;
+}
+.mypages__user img{
+  overflow: hidden;
+   width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 50%;
 }
