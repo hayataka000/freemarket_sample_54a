@@ -3,4 +3,3 @@ Rails.application.routes.draw do
   resources :item, only: [:new]
 
 end
-
