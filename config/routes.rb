@@ -14,4 +14,8 @@ Rails.application.routes.draw do
   end
   resources :item, only: [:new] do      #nishimura
   end
+  resources :purchase_confirmation, only: [:index] do  #nishimura2
+  end
+  resources :logout, only: [:index] do  #koyama2
+  end
 end
