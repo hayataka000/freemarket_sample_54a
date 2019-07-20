@@ -14,10 +14,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  
 
-  def items
-  end
+  # def items
+  # end
 
-  def show
-  end
+  # def show
+  # end
 end
