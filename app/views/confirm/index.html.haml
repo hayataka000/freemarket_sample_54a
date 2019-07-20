@@ -2,7 +2,6 @@
 
 .body
   .container
-    .mypage マイページ部分
     .main
       .main__title 本人情報の登録
       .main__content
@@ -113,6 +112,8 @@
 
           .main__content--text-right2
             = link_to '本人情報の登録について>', 'https://www.mercari.com/jp/help_center/article/423/'
-
+%main.l-container.clearfix
+  .mypages-side
+    = render "mypages/mypages-side"
 = render 'item/aside'
 = render "item/footer"
