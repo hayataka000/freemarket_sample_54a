@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get  'item/show'      =>  'item#show'
 
   devise_for :users
-  resources :cards, only: [:index] do   #koyama
+  resources :cards, only: [:index, :new] do   #koyama
   end
   resources :mypages,only:[:index]      #yamada
   resources :confirm, only: [:index] do #komatubara
