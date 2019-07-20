@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :profile, only: [:index] do
   end
 
-  resources :item, only: [:new] do
+  resources :item, only: [:new,:create] do
   end
 
 end

@@ -36,6 +36,7 @@
 |user_id|integer|foreign_key: true|
 |category_id|integer|foreign_key: true|
 
+
 ### Assosiation
 - has_many :comments
 - has_many :nices
