@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get  'item/show'      =>  'item#show'
   resources :profile, only: [:index]
   resources :cards, only: [:index]
+  resources :sign_up
+  resources :user_steps
 
   get '/confirm/index'
   devise_for :users, :controllers => {
@@ -15,7 +17,6 @@ Rails.application.routes.draw do
   devise_scope :user do
     get 'sign_in' => 'users/sessions#new'
     get 'sign_out' => 'devise/sessions#destroy'
-
   end
 
   resources :cards, only: [:index] do
