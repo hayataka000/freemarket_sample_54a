@@ -8,6 +8,6 @@ class ItemController < ApplicationController
 
   def show
     @user = User.find(1)
-    binding.pry
+    @item = Item.find(1)
   end
 end
