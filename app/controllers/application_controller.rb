@@ -13,4 +13,11 @@ class ApplicationController < ActionController::Base
       username == Rails.application.credentials[:basic_key_id] && password == Rails.application.credentials[:basic_key_pass]
     end
   end
+
+
+  def items
+  end
+
+  def show
+  end
 end

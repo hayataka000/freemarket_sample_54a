@@ -1,0 +1,264 @@
+// Place all the styles related to the item controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+:root {
+  cursor: auto;
+}
+
+:root {
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #000;
+  cursor: default;
+  font: 66.66667% sans-serif;
+}
+
+* {
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, ::before, ::after {
+  border-style: solid;
+  border-width: 0;
+}
+
+*, ::before, ::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  background: #f5f5f5;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  font-size: 14px;
+  color: #333;
+  line-height: 1;
+}
+
+a {
+  color: #0099e8;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.off_white {
+  background-color: #fff;
+}
+
+main {
+  display: block;
+}
+
+.top-carousel {
+  height: 390px;
+  overflow: hidden;
+  position: relative;
+}
+
+.top-carousel .banner, .top-carousel .banner__stage, .top-carousel .banner__item, .top-carousel .banner__item>a {
+  height: 100%;
+}
+
+.owl-carousel .banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.top-carousel .owl-nav {
+  color: transparent;
+  display: block;
+}
+
+.top-carousel .owl-prev {
+  left: 60px;
+}
+
+.top-carousel .owl-prev {
+  background-image: url(/jp/assets/img/common/jp/top/carousel-prev.png);
+  left: 10px;
+}
+
+.top-carousel .owl-next {
+  right: 60px;
+}
+
+.top-carousel .owl-next {
+  background-image: url(/jp/assets/img/common/jp/top/carousel-next.png);
+  right: 10px;
+}
+
+.top-carousel .owl-next, .top-carousel .owl-prev {
+  cursor: pointer;
+  height: 46px;
+  width: 31px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-23px);
+  transform: translateY(-23px);
+}
+
+.top-carousel .owl-dots {
+  display: block;
+}
+
+.top-carousel .owl-dots {
+  display: none;
+  margin: -30px;
+  text-align: center;
+}
+
+.owl-dots {
+  line-height: 0;
+}
+
+.owl-carousel .banner__stage {
+  position: relative;
+}
+
+.banner__item {
+  text-align: center;
+}
+
+.main__pickup .main__items {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.main__pickup .main__items>h3 {
+  font-size: 22px;
+  margin: 26px 11px;
+}
+
+.main__pickup {
+  padding: 40px 0;
+  background: #f5f5f5;
+  h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+}
+.main__text {
+  text-align: center;
+}
+
+.main__pickup .main__items .items__box {
+  margin: 0 0 0 20px;
+  width: 213px;
+}
+
+.items {
+  width: auto;
+  margin: 0 auto;
+  &__box {
+    position: relative;
+    float: left;
+    width: 48%;
+    margin: 0 0 4% 4%;
+    background: #fff;
+    &__box a {
+      display: block;
+      color: #333;
+      &__box__photo {
+        width: 220px;
+        height: 220px;
+      }
+    }
+  }
+}
+
+.items__box__photo {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 0 0 100%;
+}
+
+.main__pickup .main__items .items__box figure {
+  width: 213px;
+}
+
+
+.items__box__photo img.is-higher-width {
+  width: auto;
+  left: 50%;
+  right: auto;
+  height: 100%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+.items__box__photo img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.items__box__body {
+  padding: 16px;
+  height: 110px;
+}
+
+.items__box-name {
+  overflow: hidden;
+  position: relative;
+  font-weight: 400;
+  height: 3em;
+  line-height: 1.5;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.font-2 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+}
+
+.items__box__num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 8px 0 0;
+}
+
+.items__box__num__price {
+  font-size: 17px;
+}
+
+.font-5 {
+  font-weight: 600;
+  color: #333;
+}
+
+.main__pickup .view-all {
+  padding: 20px 0 30px;
+  width: 99.5%;
+  text-align: right;
+  font-size: 14px;
+}
