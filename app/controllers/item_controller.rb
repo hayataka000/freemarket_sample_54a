@@ -7,8 +7,7 @@ class ItemController < ApplicationController
   end
 
   def show
-    # @user = Users.find(params[:id])
+    @user = User.find(1)
+    binding.pry
   end
 end
-
-
