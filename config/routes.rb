@@ -5,8 +5,13 @@ Rails.application.routes.draw do
   get  'item/show'      =>  'item#show'
   resources :profile, only: [:index]
   resources :cards, only: [:index]
-  resources :sign_up
-  resources :user_steps
+
+  resources :sign_up do
+    collection do
+      get 'index'
+    end
+  end
+
 
   get '/confirm/index'
   devise_for :users, :controllers => {
