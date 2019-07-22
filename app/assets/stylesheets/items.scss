@@ -1,0 +1,134 @@
+.item-other-container {
+  margin: 40px auto 0;
+  width: 1020px;
+}
+
+.item-other-content {
+  float: right;
+  width: 700px;
+  &__delete {
+    background: #fff;
+    padding: 24px 16px;
+    font-size: 16px;
+    text-align: center;
+  }
+  &__box {
+    overflow: hidden;
+    padding: 0;
+    margin: 0 0 20px;
+    &--h2 {
+      font-size: 22px;
+      margin: 24px 0 8px;
+      line-height: 1.4;
+    }
+    &--all {
+      padding: 0;
+    }
+  }
+}
+
+
+.item-other-content__box .items-box {
+  float: left;
+  display: block;
+  width: 220px;
+  margin: 0 0 20px 20px;
+  vertical-align: inherit;
+}
+
+.items-box:nth-child(3n+1) {
+  margin: 0 0 20px;
+}
+
+.items-box-photo {
+  width: 220px;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  padding: 0 0 100%;
+}
+
+
+.items-box img {
+  width: 220px;
+}
+
+.items-box-photo img.is-higher-height {
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+.items-box-photo img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+
+.items-box-name {
+  overflow: hidden;
+  position: relative;
+  font-weight: 400;
+  height: 3em;
+  line-height: 1.5;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.items-box-num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 8px 0 0;
+}
+
+.items-box-price {
+  font-size: 17px;
+}
+
+i[class^=‘icon-’], i[class*=‘icon-’] {
+  display: inline-block;
+  font-family: ‘icon-font’;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-like-border {
+  color: #ccc;
+}
+
+.lside-advertisement {
+  float: left;
+  width: 280px;
+  margin: 0 40px 0 0;
+  &__box {
+    display: block;
+    &--banner {
+      display: block;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.lside-advertisement__box--banner {
+  width: 100%;
+}
