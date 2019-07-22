@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :sign_up do
     collection do
       get 'index'
+
     end
   end
 
