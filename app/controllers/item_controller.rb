@@ -6,7 +6,7 @@ class ItemController < ApplicationController
   end
 
   def edit
-    
+    @item = item.find(params[:id])
   end
 
 end
