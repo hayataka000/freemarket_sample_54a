@@ -7,6 +7,29 @@ background: #fff;
 padding: 8px 16px 8px 16px;
 width:700px;
 margin:80px 180px 0px 340px;
+  .btn-default-btn-red {
+    max-width:700px;
+    margin-top:16px;
+    background: #ea352d;
+    border: 1px solid #ea352d;
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+  }
+  .btn-default.btn-gray{
+    max-width:669px;
+    margin-top:16px;
+    width:700px;
+    margin-left:0px;
+    margin: 16px 0 16px 0;
+    font-size:14px;
+  }
+  p{
+    height:10px;
+  }
 }
 .comment-container{
   padding: 24px;
@@ -14,31 +37,25 @@ margin:80px 180px 0px 340px;
   height:262px;
   width:700px;
   margin:80px 180px 70px 340px;
+  p{
+    padding: 8px;
+    font-size: 14px;
+    background: #fff6de;
+  }
+  .btn-default.btn-gray{
+    max-width:669px;
+    margin-top:16px;
+    width:700px;
+    margin-left:0px;
+    margin: 16px 0 16px 0;
+    font-size:14px;
+  }
 }
 
 .exhibition-container .item-box-container{
   margin:80px 180px 0px 340px;
 }
-.edit-container .btn-default.btn-red{
-   max-width:700px;
-   margin-top:16px;
-}
-.edit-container .btn-default.btn-gray{
-  max-width:669px;
-  margin-top:16px;
-  width:700px;
-  margin-left:0px;
-  margin: 16px 0 16px 0;
-  font-size:14px;
-}
-.edit-container p{
-  height:10px;
-}
-.comment-container p{
-  padding: 8px;
-  font-size: 14px;
-  background: #fff6de;
-}
+
 .text-form{
   display: block;
   width: 100%;
@@ -50,11 +67,9 @@ margin:80px 180px 0px 340px;
   font-size: 16px;
   line-height: 1.5;
 }
-.comment-container .btn-default.btn-gray{
-  max-width:669px;
-  margin-top:16px;
-  width:700px;
-  margin-left:0px;
-  margin: 16px 0 16px 0;
-  font-size:14px;
+
+.btn-default.btn-red a{
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
 }
