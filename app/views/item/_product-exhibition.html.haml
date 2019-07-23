@@ -15,6 +15,7 @@
             必須
           %p.main-buy-item__container__form__box__upload 最大10枚までアップロードできます
           .main-buy-item__container__form__box__drag-and-drop
+            %input#comment_image.hidden{:name => "comment[image]", :type => "file"}/
             .main-buy-item__container__form__box__drag-and-drop__item
               %p.main-buy-item__container__form__box__drag-and-drop__item__font
                 ドラッグアンドドロップ
@@ -32,7 +33,7 @@
         = form_with model:  @item do |f|
           %h3
             商品の説明
-            = f.text_area :content, class: 'item_datail', placeholder: '商品名を入力してください(40字まで)'
+            = f.text_area :content, class: 'item_datail', placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
           %span
             必須
         -# %textarea.main-buy-item__container-product-datails__textarea{:placeholder => "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", :rows => "5"}
@@ -173,9 +174,10 @@
               必須
             .main-buy-item__container-product-condition__price__box__ul__price__right
               .main-buy-item__container-product-condition__price__box__ul__price__right
+              = form_with model:  @item do |f|
                 .main-buy-item__container-product-condition__price__box__ul__price__right__input
                   ¥
-                %input.main-buy-item__container-product-condition__price__box__ul__price__right__default{:placeholder => "例）300", value: ""}/
+                = f.text_field :content, class: 'item_price', placeholder: '例）300'
           %li.main-buy-item__container-product-condition__price__box__ul__fee
             .main-buy-item__container-product-condition__price__box__ul__fee__left
               販売手数料
@@ -215,4 +217,12 @@
     %a.bottom__logo{:href => "https://www.mercari.com/jp/"}
       %img{:alt => "mercari", :height => "65", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2927923569", :width => "80"}/
     %p.bottom__mercari © 2019 Mercari
+
+    .sell-dropbox-container.clearfix.state-image-number-10
+      .sell-upload-items-container
+        .sell-upload-items.have-item-0
+          %ul
+      .sell-upload-drop-box.have-item-0
+        %input.sell-upload-drop-file{:multiple => "multiple", :name => "image1", :style => "display: none;", :type => "file"}/
+        %pre.visible-pc
 

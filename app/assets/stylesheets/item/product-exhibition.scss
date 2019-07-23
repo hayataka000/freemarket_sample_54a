@@ -324,7 +324,7 @@
                         top:14px;
                         left:-5px;
                     }
-                    &__default{
+                    .item_price{
                         margin-left:10px;
                         padding-bottom:10px;
                         height: 48px;
@@ -407,4 +407,7 @@
     font-size: 16px;
     line-height: 1.5;
     height:150px;
+}
+.hidden{
+    // display:none;
 }
