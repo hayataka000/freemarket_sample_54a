@@ -8,11 +8,11 @@
       .sign-up-main__content__bottom
         .sign-up-main__content__bottom-inner
           .mail-btn
-            = link_to "メールアドレスで登録する", "sign_up", class: "sign-up__btn"
+            %button{class: "sign-up__btn", onclick: "location.href='sign_up'"}メールアドレスで登録する
           .facebook-btn
-            = link_to "Facebookで登録する", "sign_up", class: "sign-up__btn--facebook"
+            %button{class: "sign-up__btn--facebook", onclick: "location.href='sign_up'"}Facebookで登録する
           .google-btn
-            = link_to "Googleで登録する", "sign_up", class: "sign-up__btn--google"
+            %button{class: "sign-up__btn--google", onclick: "location.href='sign_up'"}Googleで登録する
   .sign-up-footer
     .sign-up-nav
       .sign-up-nav__clearfix
