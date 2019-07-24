@@ -18,16 +18,16 @@
         .point3 支払い方法
         .point3:before
         .point3:after
-        
+
         .point 完了
         .point:before
         .point:after
-       
 
   .new-member-main
     .new-member-main__inner
       .new-member-main__inner--top 会員情報入力
       .new-member-main__inner--form
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
         .form__inner
           .form__inner-group
             %label{for: "nickname"} ニックネーム
