@@ -59,6 +59,8 @@ set :rbenv_ruby, '2.5.1' #カリキュラム通りに進めた場合、2.5.1か2
 set :ssh_options, auth_methods: ['publickey'],
                   keys: ['~/.ssh/yoshhhhiki.pem']  
 
+set :linked_files, 'config/master.key'                  
+
 # プロセス番号を記載したファイルの場所
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
 
