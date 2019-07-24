@@ -1,8 +1,8 @@
 %header
   .top
     %h1.top__setting
-      %a{:href => "https://www.mercari.com/jp/"}
-        %img.top__image{:alt => "mercari", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?2927923569"}/
+      %a{href: "https://www.mercari.com/jp/"}
+        %img.top__image{alt: "mercari", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?2927923569"}/
 .main
   .main-buy-item
     .main-buy-item__container
@@ -15,7 +15,7 @@
             必須
           %p.main-buy-item__container__form__box__upload 最大10枚までアップロードできます
           .main-buy-item__container__form__box__drag-and-drop
-            %input#comment_image.hidden{:name => "comment[image]", :type => "file"}/
+            %input#comment_image.hidden{name: "comment[image]", type: "file"}/
             .main-buy-item__container__form__box__drag-and-drop__item
               %p.main-buy-item__container__form__box__drag-and-drop__item__font
                 ドラッグアンドドロップ
@@ -34,9 +34,9 @@
           %h3
             商品の説明
             = f.text_area :content, class: 'item_datail', placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
-          %span
-            必須
-        -# %textarea.main-buy-item__container-product-datails__textarea{:placeholder => "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", :rows => "5"}
+            %span
+              必須
+        -# %textarea.main-buy-item__container-product-datails__textarea{:placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", :rows: "5"}
     .main-buy-item__container-product-condition
       .main-buy-item__container-product-condition__state
         %h3
@@ -82,10 +82,10 @@
     .main-buy-item__container-product-condition__delivery
       %h3.main-buy-item__container-product-condition__delivery__sub
         配送について
-        %a.main-buy-item__container-product-condition__delivery__sub__question{:href => "/jp/help_center/article/68/", :target => "_blank"} ?
+        %a.main-buy-item__container-product-condition__delivery__sub__question{href: "/jp/help_center/article/68/", target: "_blank"} ?
       .main-buy-item__container-product-condition__delivery__form
         .main-buy-item__container-product-condition__delivery__form__group
-          %h3 
+          %h3
             配送料の負担
           %span.a
             必須
@@ -153,7 +153,7 @@
             %option{value: "47"} 沖縄県
             %option{value: "99"} 未定
         .main-buy-item__container-product-condition__delivery__form__group__third
-          %h3 
+          %h3
             発送までの日数
           %span.c
             必須
@@ -190,32 +190,32 @@
     .main-buy-item__container-product-condition__price__btn
       .main-buy-item__container-product-condition__price__btn__box
       %p
-        %a{:href => "/jp/help_center/getting_started/prohibited_items/", :target => "_blank"} 禁止されている出品
+        %a{href: "/jp/help_center/getting_started/prohibited_items/", target: "_blank"} 禁止されている出品
         、
-        %a{:href => "/jp/help_center/getting_started/prohibited_conduct/", :target => "_blank"} 行為
+        %a{href: "/jp/help_center/getting_started/prohibited_conduct/", target: "_blank"} 行為
         を必ずご確認ください
       %p
         またブランド品でシリアルナンバー等がある場合はご記載ください。
-        %a{:href => "/jp/help_center/getting_started/counterfeit_goods/", :target => "_blank"} 偽ブランドの販売
+        %a{href: "/jp/help_center/getting_started/counterfeit_goods/", target: "_blank"} 偽ブランドの販売
         は犯罪あり処罰される可能性があります。
       %p
         また、出品をもちまして
-        %a{:href => "/jp/seller_terms/"} 加盟店規約
+        %a{href: "/jp/seller_terms/"} 加盟店規約
         に同意したことになります。
-      %button.btn-default.btn-red{:type => "submit"}
+      %button.btn-default.btn-red{type: "submit"}
         出品する
       .btn-default.btn-gray もどる
 
   .bottom
     %ul.bottom__list
       %li.bottom__list__Exclusion
-        %a{:href => "https://www.mercari.com/jp/privacy/"} プライバシーポリシー
+        %a{href: "https://www.mercari.com/jp/privacy/"} プライバシーポリシー
       %li.bottom__list__margin
-        %a{:href => "https://www.mercari.com/jp/tos/"} メルカリ利用規約
+        %a{href: "https://www.mercari.com/jp/tos/"} メルカリ利用規約
       %li.bottom__list__margin
-        %a{:href => "https://www.mercari.com/jp/tokutei/"} 特定商取引に関する表記
-    %a.bottom__logo{:href => "https://www.mercari.com/jp/"}
-      %img{:alt => "mercari", :height => "65", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2927923569", :width => "80"}/
+        %a{href: "https://www.mercari.com/jp/tokutei/"} 特定商取引に関する表記
+    %a.bottom__logo{href: "https://www.mercari.com/jp/"}
+      %img{alt: "mercari", height: "65", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2927923569", width: "80"}/
     %p.bottom__mercari © 2019 Mercari
 
     .sell-dropbox-container.clearfix.state-image-number-10
@@ -223,6 +223,6 @@
         .sell-upload-items.have-item-0
           %ul
       .sell-upload-drop-box.have-item-0
-        %input.sell-upload-drop-file{:multiple => "multiple", :name => "image1", :style => "display: none;", :type => "file"}/
+        %input.sell-upload-drop-file{multiple: "multiple", name: "image1", style: "display: none;", type: "file"}/
         %pre.visible-pc
 
