@@ -262,13 +262,13 @@
             background-color:white;
             &__2{
                 padding:0 16px;
-                font-size:16px;
                 border: 1px solid #ccc;
                 width:400px;
                 height:48px;
                 background-color:white;
             }
             #subject{
+                font-size:16px;
                 padding:0 16p;
                 border: 1px solid #ccc;
                 width:400px;
@@ -407,7 +407,8 @@
 .hidden{
     display:none;
 }
-#select{    
+#select{   
+    font-size:16px; 
     padding:0 16p;
     border: 1px solid #ccc;
     width:400px;
@@ -417,6 +418,7 @@
     padding:0 16px;
 }
 #selecter{
+    font-size:16px;
     padding:0 16p;
     border: 1px solid #ccc;
     width:400px;
