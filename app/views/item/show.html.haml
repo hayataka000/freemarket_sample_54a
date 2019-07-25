@@ -40,16 +40,16 @@
             %th 出品者
             %td
               =link_to do
-                = @user.id
+                = @user.name
               %div
                 .item-user-ratings
                   %i.icon-good
-                    %span 821
+                    %span 0
                 .item-user-ratings
                   %i.icon-normal
-                    %span 2
+                    %span 0
                 .item-user-ratings
-                  %i.icon-bad
+                  %i.icon-bads
                     %span 0
           %tr
             %th カテゴリー
@@ -143,144 +143,24 @@
     %section.items-box-container.clearfix.related-item-column.items-in-user-profile
       %h2.items-box-head
         =link_to do
-          =@user.name + "さんのその他の出品"
+          = @user.name + "さんのその他の出品"
       .items-box-content.clearfix
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag @item.image, size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag @item.image, size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag @item.image, size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag @item.image, size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag @item.image, size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag @item.image, size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
+        = render 'items-box'
+        = render 'items-box'
+        = render 'items-box'
+        = render 'items-box'
+        = render 'items-box'
+        = render 'items-box'
     %section.items-box-container.clearfix.related-item-column.items-in-user-profile
       %h2.items-box-head
         =link_to do
           その他の出品
       .items-box-content.clearfix
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag @item.image, size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag @item.image, size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag @item.image, size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag @item.image, size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag @item.image, size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag @item.image, size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
+        = render 'items-box'
+        = render 'items-box'
+        = render 'items-box'
+        = render 'items-box'
+        = render 'items-box'
+        = render 'items-box'
   = render 'aside'
   = render "footer"
