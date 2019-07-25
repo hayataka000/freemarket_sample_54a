@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'item#index'
 
+
   get  'item/items'     =>  'item#items'
   get  'item/show'      =>  'item#show'
   resources :profile, only: [:index]
@@ -11,10 +12,14 @@ Rails.application.routes.draw do
   resources :cards, only: [:index] do
   end
   resources :mypages,only:[:index]
+  resources :exhibition,only:[:index]
   resources :confirm, only: [:index] do
   end
   resources :profile, only: [:index] do
   end
-  resources :item, only: [:new] do
+
+
+  resources :item, only: [:new,:create] do
+
   end
 end

@@ -14,7 +14,7 @@
 - has_many :items
 - has_many :comments
 - has_many :trades, through: :users_trades
-- has_many :addresses
+- has_many :addresses
 - has_many :nices
 - has_many :trades
 - has_many :evaluations
@@ -50,6 +50,8 @@
 |brand_id|integer|null: false|
 |category_id|integer|null: false|
 |nice_id|integer|null: false|
+|user_id|integer|foreign_key: true|
+|category_id|integer|foreign_key: true|
 
 ### Assosiation
 - has_many :comments
