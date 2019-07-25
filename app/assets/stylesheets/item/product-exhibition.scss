@@ -135,17 +135,15 @@
                     font-size:14px;
                     padding:2px 4px;
                 }
-                &__select{
-                    &__default{
-                        font-size:16px;
-                        width:400px;
-                        height:48px;
-                        position:absolute;
-                        left:240px;
-                        top:70px;
-                        background-color:white;
-                        border: 1px solid #ccc;
-                    }
+                #subject{
+                    font-size:16px;
+                    width:400px;
+                    height:48px;
+                    position:absolute;
+                    left:240px;
+                    top:70px;
+                    background-color:white;
+                    border: 1px solid #ccc;
                 }
             }
             &__condition{
@@ -165,18 +163,16 @@
                     padding:2px 4px;
                     margin-left:15px;
                 }
-                &__select{
-                    &__default{
+                form{
+                    #subject{
                         font-size:16px;
                         width:400px;
                         height:48px;
                         position:absolute;
-                        left:120px;
-                        top:30px;
+                        left:240px;
+                        top:70px;
                         background-color:white;
                         border: 1px solid #ccc;
-                        padding:0 16px;
-                       
                     }
                 }
             }
@@ -266,13 +262,13 @@
             background-color:white;
             &__2{
                 padding:0 16px;
-                font-size:16px;
                 border: 1px solid #ccc;
                 width:400px;
                 height:48px;
                 background-color:white;
             }
-            &__default{
+            #subject{
+                font-size:16px;
                 padding:0 16p;
                 border: 1px solid #ccc;
                 width:400px;
@@ -409,5 +405,25 @@
     height:150px;
 }
 .hidden{
-    // display:none;
+    display:none;
+}
+#select{   
+    font-size:16px; 
+    padding:0 16p;
+    border: 1px solid #ccc;
+    width:400px;
+    height:48px;
+    background-color:white;
+    border: 1px solid #ccc;
+    padding:0 16px;
+}
+#selecter{
+    font-size:16px;
+    padding:0 16p;
+    border: 1px solid #ccc;
+    width:400px;
+    height:48px;
+    background-color:white;
+    border: 1px solid #ccc;
+    padding:0 16px;
 }
