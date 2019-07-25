@@ -21,7 +21,7 @@ header{
         padding-top:40px;
     }
     &__image{
-            height:49px;             
+            height:49px;
     }
 }
 .center{
@@ -44,20 +44,20 @@ header{
             &__inner{
                 display: flex;
                 max-width:320px;
-                margin: 0 auto;    
-                flex-wrap: wrap;          
+                margin: 0 auto;
+                flex-wrap: wrap;
                 &__image{
                     height:61px;
                     &__item{
                         width:64px;
-                    }         
-                }   
+                    }
+                }
                 &__item-name{
                     font-size:16px;
                     font-weight:bold;
                     width: calc(100% - 80px);
                     margin-left:16px;
-                }       
+                }
             }
         }
     }
@@ -118,19 +118,19 @@ header{
             margin-top:8px;
         }
     }
-}    
+}
 .buy-user-info-fix{
     display: block;
     height:16px;
     text-align:center;
-    position:relative;  
+    position:relative;
     margin-top:8px;
     span{
         color:#0099e8;
-        float:right;        
-        position:absolute;    
+        float:right;
+        position:absolute;
         right:15px;
-        font-weight:normal;  
+        font-weight:normal;
     }
     }
 .PaymentMethod{
@@ -163,7 +163,7 @@ header{
         display:flex;
         a{
             color:black;
-            font-weight:normal;  
+            font-weight:normal;
             font-size:12px;
         }
         &__margin{
@@ -192,7 +192,7 @@ header{
     width:100%;
     color:white;
     margin-top:8px;
-        }    
+        }
 .angle-right{
     float:right;
     margin-left:8px;
@@ -200,5 +200,5 @@ header{
     position:absolute;
     bottom:-1px;
     right:1px;
-    font-weight:normal;  
+    font-weight:normal;
 }
