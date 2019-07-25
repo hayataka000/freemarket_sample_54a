@@ -1,6 +1,7 @@
-.container
-  = render 'item/header'
-  = render 'payment_method'
-  = render 'card_information'
-  = render 'item/aside'
-  = render 'item/footer'
+= render 'item/header'
+= render 'payment_method'
+%main.l-container.clearfix
+  .mypages-side
+    = render "mypages/mypages-side"
+= render 'item/aside'
+= render 'item/footer'
