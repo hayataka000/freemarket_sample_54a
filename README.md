@@ -1,13 +1,19 @@
 ## users
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
-|name_furigana|string|null: false|
+|first_name|string|null: false|
+|first_name_furigana|string|null: false|
+|last_name|string|null: false|
+|last_name_furigana|string|null: false|
 |password|string|null: false|
 |mail|string|null: false, unique: true|
 |nickname|string|null: false|
-|tel|string|null: false, unique: true|
-|birthday|date|null: false|
+|phone_number|string|null: false, unique: true|
+|birthday_year|integer|null: false|
+|birthday_month|integer|null: false|
+|birthday_day|integer|null: false|
+|adress_id|integer|null: false|
+
 
 
 ### Assosiation
