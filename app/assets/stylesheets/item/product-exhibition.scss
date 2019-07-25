@@ -3,7 +3,7 @@
         width:700px;
         margin:0 auto;
         &__container{
-            background-color:white;  
+            background-color:white;
             text-align:center;
             &__head{
             font-size:22px;
@@ -149,7 +149,7 @@
                     font-size:14px;
                     padding:2px 4px;
                 }
-                #subject{
+                #category{
                     font-size:16px;
                     width:400px;
                     height:48px;
@@ -178,7 +178,7 @@
                     margin-left:15px;
                 }
                 form{
-                    #subject{
+                    #condition{
                         font-size:16px;
                         width:400px;
                         height:48px;
@@ -232,11 +232,11 @@
                 margin-left:15px;
                 position:absolute;
                 top:1110px;
-                margin-left:110px;     
+                margin-left:110px;
 
             }
         }
-        &__group__second{    
+        &__group__second{
             margin-top:40px;
             h3{
                 margin-bottom:10px;
@@ -250,7 +250,7 @@
                 margin-left:15px;
                 position:absolute;
                 top:1263px;
-                margin-left:110px;     
+                margin-left:110px;
             }
         }
         &__group__third{
@@ -267,7 +267,7 @@
                 margin-left:15px;
                 position:absolute;
                 top:1377px;
-                margin-left:125px;     
+                margin-left:125px;
             }
         }
         &__select{
@@ -281,7 +281,7 @@
                 height:48px;
                 background-color:white;
             }
-            #subject{
+            #shipping_area{
                 font-size:16px;
                 padding:0 16p;
                 border: 1px solid #ccc;
@@ -421,8 +421,8 @@
 .hidden{
     display:none;
 }
-#select{   
-    font-size:16px; 
+#delivery_fee{
+    font-size:16px;
     padding:0 16p;
     border: 1px solid #ccc;
     width:400px;
@@ -431,7 +431,7 @@
     border: 1px solid #ccc;
     padding:0 16px;
 }
-#selecter{
+#delivery_date{
     font-size:16px;
     padding:0 16p;
     border: 1px solid #ccc;
