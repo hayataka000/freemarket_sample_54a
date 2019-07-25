@@ -17,7 +17,7 @@
           .main-buy-item__container__form__box__drag-and-drop
             %input#comment_image.hidden{name: "comment[image]", type: "file"}/
             .main-buy-item__container__form__box__drag-and-drop__item
-            = form_for @item,url:item_idex_path do |f| 
+            = form_with model:  @item do |f|
               %p.main-buy-item__container__form__box__drag-and-drop__item__font
                 ドラッグアンドドロップ
                 %br/
@@ -25,14 +25,14 @@
                 = f.file_field :iamge
       .main-buy-item__container-product-datails
         .main-buy-item__container-product-datails__form
-        = form_for @item,url :item_idex_path do |f|
+        = form_with model:  @item do |f|
           %h3
             商品名
             = f.text_field :name, class: 'item_name', placeholder: '商品名を入力してください(40字まで)'
           %span
             必須
         .main-buy-item__container-product-datails__description
-        = form_for @item,url :item_idex_path do |f|
+        = form_with model:  @item do |f|
           %h3
             商品の説明
             = f.text_area :content, class: 'item_datail', placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
@@ -49,7 +49,7 @@
             %span.category
               必須
             .main-buy-item__container-product-condition__state__box__category__select
-            = form_for @item,url :item_idex_path do |f|
+            = form_with model:  @item do |f|
               = f.select :category, [["---", "---"], ["レディース", "レディース"], ["メンズ", "メンズ"], ["ベビー・キッズ", "ベビー・キッズ"], ["おもちゃ・ホビー・グッズ", "おもちゃ・ホビー・グッズ"], [" 本・音楽・ゲーム", " 本・音楽・ゲーム"],["コスメ・香水・美容", "コスメ・香水・美容"],["家電・スマホ・カメラ", "家電・スマホ・カメラ"],["スポーツ・レジャー", "スポーツ・レジャー"],["ハンドメイド", "ハンドメイド"],["チケット", "チケット"],["自動車・オートバイ", "自動車・オートバイ"],["その他", "その他"]] ,class:"category-select"
           .main-buy-item__container-product-condition__state__box__condition
             %h3
@@ -57,7 +57,7 @@
             %span.condition
               必須
             .main-buy-item__container-product-condition__state__box__condition__select
-            = form_for @item,url :item_idex_path do |f|
+            = form_with model:  @item do |f|
               = f.select :condition, [["---", "---"],["新品、未使用", "新品、未使用"], ["未使用に近い", "未使用に近い"], ["目立った傷や汚れなし", "目立った傷や汚れなし"], ["やや傷や汚れあり", "やや傷や汚れあり"], ["傷や汚れあり", "傷や汚れあり"], ["全体的に状態が悪い", "全体的に状態が悪い"]] ,class:"category-select"
     .main-buy-item__container-product-condition__delivery
       %h3.main-buy-item__container-product-condition__delivery__sub
@@ -70,7 +70,7 @@
           %span.a
             必須
         .main-buy-item__container-product-condition__delivery__form__select
-        = form_for @item,url :item_idex_path do |f|
+        = form_with model:  @item do |f|
           = f.select :delivery_fee, [["---", "---"], ["送料込み(出品者負担)", "送料込み(出品者負担)"], ["着払い(購入者負担)", "着払い(購入者負担)"]] ,class:"category-selec"
         .main-buy-item__container-product-condition__delivery__form__group__second2
           %h3
@@ -78,7 +78,7 @@
           %span.b
             必須
         .main-buy-item__container-product-condition__delivery__form__select
-          = form_for @item,url :item_idex_path do |f|
+          = form_with model:  @item do |f|
             = f.select :shipping_area, [["---", "---"],["北海道", "北海道"],["青森県", "青森県"],["岩手県", "岩手県"],["宮城県", "宮城県"], ["秋田県", "秋田県"],["山形県", "山形県"],["福島県", "福島県"],["茨城県", "茨城県"],["栃木県", "栃木県"],["群馬県", "群馬県"],["埼玉県", "埼玉県"],["千葉県", " 千葉県"],["東京都", "東京都"],["神奈川県", "神奈川県"],["新潟県", "新潟県"],["富山県", "富山県"],["石川県", "石川県"],["福井県", "福井県"],["山梨県", "山梨県"],["長野県", "長野県"],["岐阜県", "岐阜県"],["静岡県", "静岡県"],["愛知県", "愛知県"],["三重県", "三重県"],["滋賀県", "滋賀県"],["京都府", "京都府"],["大阪府", "大阪府"],["兵庫県", "兵庫県"],[" 奈良県", " 奈良県"],["和歌山県", "和歌山県"],["鳥取県", "鳥取県"],["島根県", "島根県"],["岡山県", "岡山県"],["広島県", "広島県"],["山口県", "山口県"],["徳島県", "徳島県"],["香川県", "香川県"],["愛媛県", "愛媛県"],["高知県", "高知県"],["福岡県", "福岡県"],["佐賀県", "佐賀県"],["長崎県", "長崎県"],["熊本県", "熊本県"],["大分県", "大分県"],["宮崎県", "宮崎県"],["鹿児島県", "鹿児島県"],["沖縄県", "沖縄県"],[" 未定", " 未定"]] ,class:"category-select2"
         .main-buy-item__container-product-condition__delivery__form__group__third
           %h3
@@ -86,7 +86,7 @@
           %span.c
             必須
         .main-buy-item__container-product-condition__delivery__form__select
-          = form_for @item,url :item_idex_path do |f|
+          = form_with model:  @item do |f|
             = f.select :delivery_date, [["---", "---"], ["1~2日で発送", "1~2日で発送"], ["2~3日で発送", "2~3日で発送"],["4~7日で発送", "4~7日で発送"]] ,class:"category-selec"
     .main-buy-item__container-product-condition__price
       %h3.price 販売価格(300~9,999,999)
@@ -99,7 +99,7 @@
               必須
             .main-buy-item__container-product-condition__price__box__ul__price__right
               .main-buy-item__container-product-condition__price__box__ul__price__right
-              = form_for @item,url :item_idex_path do |f|
+              = form_with model:  @item do |f|
                 .main-buy-item__container-product-condition__price__box__ul__price__right__input
                   ¥
                 = f.text_field :price, class: 'item_price', placeholder: '例）300'
@@ -128,7 +128,7 @@
         %a{href: "/jp/seller_terms/"} 加盟店規約
         に同意したことになります。
       .btn-default.btn-red
-      = form_for @item,url :item_idex_path do |f|
+      = form_with model:  @item do |f|
         = f.submit "出品する"
       .btn-default.btn-gray もどる
 
