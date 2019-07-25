@@ -4,22 +4,24 @@ Rails.application.routes.draw do
 
   get  'item/items'     =>  'item#items'
   get  'item/show'      =>  'item#show'
-  resources :profile, only: [:index]
-  resources :cards, only: [:index]
 
-  get '/confirm/index'
   devise_for :users
-  resources :cards, only: [:index] do
+  resources :cards, only: [:index] do   #koyama
   end
-  resources :mypages,only:[:index]
+
+  resources :mypages,only:[:index]      #yamada
   resources :exhibition,only:[:index]
-  resources :confirm, only: [:index] do
+  resources :confirm, only: [:index] do #komatubara
+
   end
-  resources :profile, only: [:index] do
+  resources :profile, only: [:index] do #hayashida
   end
 
-
-  resources :item, only: [:new,:create] do
+  resources :item, only: [:new, :create] do      #nishimura
+  end
+  resources :purchase_confirmation, only: [:index] do  #nishimura2
+  end
+  resources :logout, only: [:index] do  #koyama2
 
   end
 end
