@@ -1,0 +1,102 @@
+.container
+  %section.item-box-container
+    %h1.item-name COACH コーチ ショルダーバッグ
+    %p.item-wording
+      『COACH コーチ ショルダーバッグ』は、821回の取引実績を持つ
+      =link_to do
+        ３児mama☆(プロフィール必読!!)
+      さんから出品されました。
+      =link_to do
+        コーチ
+      （
+      =link_to do
+        ショルダーバッグ/レディース
+      ）の商品で、岡山県から4~7日で発送されます。
+    .item-main-content.clearfix
+      .item-photo
+        .owl-carousel
+          .owl-stage-outer
+            .owl-stage
+              .owl-item
+              .owl-item.active
+                .owl-item-inner
+                  = image_tag '', size: '300×300'
+          .owl-nav.disabled
+            .owl-prev prev
+            .owl-next next
+          .owl-dots
+            .owl-dot.active
+              %span
+              .owl-dot-inner
+                = image_tag '', size: '60×60'
+            .owl-dot
+              %span
+              .owl-dot-inner
+                = image_tag '', size: '60×60'
+      .item-price-box.text-center.visible-sp
+        %span.item-price.bold ¥ 2,500
+        %span.item-tax (税込)
+        %span.item-shipping-fee 送料込み
+      %section.visible-sp
+        =link_to class: 'item-buy-btn.f18-24' do
+          購入画面に進む
+        .item-btn-float-area
+          =link_to class: 'item-btn-client' do
+            .visible 購入画面に進む
+      %table.item-detail-table
+        %tbody
+          %tr
+            %th 出品者
+            %td
+              =link_to do
+                ３児mama☆(プロフィール必読!!)
+              %div
+                .item-user-ratings
+                  %i.icon-good
+                    %span 821
+                .item-user-ratings
+                  %i.icon-normal
+                    %span 2
+                .item-user-ratings
+                  %i.icon-bad
+                    %span 0
+          %tr
+            %th カテゴリー
+            %td
+              =link_to do
+                %div レディース
+              =link_to do
+                .item-detail-table-sub-category
+                  %i.icon-arrow-right バッグ
+              =link_to do
+                .item-detail-table-sub-sub-category
+                  %i.icon-arrow-right ショルダーバッグ
+          %tr
+            %th ブランド
+            %td
+              =link_to do
+                %div コーチ
+          %tr
+            %th 商品の状態
+            %td やや傷や汚れあり
+          %tr
+            %th 配送料の負担
+            %td 送料込み(出品者負担)
+          %tr
+            %th 配送の方法
+            %td らくらくメルカリ便
+          %tr
+            %th 配送元地域
+            %td
+              =link_to do
+                岡山県
+          %tr
+            %th 発送日の目安
+            %td 4~7日で発送
+    .item-price-box.text-center
+      %span.item-price.bold ¥ 2,500
+      %span.item-tax (税込)
+      %span.item-shipping-fee 送料込み
+    .item-btn-client
+    .item-description.f14
+      %p.item-description-inner あああ
