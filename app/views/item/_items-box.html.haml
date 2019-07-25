@@ -1,0 +1,11 @@
+%section.items-box
+  =link_to do
+    %figure.items-box-photo
+      = image_tag @item.image, size: '220×220', class: 'lazyloaded'
+    .items-box-body
+      %h3.items-box-name.font-2 x-girl  ショルダーバッグ
+      .items-box-num
+        .items-box-price.font-5 ¥ 3,000
+        .font-2
+          .icon-like-border
+            %span 4
