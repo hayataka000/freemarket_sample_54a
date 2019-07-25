@@ -14,17 +14,29 @@
 - has_many :items
 - has_many :comments
 - has_many :trades, through: :users_trades
-- has_many :addresses
+- has_many :addresses
 - has_many :nices
 - has_many :trades
 - has_many :evaluations
 - has_one :credit_card
 
+## images
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false|
+|item_id|integer|null: false|
+|url|text|null: false|
+
+### Assosiation
+- belongs_to :item
+- has_one :user
+
+
 ## items
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|image|string|null: false|
+<!-- |image|string|null: false| image table作成により重複するためコメントアウト -->
 |price|integer|null: false|
 |size|string|null: false|
 |condition|string|null: false|
@@ -33,9 +45,13 @@
 |delivery_method|string|null: false|
 |shipping_area|string|null: false|
 |content|text|null: false|
+|user_id|integer|null: false|
+|image_id|integer|null: false|
+|brand_id|integer|null: false|
+|category_id|integer|null: false|
+|nice_id|integer|null: false|
 |user_id|integer|foreign_key: true|
 |category_id|integer|foreign_key: true|
-
 
 ### Assosiation
 - has_many :comments
