@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+%head
+  %link{:href => "https://use.fontawesome.com/releases/v5.0.1/css/all.css", :rel => "stylesheet"}/
 .container
   .header
     .inner
@@ -6,7 +9,7 @@
         .inner__top-form
           %input.input-default{:name => "keyword", :placeholder => "何をお探しですか？", :type => "search", :value => ""}/
           %i.icon-search
-            %i.material-icons search
+            %i.fas.fa-search
       .inner__nav__box
         .inner__nav__box-right
           .inner__nav__box-right-signup
@@ -19,10 +22,10 @@
               %li
                 %h2
                   %a.header__bottom__left__nav__icon{:href => "https://www.mercari.com/jp/category/"}
-                    %i.material-icons list
+                    %i.fas.fa-list-ul
                     %span カテゴリーから探す
               %li
                 %h2
                   %a.header__bottom__left__nav__icon2{:href => "https://www.mercari.com/jp/brand/"}
-                    %i.material-icons pageview
+                    %i.fas.fa-tags
                     %span ブランドから探す
