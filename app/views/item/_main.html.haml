@@ -3,7 +3,7 @@
     .banner
       .banner__item{style: ""}
         %a.banner__item__top.banner__item__camp{href: ""}
-          %img{alt: "", src: "//www-mercari-jp.akamaized.net/assets/img/featured/camp/index/index_keyvisual.png?2927923569", width: "680px", height: "auto"}
+          %img{alt: "", src: "//www-mercari-jp.akamaized.net/assets/img/featured/camp/index/index_keyvisual.png?2927923569", width: "680px", height: "cover"}
       .banner__stage{style: "left: -2880px; width: 8640px;"}
         .banner__item.cloned{style: "width: 1440px;"}
           %a.banner__item__top.banner__item__camp{href: ""}
@@ -92,369 +92,35 @@
     %section.main__items.clearfix
       %h3.main__text
         %a{href: ""} レディース 新着アイテム
-      .items.clearfix
-        - @items.each do |item|
-          %section.items__box
-            %a{href: ""}
-              %figure.items__box__photo
-                = image_tag item.iamge
-              .items__box__body
-                %h3.items__box-name.font-2
-                  = simple_format(item.content)
-                .items__box__num
-                  .items__box__num__price.font-5
-                    ¥
-                    = (item.price)
-                  .font-2
-                  %span
-        .view-all
-          %a{href: ""} すべての商品を見る
-      %section.main__items.clearfix
-        %h3.main__text
-          %a{href: ""} メンズ 新着アイテム
-        - @items.each do |item|
-          %section.items__box
-            %a{href: ""}
-              %figure.items__box__photo
-                = image_tag item.iamge
-              .items__box__body
-                %h3.items__box-name.font-2
-                  = simple_format(item.content)
-                .items__box__num
-                  .items__box__num__price.font-5
-                    ¥
-                    = (item.price)
-                  .font-2
-                  %span
-        .view-all
-          %a{href: ""} すべての商品を見る
+      = render 'items_box'
+    %section.main__items.clearfix
+      %h3.main__text
+        %a{href: ""} メンズ 新着アイテム
+      = render 'items_box'
+
     %section.main__items.clearfix
       %h3.main__text
         %a{href: ""} ベビー・キッズ 新着アイテム
-      .items.clearfix
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-      .view-all
-        %a{href: ""} すべての商品を見る
+      = render 'items_box'
     %section.main__items.clearfix
       %h3.main__text
         %a{href: ""} コスメ・香水・美容 新着アイテム
-      .items.clearfix
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-      .view-all
-        %a{href: ""} すべての商品を見る
+      = render 'items_box'
   %section.main__pickup
     %h2.main__pickup__head ピックアップカテゴリー
     %section.main__items.clearfix
       %h3.main__text
         %a{href: ""} シャネル 新着アイテム
-      .items.clearfix
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-
-      .view-all
-        %a{href: ""} すべての商品を見る
-
+      = render 'items_box'
     %section.main__items.clearfix
       %h3.main__text
         %a{href: ""} ルイ ヴィトン 新着アイテム
-      .items.clearfix
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-
-      .view-all
-        %a{href: ""} すべての商品を見る
-
+      = render 'items_box'
     %section.main__items.clearfix
       %h3.main__text
         %a{href: ""} シュプリーム 新着アイテム
-      .items.clearfix
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-      .view-all
-        %a{href: ""} すべての商品を見る
+      = render 'items_box'
     %section.main__items.clearfix
       %h3.main__text
         %a{href: ""} ナイキ 新着アイテム
-      .items.clearfix
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-        %section.items__box
-          %a{href: ""}
-            %figure.items__box__photo
-              %img{alt: "", "data-src": ""}/
-            .items__box__body
-              %h3.items__box-name.font-2 商品名
-              .items__box__num
-                .items__box__num__price.font-5 値段
-                .font-2
-                  %i.icon-like-border
-                  %span
-                  %i.far.fa-heart
-      .view-all
-        %a{href: ""} すべての商品を見る
+      = render 'items_box'
