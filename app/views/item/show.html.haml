@@ -1,8 +1,18 @@
 .container
   = render 'item/header'
   %section.item-box-container
-    %h1.item-name  
-      = @item.name
+    %h1.item-name COACH コーチ ショルダーバッグ
+    %p.item-wording
+      『COACH コーチ ショルダーバッグ』は、821回の取引実績を持つ
+      =link_to do
+        ３児mama☆(プロフィール必読!!)
+      さんから出品されました。
+      =link_to do
+        コーチ
+      （
+      =link_to do
+        ショルダーバッグ/レディース
+      ）の商品で、岡山県から4~7日で発送されます。
     .item-main-content.clearfix
       .item-photo
         .owl-carousel
@@ -11,7 +21,7 @@
               .owl-item
               .owl-item.active
                 .owl-item-inner
-                  = image_tag @item.image, size: '300×300'
+                  = image_tag '', size: '300×300'
           .owl-nav.disabled
             .owl-prev prev
             .owl-next next
@@ -19,11 +29,11 @@
             .owl-dot.active
               %span
               .owl-dot-inner
-                = image_tag @item.image, size: '60×60'
+                = image_tag '', size: '60×60'
             .owl-dot
               %span
               .owl-dot-inner
-                = image_tag @item.image, size: '60×60'
+                = image_tag '', size: '60×60'
       .item-price-box.text-center.visible-sp
         %span.item-price.bold ¥ 2,500
         %span.item-tax (税込)
@@ -40,23 +50,22 @@
             %th 出品者
             %td
               =link_to do
-                = @user.name
+                ３児mama☆(プロフィール必読!!)
               %div
                 .item-user-ratings
                   %i.icon-good
-                    %span 0
+                    %span 821
                 .item-user-ratings
                   %i.icon-normal
-                    %span 0
+                    %span 2
                 .item-user-ratings
-                  %i.icon-bads
+                  %i.icon-bad
                     %span 0
           %tr
             %th カテゴリー
             %td
               =link_to do
-                %div 
-                  = @item.name
+                %div レディース
               =link_to do
                 .item-detail-table-sub-category
                   %i.icon-arrow-right バッグ
@@ -67,30 +76,26 @@
             %th ブランド
             %td
               =link_to do
-                %div コーチ,
+                %div コーチ
           %tr
             %th 商品の状態
-            %td
-              = @item.condition
+            %td やや傷や汚れあり
           %tr
             %th 配送料の負担
-            %td
-              = @item.delivery_fee
+            %td 送料込み(出品者負担)
           %tr
             %th 配送の方法
-            %td  
-              = @item.delivery_method
+            %td らくらくメルカリ便
           %tr
             %th 配送元地域
             %td
-              = @item.shipping_area
+              =link_to do
+                岡山県
           %tr
             %th 発送日の目安
-            %td 
-              = @item.delivery_date
+            %td 4~7日で発送
     .item-price-box.text-center
-      %span.item-price.bold 
-        = @item.price 
+      %span.item-price.bold ¥ 2,500
       %span.item-tax (税込)
       %span.item-shipping-fee 送料込み
     .item-buy-btn.f18-24
@@ -98,8 +103,7 @@
         購入画面に進む
     .item-btn-client
     .item-description.f14
-      %p.item-description-inner 
-        = @item.content
+      %p.item-description-inner 所々に擦り傷、色剥げ、スカーフに黄ばみ、少し形崩れもあります。この状態をご理解頂いての、ご購入で宜しくお願いします。そして長財布は、入りません。縦…約12cm横…約20cmマチ…約5cm神経質な方は、ご遠慮ください。
     .item-button-container.clearfix
       .item-button-left
         =link_to do
@@ -143,24 +147,144 @@
     %section.items-box-container.clearfix.related-item-column.items-in-user-profile
       %h2.items-box-head
         =link_to do
-          = @user.name + "さんのその他の出品"
+          = "３児mama☆(プロフィール必読!!)さんのその他の出品"
       .items-box-content.clearfix
-        = render 'items-box'
-        = render 'items-box'
-        = render 'items-box'
-        = render 'items-box'
-        = render 'items-box'
-        = render 'items-box'
+        %section.items-box
+          =link_to do
+            %figure.items-box-photo
+              = image_tag '', size: '220×220', class: 'lazyloaded'
+            .items-box-body
+              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
+              .items-box-num
+                .items-box-price.font-5 ¥ 3,000
+                .font-2
+                  .icon-like-border
+                    %span 4
+        %section.items-box
+          =link_to do
+            %figure.items-box-photo
+              = image_tag '', size: '220×220', class: 'lazyloaded'
+            .items-box-body
+              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
+              .items-box-num
+                .items-box-price.font-5 ¥ 3,000
+                .font-2
+                  .icon-like-border
+                    %span 4
+        %section.items-box
+          =link_to do
+            %figure.items-box-photo
+              = image_tag '', size: '220×220', class: 'lazyloaded'
+            .items-box-body
+              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
+              .items-box-num
+                .items-box-price.font-5 ¥ 3,000
+                .font-2
+                  .icon-like-border
+                    %span 4
+        %section.items-box
+          =link_to do
+            %figure.items-box-photo
+              = image_tag '', size: '220×220', class: 'lazyloaded'
+            .items-box-body
+              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
+              .items-box-num
+                .items-box-price.font-5 ¥ 3,000
+                .font-2
+                  .icon-like-border
+                    %span 4
+        %section.items-box
+          =link_to do
+            %figure.items-box-photo
+              = image_tag '', size: '220×220', class: 'lazyloaded'
+            .items-box-body
+              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
+              .items-box-num
+                .items-box-price.font-5 ¥ 3,000
+                .font-2
+                  .icon-like-border
+                    %span 4
+        %section.items-box
+          =link_to do
+            %figure.items-box-photo
+              = image_tag '', size: '220×220', class: 'lazyloaded'
+            .items-box-body
+              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
+              .items-box-num
+                .items-box-price.font-5 ¥ 3,000
+                .font-2
+                  .icon-like-border
+                    %span 4
     %section.items-box-container.clearfix.related-item-column.items-in-user-profile
       %h2.items-box-head
         =link_to do
-          その他の出品
+          ３児mama☆(プロフィール必読!!)さんのその他の出品
       .items-box-content.clearfix
-        = render 'items-box'
-        = render 'items-box'
-        = render 'items-box'
-        = render 'items-box'
-        = render 'items-box'
-        = render 'items-box'
+        %section.items-box
+          =link_to do
+            %figure.items-box-photo
+              = image_tag '', size: '220×220', class: 'lazyloaded'
+            .items-box-body
+              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
+              .items-box-num
+                .items-box-price.font-5 ¥ 3,000
+                .font-2
+                  .icon-like-border
+                    %span 4
+        %section.items-box
+          =link_to do
+            %figure.items-box-photo
+              = image_tag '', size: '220×220', class: 'lazyloaded'
+            .items-box-body
+              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
+              .items-box-num
+                .items-box-price.font-5 ¥ 3,000
+                .font-2
+                  .icon-like-border
+                    %span 4
+        %section.items-box
+          =link_to do
+            %figure.items-box-photo
+              = image_tag '', size: '220×220', class: 'lazyloaded'
+            .items-box-body
+              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
+              .items-box-num
+                .items-box-price.font-5 ¥ 3,000
+                .font-2
+                  .icon-like-border
+                    %span 4
+        %section.items-box
+          =link_to do
+            %figure.items-box-photo
+              = image_tag '', size: '220×220', class: 'lazyloaded'
+            .items-box-body
+              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
+              .items-box-num
+                .items-box-price.font-5 ¥ 3,000
+                .font-2
+                  .icon-like-border
+                    %span 4
+        %section.items-box
+          =link_to do
+            %figure.items-box-photo
+              = image_tag '', size: '220×220', class: 'lazyloaded'
+            .items-box-body
+              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
+              .items-box-num
+                .items-box-price.font-5 ¥ 3,000
+                .font-2
+                  .icon-like-border
+                    %span 4
+        %section.items-box
+          =link_to do
+            %figure.items-box-photo
+              = image_tag '', size: '220×220', class: 'lazyloaded'
+            .items-box-body
+              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
+              .items-box-num
+                .items-box-price.font-5 ¥ 3,000
+                .font-2
+                  .icon-like-border
+                    %span 4
   = render 'aside'
   = render "footer"
