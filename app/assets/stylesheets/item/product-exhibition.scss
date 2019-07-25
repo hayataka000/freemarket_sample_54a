@@ -40,11 +40,25 @@
                         margin-top:16px;
                         background-color:#f5f5f5;
                         border: 1px dashed #ccc;
+                        margin: 16px auto 0;
+                        min-height: 162px;
                         &__item{
                             width:100%;
                             padding:40px;
+                            display: block;
+                            cursor: pointer;
+                            position: relative;
+                            &__img {
+                                display: none;
+                            }
                             &__font{
-                                font-weight:bold;
+                                position: absolute;
+                                top: 50%;
+                                left: 16px;
+                                right: 16px;
+                                text-align: center;
+                                font-size: 14px;
+                                line-height: 1.5;
                             }
                         }
                     }
