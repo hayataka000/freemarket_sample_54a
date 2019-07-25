@@ -92,11 +92,42 @@
     %section.main__items.clearfix
       %h3.main__text
         %a{href: ""} レディース 新着アイテム
-      = render 'items_box'
-    %section.main__items.clearfix
-      %h3.main__text
-        %a{href: ""} メンズ 新着アイテム
-      = render 'items_box'
+      .items.clearfix
+        - @items.each do |item|
+          %section.items__box
+            %a{:href => "./blank.html", :style => "height:200px;"}
+              %figure.items__box__photo
+                = image_tag item.iamge
+              .items__box__body
+                %h3.items__box-name.font-2
+                  = simple_format(item.content)
+                .items__box__num
+                  .items__box__num__price.font-5
+                    ¥
+                    = (item.price)
+                  .font-2
+                  %span
+        .view-all
+          %a{href: ""} すべての商品を見る
+      %section.main__items.clearfix
+        %h3.main__text
+          %a{href: ""} メンズ 新着アイテム
+        - @items.each do |item|
+          %section.items__box
+            %a{href: ""}
+              %figure.items__box__photo
+                = image_tag item.iamge
+              .items__box__body
+                %h3.items__box-name.font-2
+                  = simple_format(item.content)
+                .items__box__num
+                  .items__box__num__price.font-5
+                    ¥
+                    = (item.price)
+                  .font-2
+                  %span
+        .view-all
+          %a{href: ""} すべての商品を見る
 
     %section.main__items.clearfix
       %h3.main__text

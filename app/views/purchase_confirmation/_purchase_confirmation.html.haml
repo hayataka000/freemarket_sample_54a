@@ -1,17 +1,17 @@
 %header
   .top
     %h1.top__setting
-      %a{:href => "https://www.mercari.com/jp/"}
-        %img.top__image{:alt => "mercari", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?2927923569"}/
+      %a{href: "https://www.mercari.com/jp/"}
+        %img.top__image{alt: "mercari", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?2927923569"}/
 .center
   .center__item
     %h2.center__item__head 購入内容の確認
     .center__item__buy
       .center__item__buy__inner
         %h3.center__item__buy__inner__image
-          %img.center__item__buy__inner__image__item{:alt => "item", :src => "https://static.mercdn.net/thumb/photos/m24504139973_1.jpg?1563145720", }/
+          %img.center__item__buy__inner__image__item{alt: "item", src: "https://static.mercdn.net/thumb/photos/m24504139973_1.jpg?1563145720", }/
         %p.center__item__buy__inner__item-name 新品未使用！計40kg ダンベルセット
-        %form.buy-form{:action => "https://www.mercari.com/jp/transaction/buy/done/m24504139973/", :method => "POST", :novalidate => "novalidate"}
+        %form.buy-form{action: "https://www.mercari.com/jp/transaction/buy/done/m24504139973/", method: "POST", novalidate: "novalidate"}
           %p.buy-form__price
             ¥ 6,900
             %span.buy-form__price__cost 送料込み
@@ -21,7 +21,7 @@
             .buy-form__row__price 支払い金額
             .buy-form__row__price-2 ￥ 6,900
           .buy-form__error 配送先と支払い方法の入力を完了してください。
-          %button.btn-default{:disabled => "", :type => "submit"} 購入する
+          %button.btn-default{disabled: "", type: "submit"} 購入する
     .buy-user
       .buy-user__info
         %h3.buy-user__info__address 配送先
@@ -32,29 +32,29 @@
           000
           %br/
           メルカリ 太郎
-        %a.buy-user-info-fix{:href => "https://www.mercari.com/jp/"}
+        %a.buy-user-info-fix{href: "https://www.mercari.com/jp/"}
           %span 変更する
           = fa_icon 'angle-right', class: "angle-right"
     .PaymentMethod
       .PaymentMethod__inner
         %h3 支払い方法
-        %p.PaymentMethod__inner__text 
+        %p.PaymentMethod__inner__text
           ************1234
           %br/
           01/01
         %figure
-          %img{:alt => "visa", :height => "15", :src => "//www-mercari-jp.akamaized.net/assets/img/card/visa.svg?2927923569", :width => "49"}/
-        %a.buy-user-info-fix{:href => "https://www.mercari.com/jp/"}
+          %img{alt: "visa", height: "15", src: "//www-mercari-jp.akamaized.net/assets/img/card/visa.svg?2927923569", width: "49"}/
+        %a.buy-user-info-fix{href: "https://www.mercari.com/jp/"}
           %span 変更する
           = fa_icon 'angle-right', class: "angle-right"
   .bottom
     %ul.bottom__list
       %li.bottom__list__Exclusion
-        %a{:href => "https://www.mercari.com/jp/privacy/"} プライバシーポリシー
+        %a{href: "https://www.mercari.com/jp/privacy/"} プライバシーポリシー
       %li.bottom__list__margin
-        %a{:href => "https://www.mercari.com/jp/tos/"} メルカリ利用規約
+        %a{href: "https://www.mercari.com/jp/tos/"} メルカリ利用規約
       %li.bottom__list__margin
-        %a{:href => "https://www.mercari.com/jp/tokutei/"} 特定商取引に関する表記
-    %a.bottom__logo{:href => "https://www.mercari.com/jp/"}
-      %img{:alt => "mercari", :height => "65", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2927923569", :width => "80"}/
+        %a{href: "https://www.mercari.com/jp/tokutei/"} 特定商取引に関する表記
+    %a.bottom__logo{href: "https://www.mercari.com/jp/"}
+      %img{alt: "mercari", height: "65", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2927923569", width: "80"}/
     %p.bottom__mercari © 2019 Mercari

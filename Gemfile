@@ -80,6 +80,3 @@ gem 'carrierwave'
 gem 'fog-aws'
 gem 'devise'
 gem 'pry-rails'
-
-
-  
