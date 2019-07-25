@@ -11,11 +11,14 @@
         .main-buy-item__container__form__box
           %h3.main-buy-item__container__form__box__picture
             出品画像
-          %span
-            必須
+            %span
+              必須
           %p.main-buy-item__container__form__box__upload 最大10枚までアップロードできます
           .main-buy-item__container__form__box__drag-and-drop
-            %input#comment_image.hidden{name: "comment[image]", type: "file"}/
+          = form_with model: @item do |f|
+            = f.file_field :image, class: '',style:"display: none;"
+            -# = f.label :image, class: 'input-box__image' do
+            -# %input#comment_image{name: "comment[image]", type: "file"}/
             .main-buy-item__container__form__box__drag-and-drop__item
               %p.main-buy-item__container__form__box__drag-and-drop__item__font
                 ドラッグアンドドロップ
@@ -23,7 +26,7 @@
                 またはクリックしてファイルをアップロード
       .main-buy-item__container-product-datails
         .main-buy-item__container-product-datails__form
-        = form_with model:  @item do |f|
+        = form_with model: @item do |f|
           %h3
             商品名
             = f.text_field :content, class: 'item_name', placeholder: '商品名を入力してください(40字まで)'
@@ -36,7 +39,6 @@
             = f.text_area :content, class: 'item_datail', placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
             %span
               必須
-        -# %textarea.main-buy-item__container-product-datails__textarea{:placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", :rows: "5"}
     .main-buy-item__container-product-condition
       .main-buy-item__container-product-condition__state
         %h3
