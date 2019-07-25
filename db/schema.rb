@@ -20,11 +20,11 @@ ActiveRecord::Schema.define(version: 2019_07_18_043328) do
     t.string "last_name", null: false
     t.string "last_name_furigana", null: false
     t.string "nickname", null: false
-    t.string "phone_number", null: false
-    t.integer "birthday_year", null: false
-    t.integer "birthday_month", null: false
-    t.integer "birthday_day", null: false
-    t.integer "adress_id", null: false
+    t.string "phone_number"
+    t.integer "birthday_year"
+    t.integer "birthday_month"
+    t.integer "birthday_day"
+    t.integer "adress_id"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
