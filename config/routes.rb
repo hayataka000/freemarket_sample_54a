@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   get  'item/items'     =>  'item#items'
   get  'item/show'      =>  'item#show'
+  get '/item/show/:id', to: 'item#show'
+  get '/user/show/:id', to: 'user#show'
+  get  '/item/:id/edit' , to: 'item#edit'
   resources :profile, only: [:index]
   resources :cards, only: [:index]
 
