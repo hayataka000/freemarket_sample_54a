@@ -1,5 +1,4 @@
 class Item < ApplicationRecord
-belongs_to :user
-belongs_to :item
-belongs_to :category
+belongs_to :user, optional: true
+belongs_to :item, optional: true
 end

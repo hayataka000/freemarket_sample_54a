@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   get '/user/show/:id', to: 'user#show'
   resources :profile, only: [:index]
   resources :cards, only: [:index]
-
-
+  get '/item/new/:id', to: 'item#new'
+  get '/item/:id', to: 'item#create'
   devise_for :users
   resources :cards, only: [:index, :new] do   #koyama
   end
@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
 
 
-  resources :item, only: [:new, :create] do      #nishimura
+  resources :item, only: [:create] do      #nishimura
   end
   resources :purchase_confirmation, only: [:index] do  #nishimura2
   end

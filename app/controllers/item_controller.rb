@@ -9,12 +9,16 @@ class ItemController < ApplicationController
 
 
   def create
-     Item.create(item_params)
+     @item = Item.new(item_params)
+     @item.save
+     binding.pry
   end
+
+  
 
   private
   def item_params
-    params.permit(:name, :iamge, :price, :size, :condition, :delivery_fee, :delivery_date, :delivery_method, :shipping_area, :content,:category_id,:user_id)
+    params.require(:item).permit(:name, :iamge, :price, :size, :condition, :delivery_fee, :delivery_date, :delivery_method, :shipping_area, :content, :category)
   end
   
   def show
