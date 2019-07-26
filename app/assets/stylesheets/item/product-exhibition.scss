@@ -40,11 +40,25 @@
                         margin-top:16px;
                         background-color:#f5f5f5;
                         border: 1px dashed #ccc;
+                        margin: 16px auto 0;
+                        min-height: 162px;
                         &__item{
                             width:100%;
                             padding:40px;
+                            display: block;
+                            cursor: pointer;
+                            position: relative;
+                            &__img {
+                                display: none;
+                            }
                             &__font{
-                                font-weight:bold;
+                                position: absolute;
+                                top: 50%;
+                                left: 16px;
+                                right: 16px;
+                                text-align: center;
+                                font-size: 14px;
+                                line-height: 1.5;
                             }
                         }
                     }
@@ -68,7 +82,7 @@
                         padding:2px 4px;
                     }
                 }
-                &__input{
+                .item_name{
                     width: 100%;
                     margin: 8px 0 0;
                     height:48px;
@@ -135,17 +149,15 @@
                     font-size:14px;
                     padding:2px 4px;
                 }
-                &__select{
-                    &__default{
-                        font-size:16px;
-                        width:400px;
-                        height:48px;
-                        position:absolute;
-                        left:240px;
-                        top:70px;
-                        background-color:white;
-                        border: 1px solid #ccc;
-                    }
+                #subject{
+                    font-size:16px;
+                    width:400px;
+                    height:48px;
+                    position:absolute;
+                    left:240px;
+                    top:70px;
+                    background-color:white;
+                    border: 1px solid #ccc;
                 }
             }
             &__condition{
@@ -165,18 +177,16 @@
                     padding:2px 4px;
                     margin-left:15px;
                 }
-                &__select{
-                    &__default{
+                form{
+                    #subject{
                         font-size:16px;
                         width:400px;
                         height:48px;
                         position:absolute;
-                        left:120px;
-                        top:30px;
+                        left:240px;
+                        top:70px;
                         background-color:white;
                         border: 1px solid #ccc;
-                        padding:0 16px;
-                       
                     }
                 }
             }
@@ -266,13 +276,13 @@
             background-color:white;
             &__2{
                 padding:0 16px;
-                font-size:16px;
                 border: 1px solid #ccc;
                 width:400px;
                 height:48px;
                 background-color:white;
             }
-            &__default{
+            #subject{
+                font-size:16px;
                 padding:0 16p;
                 border: 1px solid #ccc;
                 width:400px;
@@ -324,7 +334,7 @@
                         top:14px;
                         left:-5px;
                     }
-                    &__default{
+                    .item_price{
                         margin-left:10px;
                         padding-bottom:10px;
                         height: 48px;
@@ -397,4 +407,37 @@
     color:white;
     line-height:48px;
     font-weight:bold;
+}
+.item_datail{
+    margin-top: 8px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+    height:150px;
+}
+.hidden{
+    display:none;
+}
+#select{   
+    font-size:16px; 
+    padding:0 16p;
+    border: 1px solid #ccc;
+    width:400px;
+    height:48px;
+    background-color:white;
+    border: 1px solid #ccc;
+    padding:0 16px;
+}
+#selecter{
+    font-size:16px;
+    padding:0 16p;
+    border: 1px solid #ccc;
+    width:400px;
+    height:48px;
+    background-color:white;
+    border: 1px solid #ccc;
+    padding:0 16px;
 }

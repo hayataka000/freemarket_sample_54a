@@ -159,6 +159,9 @@ main {
 .main__pickup .main__items .items__box {
   margin: 0 0 0 20px;
   width: 213px;
+    img{
+      width:100%;
+    }
 }
 
 .items {
@@ -211,6 +214,7 @@ main {
   left: 0;
   z-index: 1;
   width: 100%;
+  height: auto;
 }
 
 .items__box__body {
