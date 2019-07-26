@@ -95,7 +95,7 @@
       .items.clearfix
         - @items.each do |item|
           %section.items__box
-            %a{:href => "./blank.html", :style => "height:200px;"}
+            %a{:href => "/item/show/1", :style => "height:200px;"}
               %figure.items__box__photo
                 = image_tag item.image
               .items__box__body
@@ -114,7 +114,7 @@
           %a{href: ""} メンズ 新着アイテム
         - @items.each do |item|
           %section.items__box
-            %a{href: ""}
+            %a{href: "/item/show/1"}
               %figure.items__box__photo
                 = image_tag item.image
               .items__box__body
