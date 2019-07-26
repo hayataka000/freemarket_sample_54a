@@ -10,8 +10,26 @@ Rails.application.routes.draw do
   resources :profile, only: [:index]
   resources :cards, only: [:index]
 
+  # resources :sign_up do
+  #   collection do
+  #     get 'index'
+  #   end
+  # end
+
   get '/confirm/index'
-  devise_for :users
+  get '/registrations/new' => 'registrations#new'
+  devise_for :users, :controllers => {
+    :registrations => 'users/registrations',
+    :sessions => 'users/sessions',
+    :omniauth_callbacks => 'users/omniauth_callbacks'
+  }
+
+  devise_scope :user do
+    get 'sign_up', to: 'users/registrations#new'
+    get 'sign_in', to: 'users/sessions#new'
+    get 'sign_out', to: 'devise/sessions#destroy'
+  end
+
   resources :cards, only: [:index] do
   end
   resources :mypages,only:[:index]
