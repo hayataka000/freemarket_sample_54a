@@ -1,0 +1,26 @@
+.sign-up-container
+  .sign-up-header
+    .sign-up-header__main
+      %img{alt: "mercari", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?2927923569"}/
+  .sign-up-main
+    .sign-up-main__content
+      .sign-up-main__content__head 新規会員登録
+      .sign-up-main__content__bottom
+        .sign-up-main__content__bottom-inner
+          .mail-btn
+            %button{class: "sign-up__btn", onclick: "location.href='sign_up'"}メールアドレスで登録する
+          .facebook-btn
+            %button{class: "sign-up__btn--facebook", onclick: "location.href='sign_up'"}Facebookで登録する
+          .google-btn
+            %button{class: "sign-up__btn--google", onclick: "location.href='sign_up'"}Googleで登録する
+          = render "devise/shared/links"
+  .sign-up-footer
+    .sign-up-nav
+      .sign-up-nav__clearfix
+        .sign-up-nav__clearfix__left プライバシーポリシー
+        .sign-up-nav__clearfix__middle メルカリ利用規約
+        .sign-up-nav__clearfix__right 特定商取引に関する表記
+    .footer-logo
+      = image_tag "logo-gray.svg", size: "80x65"
+    %p
+      %small © 2019 Mercari
