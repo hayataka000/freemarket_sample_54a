@@ -38,11 +38,11 @@ ActiveRecord::Schema.define(version: 2019_07_25_091517) do
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.string "first_name", null: false
-    t.string "first_name_furigana", null: false
-    t.string "last_name", null: false
-    t.string "last_name_furigana", null: false
-    t.string "nickname", null: false
+    t.string "first_name"
+    t.string "first_name_furigana"
+    t.string "last_name"
+    t.string "last_name_furigana"
+    t.string "nickname"
     t.string "phone_number"
     t.integer "birthday_year"
     t.integer "birthday_month"
