@@ -1,16 +1,21 @@
-.profile
-  .profile__head
-    プロフィール
+= render 'item/header'
+.container
+  .profile
+    .profile__head
+      プロフィール
 
-  .profile__info
-    .profile__info--box
-      .user-icon
-      .user-name
-        %input{name: "user-name", type: "text", id: "profile-name"}
+    .profile__info
+      .profile__info--box
+        .user-icon
+        .user-name
+          %input{name: "user-name", type: "text", id: "profile-name"}
 
-  .profile__content
-    .profile__content--box
-      .textbox
-        %textarea{name: "introduction", placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。", cols: "105", rows: "18", id: "profile-introduction"}
-      .save-btn
-        %button{id: "profile-edit-btn"} 変更する
+    .profile__content
+      .profile__content--box
+        .textbox
+          %textarea{name: "introduction", placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。", cols: "105", rows: "18", id: "profile-introduction"}
+        .save-btn
+          %button{id: "profile-edit-btn"} 変更する
+%main.l-container.clearfix
+  .mypages-side
+    = render 'mypages/mypages-side' 

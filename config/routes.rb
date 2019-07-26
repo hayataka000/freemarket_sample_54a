@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get  'item/items'     =>  'item#items'
   get  'item/show'      =>  'item#show'
   resources :profile, only: [:index]
-  resources :cards, only: [:index]
+  resources :cards, only: [:index, :new]
 
   # resources :sign_up do
   #   collection do
