@@ -26,10 +26,10 @@ margin: 0 40px 0 0;
     background: #fff;
     font-size: 14px;
     color: #333;
-    &.active {
-      background: #eee;
-      font-weight: 600;
-    }
+    // &.active {
+    //   background: #eee;
+    //   font-weight: 600;    ここのコメントアウトを外すとマイページのところだけ色が変わります。
+    // }
   }
 }
 
@@ -424,7 +424,7 @@ body {
 }
 .mypages__user img{
   overflow: hidden;
-   width: 60px;
+  width: 60px;
   height: 60px;
   margin: 0 auto;
   border-radius: 50%;
