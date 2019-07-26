@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get  'item/items'     =>  'item#items'
   get  'item/show'      =>  'item#show'
   resources :profile, only: [:index]
-  resources :cards, only: [:index]
+  resources :cards, only: [:index, :new]
 
   get '/confirm/index'
   devise_for :users
