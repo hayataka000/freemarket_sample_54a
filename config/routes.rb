@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/user/show/:id', to: 'user#show'
   get  '/item/:id/edit' , to: 'item#edit'
   resources :profile, only: [:index]
-  resources :cards, only: [:index]
+  resources :cards, only: [:index, :new]
 
   # resources :sign_up do
   #   collection do
@@ -28,6 +28,12 @@ Rails.application.routes.draw do
     get 'sign_up', to: 'users/registrations#new'
     get 'sign_in', to: 'users/sessions#new'
     get 'sign_out', to: 'devise/sessions#destroy'
+  resources :cards, only: [:index]
+  get '/item/new/:id', to: 'item#new'
+  get '/item/:id', to: 'item#create'
+  devise_for :users
+  resources :cards, only: [:index, :new] do   #koyama
+
   end
 
   resources :cards, only: [:index] do
@@ -40,7 +46,14 @@ Rails.application.routes.draw do
   end
 
 
-  resources :item, only: [:new,:create] do
+
+  resources :item, only: [:new] do
+
+
+
+  resources :purchase_confirmation, only: [:index] do  #nishimura2
+  end
+  resources :logout, only: [:index] do  #koyama2
 
   end
 end
