@@ -1,0 +1,69 @@
+.sign-up-main-box {
+  display: block;
+  text-align: center;
+  &__content {
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    .no-account{
+      button.sign-up__new-user {
+        margin: 16px 0 0;
+        background: #0099e8;
+        color: #fff;
+        display: block;
+        width: 100%;
+        line-height: 48px;
+        font-size: 14px;
+        border: 1px solid transparent;
+        -webkit-transition: all ease-out .3s;
+        transition: all ease-out .3s;
+        cursor: pointer;
+        text-align: center;
+        border-radius: 5px;
+      }
+    }
+
+    .auth-sns{
+      button.sign-up__btn--facebook {
+        margin: 16px 0 0;
+        background: #385185;
+        color: #fff;
+        display: block;
+        width: 100%;
+        line-height: 48px;
+        font-size: 14px;
+        border: 1px solid transparent;
+        -webkit-transition: all ease-out .3s;
+        transition: all ease-out .3s;
+        cursor: pointer;
+        text-align: center;
+        border-radius: 5px;
+      }
+
+      button.sign-up__btn--google {
+        margin: 16px 0 0;
+        background: #fff no-repeat 3px top;
+        border: #979797 solid 1px;
+        color: #333;
+        position: relative;
+        display: block;
+        width: 100%;
+        line-height: 48px;
+        font-size: 14px;
+        border-top-color: rgb(151, 151, 151);
+        border-top-style: solid;
+        border-top-width: 1px;
+        transition: all ease-out .3s;
+        cursor: pointer;
+        text-align: center;
+        border-radius: 5px;
+      }
+    }
+
+    .login-form{
+
+    }
+  }
+}
