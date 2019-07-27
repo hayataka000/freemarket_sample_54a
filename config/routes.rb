@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get  'item/items'     =>  'item#items'
   get  'item/show'      =>  'item#show'
+  get  'item/:id/edit'   =>'item#edit'
   resources :profile, only: [:index]
   resources :cards, only: [:index, :new]
 
