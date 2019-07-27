@@ -14,9 +14,12 @@
     .profile__content
       .profile__content--box
         .textbox
-          %textarea{name: "introduction", placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。", cols: "105", rows: "18", id: "profile-introduction"}
+        = form_with model: @users do |f|
+          = f.text_area :content, class: 'item_datail', placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。"
         .save-btn
+        = form_with model: @users do |f|
           %button{id: "profile-edit-btn"} 変更する
+          = f.submit "変更する"
 %main.l-container.clearfix
   .mypages-side
     = render 'mypages/mypages-side'
