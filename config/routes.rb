@@ -4,8 +4,6 @@ Rails.application.routes.draw do
   get  'item/show'      =>  'item#show'
   resources :profile, only: [:index]
   resources :cards, only: [:index, :new]
-  # resources :cards, only: [:index, :new] do   #koyama
-  # end
   get '/item/new/:id', to: 'item#new'
   get '/item/:id', to: 'item#create'
   get '/confirm/index'
