@@ -1,17 +1,9 @@
 Rails.application.routes.draw do
   root 'item#index'
-
-
   get  'item/items'     =>  'item#items'
   get  'item/show'      =>  'item#show'
   resources :profile, only: [:index]
   resources :cards, only: [:index]
-
-  # resources :sign_up do
-  #   collection do
-  #     get 'index'
-  #   end
-  # end
 
   get '/confirm/index'
   get '/registrations/new' => 'registrations#new'
