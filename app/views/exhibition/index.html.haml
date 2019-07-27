@@ -9,8 +9,8 @@
         %p.text-center or
         %button.btn-default.btn-gray 出品を一旦停止する
         %button.btn-default.btn-gray この商品を削除する
-        = form_with
-        = button_tag "この商品を削除する", class: "btn-default.btn-gray", date: "deta-item"
+        = form_with model: @users do |f|
+          = button_tag "この商品を削除する", class: "btn-default.btn-gray", date: "deta-item"
       .comment-container
         %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
         .text-form
