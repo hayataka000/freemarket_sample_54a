@@ -9,6 +9,7 @@
         .user-icon
         .user-name
         = form_with model: @users do |f|
+          = f.text_field :name, id: "profile-name", placeholder: '名前'
           %input{name: "user-name", type: "text", id: "profile-name"}
 
     .profile__content
