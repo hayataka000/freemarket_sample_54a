@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get  'item/items'     =>  'item#items'
   get  'item/show'      =>  'item#show'
+  delete  'item/:id'    =>  'item#destroy'
   resources :profile, only: [:index]
   resources :cards, only: [:index, :new]
 
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
   #     get 'index'
   #   end
   # end
-  
+
   get '/confirm/index'
   get '/registrations/new' => 'registrations#new'
   devise_for :users, :controllers => {
@@ -29,7 +30,7 @@ Rails.application.routes.draw do
 
   resources :cards, only: [:index] do
   end
-  resources :mypages,only:[:index] 
+  resources :mypages,only:[:index]
   resources :exhibition,only:[:index]
   resources :confirm, only: [:index] do
   end
