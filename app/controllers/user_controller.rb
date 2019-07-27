@@ -5,10 +5,9 @@ class UserController < ApplicationController
     end
     def new
       @user = User.find(params[:id])
+    end   
 
-    
     def set_user
         @user = User.find(params[:id])
-        binding.pry
       end
 end
