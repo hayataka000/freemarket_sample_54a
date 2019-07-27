@@ -7,8 +7,8 @@ class ItemController < ApplicationController
     @item = Item.new
   end
   def create
-     if
      @item = Item.new(item_params)
+     if
      @item.save
     else
       render :index
