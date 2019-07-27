@@ -6,11 +6,13 @@
   padding-top: 10px;
   display: block;
   z-index: 999;
+  border-top: 1px solid #eee;
 
   a {
     font-size: 14px;
     color: black;
     display: flexbox;
     z-index: 999;
+    font-weight: 600; 
   }
 }
