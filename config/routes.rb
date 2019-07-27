@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   #     get 'index'
   #   end
   # end
-
+  
   get '/confirm/index'
   get '/registrations/new' => 'registrations#new'
   devise_for :users, :controllers => {
@@ -52,12 +52,11 @@ Rails.application.routes.draw do
     get 'sign_in', to: 'users/sessions#new'
     get 'sign_out', to: 'devise/sessions#destroy'
 
-
   end
 
   resources :cards, only: [:index] do
   end
-  resources :mypages,only:[:index]
+  resources :mypages,only:[:index] 
   resources :exhibition,only:[:index]
   resources :confirm, only: [:index] do
   end
@@ -78,6 +77,7 @@ Rails.application.routes.draw do
   resources :purchase_confirmation, only: [:index] do  #nishimura2
   end
   resources :logout, only: [:index] do  #koyama2
+
 
 
 
