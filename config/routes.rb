@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   #     get 'index'
   #   end
   # end
-
+  
   get '/confirm/index'
   get '/registrations/new' => 'registrations#new'
   devise_for :users, :controllers => {
