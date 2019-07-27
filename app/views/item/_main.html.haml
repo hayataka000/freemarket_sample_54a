@@ -95,7 +95,7 @@
       .items.clearfix
         - @items.each do |item|
           %section.items__box
-            %a{:href => "./blank.html", :style => "height:200px;"}
+            =link_to "./blank.html", class: "items__box__btn" do
               %figure.items__box__photo
                 = image_tag item.image
               .items__box__body
