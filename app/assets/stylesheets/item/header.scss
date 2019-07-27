@@ -23,6 +23,10 @@
   background: #fff;
 }
 
+i.fa-tags {
+  color:red;
+}
+
 
 
   .inner {
@@ -158,7 +162,8 @@
         &__nav{
             display:flex;
             &__icon{    
-
+              size: 2px;
+              color:red;
 
             }
 
