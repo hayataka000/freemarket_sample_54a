@@ -35,7 +35,8 @@ parent_child_array.each do |parent_child|
   else
     # 親カテゴリの名前でなかった場合子カテゴリであるので
     # child_arrayにparent_idと共に格納していく。
-    child_array << [parent_child,parent_id_cnt ]
+    # child_array << [parent_child,parent_id_cnt ]
+    Category.create(name:parent_child,parent_id: parent_id_cnt)
   end
 end
 # 最後にターミナルに完成した配列を出力。
