@@ -8,6 +8,7 @@
       .profile__info--box
         .user-icon
         .user-name
+        = form_with model: @users do |f|
           %input{name: "user-name", type: "text", id: "profile-name"}
 
     .profile__content
