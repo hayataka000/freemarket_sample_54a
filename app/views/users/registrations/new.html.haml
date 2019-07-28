@@ -27,7 +27,7 @@
     .new-member-main__inner
       .new-member-main__inner--top 会員情報入力
       .new-member-main__inner--form
-      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = form_with model: User, url: user_registration_path, method: :post, local: true do |f|
         .form__inner
           .form__inner-group
             = f.label :nickname, "ニックネーム"
@@ -55,8 +55,6 @@
               %label お名前(全角)
               %span.form-require 必須
           .group2-input-box
-            -# %input.input-default.half{name: "family_name_kanji", placeholder: "例) 山田", type: "text", value: ""}/
-            -# %input.input-default.half{name: "first_name_kanji", placeholder: "例) 彩", type: "text", value: ""}/
             = f.text_field :last_name, class: "input-default-half", placeholder: "例) 山田", type: "text"
             = f.text_field :first_name, class: "input-default-half", placeholder: "例) 彩", type: "text"
           .form__inner-group2
@@ -64,8 +62,6 @@
               = f.label "お名前カナ(全角)", id: "last_name"
               %span.form-require 必須
           .group2-input-box
-            -# %input.input-default.half{name: "family_name_kana", placeholder: "例) ヤマダ", type: "text", value: ""}/
-            -# %input.input-default.half{name: "first_name_kana", placeholder: "例) アヤ", type: "text", value: ""}/
             = f.text_field :last_name_furigana, class: "input-default-half", placeholder: "例) ヤマダ", type: "text"
             = f.text_field :first_name_furigana, class: "input-default-half", placeholder: "例) アヤ", type: "text"
 
@@ -74,8 +70,6 @@
             %span.form-require 必須
             .birthday-select-wrap
               .select-wrap
-                -# ここにアイコン入れたいよー
-                  下記コードはダサすぎる seedで初期値設定したい
                 .select-default
                   %select.select-default{name: "birthday_year"}
                     %option{value: ""} --
@@ -111,7 +105,6 @@
                     %option{value: "2019"} 2019
               .birth-day 年
               .select-wrap
-                -# ここにアイコン入れたいよー
                 .select-default
                   %select.select-default{name: "birthday_month"}
                     %option{value: ""} --
@@ -130,7 +123,6 @@
 
               .birth-day 月
               .select-wrap
-                -# ここにアイコン入れたいよー
                 .select-default
                   %select.select-default{name: "birthday_day"}
                     %option{value: ""} --
