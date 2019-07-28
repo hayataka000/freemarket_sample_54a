@@ -1,4 +1,7 @@
 class Item < ApplicationRecord
-belongs_to :user, optional: true
-belongs_to :item, optional: true
+  extend ActiveHash::Associations::ActiveRecordExtensions
+belongs_to :user,optional:true
+belongs_to :item,optional:true
+belongs_to_active_hash :prefecture,optional:true
+belongs_to_active_hash :delivery_fee,optional:true
 end

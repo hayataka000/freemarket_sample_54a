@@ -1,5 +1,5 @@
 class UserController < ApplicationController
-  before_action :set_user
+
     def index
        
     end
@@ -8,5 +8,8 @@ class UserController < ApplicationController
     end   
     def set_user
         @user = User.find(params[:id])
-      end
+        @users = User.all
+    end
+
+
 end

@@ -2,7 +2,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
   def change
     create_table :items do |t|
     t.string :name,null: false
-    t.string :iamge,null: false
+    t.string :image,null: false
     t.integer :price,null: false
     t.string :size,null: false
     t.string :condition,null: false
