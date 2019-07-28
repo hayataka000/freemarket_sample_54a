@@ -35,9 +35,9 @@ Rails.application.routes.draw do
     member do
       post 'pay', to: 'item#pay'
     end
+  end
   resources :purchase_confirmation, only: [:index] do  #nishimura2
   end
   resources :logout, only: [:index] do  #koyama2
   end
-end
 end
