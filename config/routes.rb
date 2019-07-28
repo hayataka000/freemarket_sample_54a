@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get  'item/items'     =>  'item#items'
   get  'item/show'      =>  'item#show'
   get  'item/:id/edit'   =>'item#edit'
+  patch '/item/:id/edit'  => 'item#update'
+  patch '/item'  =>  'item#update'
   resources :profile, only: [:index]
   resources :cards, only: [:index, :new]
 
@@ -27,7 +29,7 @@ Rails.application.routes.draw do
     get 'sign_in', to: 'users/sessions#new'
     get 'sign_out', to: 'devise/sessions#destroy'
   end
-
+  resources :edit,only: [:update,:index]
   resources :cards, only: [:index] do
   end
   resources :mypages,only:[:index] 
@@ -38,7 +40,7 @@ Rails.application.routes.draw do
   end
 
 
-  resources :item, only: [:new,:create] do
+  resources :item, only: [:new,:create,:update] do
 
   end
 end
