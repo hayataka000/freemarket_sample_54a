@@ -1,6 +1,6 @@
 -# 商品編集ページのフォーム
 
-= form_with @item do |f|
+=form_with model: @item, url: item_index_path do |f|
   .main-buy-item
     .main-buy-item__container
   
@@ -28,7 +28,7 @@
           %span
             必須
         .main-buy-item__container-product-datails__description
-        
+
           %h3
             商品の説明
             = f.text_area :content, class: 'item_datail', placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
@@ -125,4 +125,4 @@
       .btn-default.btn-red
       
         = f.submit "編集する"
-      .btn-default.btn-gray もどる
+      .btn-default.btn-gray 

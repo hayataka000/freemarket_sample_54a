@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2019_07_25_091517) do
     t.integer "birthday_month"
     t.integer "birthday_day"
     t.integer "adress_id"
+    t.string "introduction"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
