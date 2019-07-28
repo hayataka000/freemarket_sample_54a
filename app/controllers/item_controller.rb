@@ -10,7 +10,6 @@ class ItemController < ApplicationController
      @item = Item.new(item_params)
      if @item.save
       redirect_to root_path
-      binding.pry
     else
       render :new
   end
