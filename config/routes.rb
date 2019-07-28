@@ -4,10 +4,11 @@ Rails.application.routes.draw do
   get  'item/show'      =>  'item#show'
   resources :profile, only: [:index]
   resources :cards, only: [:index, :new]
+
   get '/item/new/:id', to: 'item#new'
-  get '/item/:id', to: 'item#create'
   get '/confirm/index'
   get '/registrations/new' => 'registrations#new'
+
 
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
@@ -28,9 +29,9 @@ Rails.application.routes.draw do
   end
   resources :profile, only: [:index] do
   end
-  resources :item, only: [:create] do      #nishimura
-  end
-  resources :item, only: [:new] do
+  
+
+  resources :item, only: [:create] do
   resources :purchase_confirmation, only: [:index] do  #nishimura2
   end
   resources :logout, only: [:index] do  #koyama2
