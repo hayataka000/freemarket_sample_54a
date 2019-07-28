@@ -6,11 +6,11 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       ## Database authenticatable
       t.string :email,                       null: false, unique:true, default: ""
       t.string :encrypted_password,          null: false, default: ""
-      t.string :first_name,                  null: false
-      t.string :first_name_furigana,         null: false
-      t.string :last_name,                   null: false
-      t.string :last_name_furigana,          null: false
-      t.string :nickname,                    null: false
+      t.string :first_name,                  null: true
+      t.string :first_name_furigana,         null: true
+      t.string :last_name,                   null: true
+      t.string :last_name_furigana,          null: true
+      t.string :nickname,                    null: true
       t.string :phone_number,                null: true, unique: true
       t.integer :birthday_year,              null: true
       t.integer :birthday_month,             null: true

@@ -1,5 +1,12 @@
 .container
   = render 'item/header'
+  .breadcrumbs
+    = link_to 'メルカリ', root_path, class: "a"
+    >
+    = link_to 'マイページ', mypages_path, class: "a"
+    >
+    = link_to '支払い方法', '', class: "a"
+    
   = render 'payment_method'
   %main.l-container.clearfix
     .mypages-side

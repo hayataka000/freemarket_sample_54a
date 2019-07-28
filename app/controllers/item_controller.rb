@@ -7,25 +7,25 @@ class ItemController < ApplicationController
     @item = Item.new
   end
   def create
-    Item.create(item_params)
+     @item = Item.new(item_params)
+     if @item.save
+      binding.pry
+      redirect_to root_path
+    else
+      render :new
   end
+end
+
   private 
-  def item_params
-      params.permit(:name, :image,:price,:size,:condition,:delivery_fee,:delivery_date,:delivery_method,:shipping_area,:content,:category)
-  end
-
-
   
-
-  private
-  def item_params
-    params.require(:item).permit(:name, :iamge, :price, :size, :condition, :delivery_fee, :delivery_date, :delivery_method, :shipping_area, :content, :category).merge(user_id: current_user.id)
-  end
   
   def show
     @item = Item.find(params[:id])
     @user = @item.user
   end
   
+  def item_params
+    params.require(:item).permit(:image,:prefecture_id,:delivery_fee_id,:name,  :price, :size, :condition, :delivery_fee_id, :delivery_date, :delivery_method, :content, :category).merge(user_id: current_user.id)
+  end
 end
 

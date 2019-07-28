@@ -1,0 +1,15 @@
+.breadcrumbs {
+  width: 100%;
+  height:40px;
+  padding-left: 190px;
+  padding-top: 10px;
+  display: block;
+
+  a {
+    font-size: 14px;
+    color: black;
+    display: flexbox;
+    z-index: 999;
+    font-weight: 600; 
+  }
+}
