@@ -8,13 +8,24 @@
           %i.icon-search
             %i.fas.fa-search
       .inner__nav__box
-        .inner__nav__box-right
-          .inner__nav__box-right-signup
-            .signup__btn-red
-              = link_to '新規会員登録', new_user_session_path
-
-            .login__btn-blue
-              = link_to 'ログイン', new_user_session_path
+        - if user_signed_in?
+          .inner__nav__box-right
+            .inner__nav__box-right-afterlogin
+              .good-mark
+                = link_to 'いいね!一覧'
+              .inform
+                = link_to 'お知らせ'
+              .must-list
+                = link_to 'やることリスト'
+              .mypage
+                = link_to 'マイページ', '/mypages'
+        - else
+          .inner__nav__box-right
+            .inner__nav__box-right-signup
+              .signup__btn-red
+                = link_to '新規会員登録', new_user_session_path
+              .login__btn-blue
+                = link_to 'ログイン', new_user_session_path
 
         .header__bottom
           .header__bottom__left

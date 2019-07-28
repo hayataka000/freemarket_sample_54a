@@ -132,7 +132,7 @@ i.fa-tags {
   .signup__btn-red {
     background: #ea352d;
     border: 1px solid #ea352d;
-    color:;
+    color:red;
     padding: 0 10px;
     line-height: 30px;
     display: list-item;
@@ -141,6 +141,7 @@ i.fa-tags {
     height: 32px;
     border-radius: 5px 5px 5px 5px;
     z-index: 20;
+    list-style: none;
   }
 
   .login__btn-blue {
@@ -193,4 +194,26 @@ span{
     vertical-align: 7px;
     color:black;
     font-weight:bold;
+}
+
+.inner__nav__box-right-afterlogin {
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 100;
+  .good-mark {
+    margin: 0 10px 0 0;
+  }
+
+  .inform {
+    margin: 0 10px 0 0;
+  }
+
+  .must-list {
+    margin: 0 10px 0 0;
+  }
+
+  .mypage {
+    margin: 0 10px 0 0;
+  }
 }

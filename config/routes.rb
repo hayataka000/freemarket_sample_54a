@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   devise_scope :user do
     get 'sign_up', to: 'users/registrations#new'
     get 'sign_in', to: 'users/sessions#new'
-    get 'sign_out', to: 'devise/sessions#destroy'
+    delete 'sign_out', to: 'devise/sessions#destroy'
   end
 
   resources :cards, only: [:index] do
@@ -38,6 +38,8 @@ Rails.application.routes.draw do
 
 
   resources :item, only: [:new,:create] do
-
   end
+  resources :logout, only: [:index] do
+  end
+
 end
