@@ -12,9 +12,12 @@ class ItemController < ApplicationController
   end
   private
   def item_params
-      params.permit(:name, :image,:price,:size,:condition,:delivery_fee,:delivery_date,:delivery_method,:shipping_area,:content,:category)
+    params.permit(:name, :image,:price,:size,:condition,:delivery_fee,:delivery_date,:delivery_method,:shipping_area,:content,:category)
   end
 
+  def destroy
+    item = Item.find(params[:id])
+  end
 
 
   private
