@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   #     get 'index'
   #   end
   # end
+  get '/done'=> "item#_done"
   get '/product_purchase_confirmation'=> "item#_product_purchase_confirmation"
   get '/confirm/index'
   get '/registrations/new' => 'registrations#new'
@@ -39,7 +40,7 @@ Rails.application.routes.draw do
 
   resources :item, only: [:new,:create] do
     member do
-      post 'pay'
+      post 'pay', to: 'item#pay'
     end
   end
 end

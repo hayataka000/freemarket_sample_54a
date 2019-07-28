@@ -11,7 +11,7 @@
         %h3.center__item__buy__inner__image
           %img.center__item__buy__inner__image__item{alt: "item", src: "https://static.mercdn.net/thumb/photos/m24504139973_1.jpg?1563145720", }/
         %p.center__item__buy__inner__item-name 新品未使用！計40kg ダンベルセット
-        %form.buy-form{action: "", method: "POST", novalidate: "novalidate"}
+        %form.buy-form{action: done_path, method: "POST", novalidate: "novalidate"}
           %p.buy-form__price
             ¥ 6,900
             %span.buy-form__price__cost 送料込み
@@ -20,7 +20,7 @@
           .buy-form__row
             .buy-form__row__price 支払い金額
             .buy-form__row__price-2 ￥ 6,900
-          .buy-form__error 配送先の入力を完了してください。
+          .buy-form__error
           = form_tag("/cards", method: :POST, id: "charge-form") do
             %script.payjp-button{id:"payjp-button", :src => "https://checkout.pay.jp", :type => "text/javascript" ,"data-text" => "購入する" ,"data-key" => "pk_test_6d636ecdcab8c61c72bee55b"}
     .buy-user
