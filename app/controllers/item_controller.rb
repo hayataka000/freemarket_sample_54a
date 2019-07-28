@@ -8,11 +8,12 @@ class ItemController < ApplicationController
   end
   def create
      @item = Item.new(item_params)
-     if @item.save
+    if @item.save
       binding.pry
       redirect_to root_path
     else
       render :new
+    end
   end
 
   def pay
