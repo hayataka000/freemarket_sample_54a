@@ -8,3 +8,11 @@ class User < ApplicationRecord
       end
     end
   end
+
+  private
+
+  def self.dummy_email(auth)
+    "#{auth.uid}-#{auth.provider}@example.com"
+  end
+  has_many :items
+end

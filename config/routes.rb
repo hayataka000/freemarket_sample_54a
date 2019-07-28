@@ -5,14 +5,15 @@ Rails.application.routes.draw do
   resources :profile, only: [:index]
   resources :cards, only: [:index, :new]
 
+  get '/item/new/:id', to: 'item#new'
   get '/confirm/index'
   get '/registrations/new' => 'registrations#new'
+
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
     :sessions => 'users/sessions',
     :omniauth_callbacks => 'users/omniauth_callbacks'
   }
-
   devise_scope :user do
     get 'sign_up', to: 'users/registrations#new'
     get 'sign_in', to: 'users/sessions#new'
@@ -27,8 +28,10 @@ Rails.application.routes.draw do
   end
   resources :profile, only: [:index] do
   end
-
-  resources :item, only: [:new,:create] do
-
+  resources :item, only: [:create] do
+  resources :purchase_confirmation, only: [:index] do  #nishimura2
   end
+  resources :logout, only: [:index] do  #koyama2
+  end
+end
 end
