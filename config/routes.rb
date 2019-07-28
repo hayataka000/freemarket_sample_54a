@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get '/confirm/index'
   get '/registrations/new' => 'registrations#new'
 
-
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
     :sessions => 'users/sessions',
@@ -29,8 +28,6 @@ Rails.application.routes.draw do
   end
   resources :profile, only: [:index] do
   end
-  
-
   resources :item, only: [:create] do
   resources :purchase_confirmation, only: [:index] do  #nishimura2
   end

@@ -1,19 +1,12 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: %i[facebook google_oauth2]
-    def self.from_omniauth(auth)
-    where(provider: auth.provider, uid: auth.uid).first
-
-    unless user
-      user = User.create(
-        uid:      auth.uid,
-        provider: auth.provider,
-        email:    User.dummy_email(auth),
-        password: Devise.friendly_token[0, 20]
-      )
+         :recoverable, :rememberable, :validatable, :omniauthable,omniauth_providers: %i[facebook google_oauth2]
+  def self.from_omniauth(auth)
+      where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+        user.email = auth.info.email
+        user.password = Devise.friendly_token[0,20]
+      end
     end
-
-    user
   end
 
   private
