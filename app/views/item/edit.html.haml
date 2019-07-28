@@ -1,0 +1,26 @@
+-# 商品編集ページビュー
+%header
+  .top
+    %h1.top__setting
+      %a{href: "https://www.mercari.com/jp/"}
+        %img.top__image{alt: "mercari", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?2927923569"}/
+.main
+  = render 'form'
+  .bottom
+    %ul.bottom__list
+      %li.bottom__list__Exclusion
+        %a{href: "https://www.mercari.com/jp/privacy/"} プライバシーポリシー
+      %li.bottom__list__margin
+        %a{href: "https://www.mercari.com/jp/tos/"} メルカリ利用規約
+      %li.bottom__list__margin
+        %a{href: "https://www.mercari.com/jp/tokutei/"} 特定商取引に関する表記
+    %a.bottom__logo{href: "https://www.mercari.com/jp/"}
+      %img{alt: "mercari", height: "65", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2927923569", width: "80"}/
+    %p.bottom__mercari © 2019 Mercari
+    .sell-dropbox-container.clearfix.state-image-number-10
+      .sell-upload-items-container
+        .sell-upload-items.have-item-0
+          %ul
+      .sell-upload-drop-box.have-item-0
+        %input.sell-upload-drop-file{multiple: "multiple", name: "image1", style: "display: none;", type: "file"}/
+        %pre.visible-pc

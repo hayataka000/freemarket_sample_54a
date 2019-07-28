@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   root 'item#index'
   get  'item/items'     =>  'item#items'
   get  'item/show'      =>  'item#show'
+  get  'item/:id/edit'   =>'item#edit'
+  patch '/item/:id/edit'  => 'item#update'
   resources :profile, only: [:index]
   resources :cards, only: [:index, :new]
 
@@ -28,7 +30,7 @@ Rails.application.routes.draw do
   end
   resources :profile, only: [:index] do
   end
-  resources :item, only: [:create] do
+  resources :item, only: [:create,:new,:update,:edit] do
   resources :purchase_confirmation, only: [:index] do  #nishimura2
   end
   resources :logout, only: [:index] do  #koyama2

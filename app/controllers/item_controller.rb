@@ -9,14 +9,27 @@ class ItemController < ApplicationController
   def create
      @item = Item.new(item_params)
      if @item.save
-      binding.pry
       redirect_to root_path
     else
       render :new
   end
 end
 
-  private 
+
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+
+  def update
+    @item = Item.find(params[:id])
+    if @item.update(item_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+    private 
   
   
   def show
@@ -25,7 +38,7 @@ end
   end
   
   def item_params
-    params.require(:item).permit(:image,:prefecture_id,:delivery_fee_id,:name,  :price, :size, :condition, :delivery_fee_id, :delivery_date, :delivery_method, :content, :category).merge(user_id: current_user.id)
+    params.require(:item).permit(:image, :prefecture_id, :delivery_fee_id, :name,  :price, :size, :condition, :delivery_fee_id, :delivery_date, :delivery_method, :content, :category).merge(user_id: current_user.id)
   end
 end
 
