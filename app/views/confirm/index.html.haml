@@ -1,8 +1,15 @@
 = render 'item/header'
 
 .body
+  .breadcrumbs
+    = link_to 'メルカリ', root_path, class: "a"
+    >
+    = link_to 'マイページ', mypages_path, class: "a"
+    >
+    = link_to '本人情報の登録', '', class: "a"
+
+
   .container
-    .mypage マイページ部分
     .main
       .main__title 本人情報の登録
       .main__content
@@ -114,5 +121,8 @@
           .main__content--text-right2
             = link_to '本人情報の登録について>', 'https://www.mercari.com/jp/help_center/article/423/'
 
+  %main.l-container.clearfix
+    .mypages-side
+      = render "mypages/mypages-side"
 = render 'item/aside'
 = render "item/footer"
