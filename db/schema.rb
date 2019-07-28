@@ -10,7 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_25_091517) do
+ActiveRecord::Schema.define(version: 2019_07_28_035320) do
+
+  create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  end
+
+  create_table "active_storage_blobs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.bigint "byte_size", null: false
+    t.string "checksum", null: false
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -20,17 +41,16 @@ ActiveRecord::Schema.define(version: 2019_07_25_091517) do
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.string "iamge", null: false
     t.integer "price", null: false
-    t.string "size", null: false
-    t.string "condition", null: false
-    t.string "delivery_fee", null: false
-    t.string "delivery_date", null: false
-    t.string "delivery_method", null: false
-    t.string "shipping_area", null: false
-    t.string "content", null: false
+    t.string "size"
+    t.string "condition"
+    t.string "delivery_fee_id"
+    t.string "delivery_date"
+    t.string "delivery_method"
+    t.string "prefecture_id"
+    t.string "content"
     t.integer "user_id"
-    t.integer "category_id"
+    t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -38,11 +58,11 @@ ActiveRecord::Schema.define(version: 2019_07_25_091517) do
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.string "first_name", null: false
-    t.string "first_name_furigana", null: false
-    t.string "last_name", null: false
-    t.string "last_name_furigana", null: false
-    t.string "nickname", null: false
+    t.string "first_name"
+    t.string "first_name_furigana"
+    t.string "last_name"
+    t.string "last_name_furigana"
+    t.string "nickname"
     t.string "phone_number"
     t.integer "birthday_year"
     t.integer "birthday_month"
@@ -60,4 +80,5 @@ ActiveRecord::Schema.define(version: 2019_07_25_091517) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
 end

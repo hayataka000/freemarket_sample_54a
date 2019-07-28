@@ -1,6 +1,14 @@
 = render 'item/header'
 
 .body
+  .breadcrumbs
+    = link_to 'メルカリ', root_path, class: "a"
+    >
+    = link_to 'マイページ', mypages_path, class: "a"
+    >
+    = link_to '本人情報の登録', '', class: "a"
+
+
   .container
     .main
       .main__title 本人情報の登録
