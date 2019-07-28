@@ -1,5 +1,11 @@
 = render 'item/header'
 .container
+  .breadcrumbs
+    = link_to 'メルカリ', root_path, class: "a"
+    >
+    = link_to 'マイページ', mypages_path, class: "a"
+    >
+    = link_to 'プロフィール', '', class: "a"
   .profile
     .profile__head
       プロフィール
