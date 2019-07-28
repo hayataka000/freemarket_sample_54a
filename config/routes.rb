@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get  'item/items'     =>  'item#items'
   get  'item/show'      =>  'item#show'
   resources :profile, only: [:index]
-  resources :cards, only: [:index]
+  resources :cards, only: [:index, :new]
 
   get '/confirm/index'
   get '/registrations/new' => 'registrations#new'
@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 
   resources :cards, only: [:index] do
   end
-  resources :mypages,only:[:index]
+  resources :mypages,only:[:index] 
   resources :exhibition,only:[:index]
   resources :confirm, only: [:index] do
   end
