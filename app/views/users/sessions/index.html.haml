@@ -1,15 +1,15 @@
 .sign-up-container
   = render 'sign-up-header'
-  .sign-up-main-box
-    .sign-up-main-box__content
-      .no-account
-        .sign-up-btn
-          %button{class: "sign-up__new-user"}新規会員登録
-      .auth-sns
-        .facebook-btn
-          %button{class: "sign-up__btn--facebook"}Facebookでログインする
-        .google-btn
-          %button{class: "sign-up__btn--google"}Googleでログインする
-      .login-form
-      
+  .sign-up-main
+    .sign-up-main__content
+      .sign-up-main__content__head 新規会員登録
+      .sign-up-main__content__bottom
+        .sign-up-main__content__bottom-inner
+          .mail-btn
+            %button{class: "sign-up__btn", onclick: "location.href='sign_up'"}メールアドレスで登録する
+          .facebook-btn
+            %button{class: "sign-up__btn--facebook", onclick: "location.href='sign_up'"}Facebookで登録する
+          .google-btn
+            %button{class: "sign-up__btn--google", onclick: "location.href='sign_up'"}Googleで登録する
+          = render "devise/shared/links"
   = render 'sign-up-footer'
