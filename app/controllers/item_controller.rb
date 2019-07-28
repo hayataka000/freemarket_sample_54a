@@ -26,7 +26,7 @@ class ItemController < ApplicationController
   def update
     @item = Item.find(params[:id])
     @item.update(params.require(:item).permit(:name, :image,:price,:size,:condition,:delivery_fee,:delivery_date,:delivery_method,:shipping_area,:content,:category))
-    redirect_to item_path
+    redirect_to item_index_path
   end
 
   private 
