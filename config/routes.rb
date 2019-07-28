@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get '/confirm/index'
   get '/registrations/new' => 'registrations#new'
 
-
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
     :sessions => 'users/sessions',
