@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   #     get 'index'
   #   end
   # end
-  get '/done'=> "item#_done"
+  post '/done'=> "item#_done"
   get '/product_purchase_confirmation'=> "item#_product_purchase_confirmation"
   get '/confirm/index'
   get '/registrations/new' => 'registrations#new'
