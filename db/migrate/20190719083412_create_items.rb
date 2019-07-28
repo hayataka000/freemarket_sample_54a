@@ -11,6 +11,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
     t.string :prefecture_id,null: true
     t.string :content,null: true
     t.integer :user_id, foreign_key: true
+    t.string :category,null: true
       t.timestamps
     end
   end

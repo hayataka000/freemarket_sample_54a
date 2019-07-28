@@ -40,22 +40,19 @@ ActiveRecord::Schema.define(version: 2019_07_28_035320) do
   end
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", default: ""
-    t.string "image", default: ""
-    t.integer "price"
-    t.string "size", default: ""
-    t.string "condition", default: ""
-    t.string "delivery_fee", default: ""
-    t.string "delivery_date", default: ""
-    t.string "delivery_method", default: ""
-    t.string "shipping_area", default: ""
-    t.string "content", default: ""
+    t.string "name", null: false
+    t.integer "price", null: false
+    t.string "size"
+    t.string "condition"
+    t.string "delivery_fee_id"
+    t.string "delivery_date"
+    t.string "delivery_method"
+    t.string "prefecture_id"
+    t.string "content"
     t.integer "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string "category"
-    t.integer "prefecture_id"
-    t.integer "delivery_fee_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
