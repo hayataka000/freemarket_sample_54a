@@ -93,7 +93,7 @@
       %h3.main__text
         %a{href: ""} レディース 新着アイテム
       .items.clearfix
-        - @mans.each do |item|
+        - @mens.each do |item|
           %section.items__box
             =link_to "./blank.html", class: "items__box__btn" do
               %figure.items__box__photo
@@ -112,7 +112,7 @@
       %section.main__items.clearfix
         %h3.main__text
           %a{href: ""} メンズ 新着アイテム
-        - @items.each do |item|
+        - @ladies.each do |item|
           %section.items__box
             %a{href: ""}
               %figure.items__box__photo
