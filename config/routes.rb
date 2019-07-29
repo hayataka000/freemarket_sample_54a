@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   get '/item/new/:id', to: 'item#new'
   get '/confirm/index'
   get '/registrations/new' => 'registrations#new'
-  get '/exhibition/:id' => 'exhibition#index'
 
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
@@ -27,13 +26,12 @@ Rails.application.routes.draw do
   resources :cards, only: [:index] do
   end
   resources :mypages,only:[:index] 
-  resources :exhibition,only:[:index,:destroy]
   resources :confirm, only: [:index] do
   end
   resources :profile, only: [:index] do
   end
 
-  resources :item, only: [:create] do
+  resources :item, only: [:create,:edit,:destroy] do
     member do
       post 'pay', to: 'item#pay'
     end

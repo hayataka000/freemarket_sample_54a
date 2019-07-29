@@ -10,7 +10,7 @@
     %p.item-wording
       『COACH コーチ ショルダーバッグ』は、821回の取引実績を持つ
       =link_to do
-        ３児mama☆(プロフィール必読!!)
+        = @item.name
       さんから出品されました。
       =link_to do
         コーチ
@@ -55,22 +55,13 @@
             %th 出品者
             %td
               =link_to do
-                ３児mama☆(プロフィール必読!!)
-              %div
-                .item-user-ratings
-                  %i.icon-good
-                    %span 821
-                .item-user-ratings
-                  %i.icon-normal
-                    %span 2
-                .item-user-ratings
-                  %i.icon-bad
-                    %span 0
+                = @item.name  
+             
           %tr
             %th カテゴリー
             %td
               =link_to do
-                %div レディース
+                = @item.category
               =link_to do
                 .item-detail-table-sub-category
                   %i.icon-arrow-right バッグ
@@ -81,10 +72,11 @@
             %th ブランド
             %td
               =link_to do
-                %div コーチ
+                = @item.brand
           %tr
             %th 商品の状態
-            %td やや傷や汚れあり
+            %td 
+              = @item.condition
           %tr
             %th 配送料の負担
             %td 送料込み(出品者負担)
@@ -95,10 +87,11 @@
             %th 配送元地域
             %td
               =link_to do
-                岡山県
+                = @item.prefecture.name
           %tr
             %th 発送日の目安
-            %td 4~7日で発送
+            %td 
+              = @item.delivery_date
     .item-price-box.text-center
       %span.item-price.bold ¥ 2,500
       %span.item-tax (税込)
