@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   root 'item#index'
   get  'item/items'     =>  'item#items'
   get  'item/show'      =>  'item#show'
-  patch '/item/:id/edit'  => 'item#update'
   resources :profile, only: [:index]
   resources :cards, only: [:index, :new]
 
@@ -34,7 +33,7 @@ Rails.application.routes.draw do
   end
 
   resources :item, only: [:create,:new,:update,:edit] do
-
+  end
 
   resources :item, only: [:create] do
     member do
@@ -46,5 +45,4 @@ Rails.application.routes.draw do
   end
   resources :logout, only: [:index] do  #koyama2
   end
-end
 end
