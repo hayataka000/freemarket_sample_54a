@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   root 'item#index'
   get  'item/items'     =>  'item#items'
   get  'item/show'      =>  'item#show'
-  get  'item/:id/edit'   =>'item#edit'
   patch '/item/:id/edit'  => 'item#update'
   resources :profile, only: [:index]
   resources :cards, only: [:index, :new]
