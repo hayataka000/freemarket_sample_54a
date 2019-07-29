@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   resources :profile, only: [:index] do
   end
 
-  resources :item, only: [:item, :create] do
+  resources :item, only: [:new, :create] do
     member do
       post 'pay', to: 'item#pay'
     end
