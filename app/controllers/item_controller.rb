@@ -1,4 +1,11 @@
 class ItemController < ApplicationController
+before_action :set_item ,only: [:edit,:update]
+
+  def set_item
+    @item = Item.find(params[:id])
+  end
+
+
   def index
     @items = Item.includes(:user).order("created_at DESC").limit(4)
   end
@@ -24,7 +31,19 @@ class ItemController < ApplicationController
     )
   end
 
-  private 
+
+  def edit
+  end
+
+
+  def update
+    if @item.update(item_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+    private 
   
   
   def show
@@ -33,7 +52,7 @@ class ItemController < ApplicationController
   end
   
   def item_params
-    params.require(:item).permit(:image,:prefecture_id,:delivery_fee_id,:name,  :price, :size, :condition, :delivery_fee_id, :delivery_date, :delivery_method, :content, :category).merge(user_id: current_user.id)
+    params.require(:item).permit(:image, :prefecture_id, :delivery_fee_id, :name,  :price, :size, :condition, :delivery_fee_id, :delivery_date, :delivery_method, :content, :category).merge(user_id: current_user.id)
   end
 end
 

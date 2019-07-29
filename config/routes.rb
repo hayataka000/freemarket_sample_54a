@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root 'item#index'
   get  'item/items'     =>  'item#items'
-  get  'item/show'      =>  'item#show'
   resources :profile, only: [:index]
   resources :cards, only: [:index, :new]
 
@@ -19,23 +18,28 @@ Rails.application.routes.draw do
   devise_scope :user do
     get 'sign_up', to: 'users/registrations#new'
     get 'sign_in', to: 'users/sessions#new'
+    get 'sign_in_index', to: 'users/sessions#index'
     get 'sign_out', to: 'devise/sessions#destroy'
   end
 
   resources :cards, only: [:index] do
   end
-  resources :mypages,only:[:index] 
+  resources :mypages,only:[:index]
   resources :exhibition,only:[:index]
   resources :confirm, only: [:index] do
   end
   resources :profile, only: [:index] do
   end
 
-  resources :item, only: [:item, :create] do
+  resources :item, only: [:create,:new,:update,:edit,:show] do
+  end
+
+  resources :item, only: [:create] do
     member do
       post 'pay', to: 'item#pay'
     end
   end
+
   resources :purchase_confirmation, only: [:index] do  #nishimura2
   end
   resources :logout, only: [:index] do  #koyama2
