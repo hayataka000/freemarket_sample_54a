@@ -64,27 +64,17 @@
                 .item-detail-table-sub-sub-category
                   %i.icon-arrow-right ショルダーバッグ
           %tr
-            %th ブランド
-            %td
-              =link_to do
-                %div 
-                  シャネル
-          %tr
             %th 商品の状態
             %td
               = @item.condition
           %tr
             %th 配送料の負担
             %td
-              = @item.delivery_fee
-          %tr
-            %th 配送の方法
-            %td  
-              = @item.delivery_method
+              = @item.delivery_fee.name
           %tr
             %th 配送元地域
             %td
-              = @item.prefecture
+              = @item.prefecture.name
           %tr
             %th 発送日の目安
             %td 
@@ -120,42 +110,11 @@
   .item-detail-message
     .message-container
   %ul.nav-item-link-prev-next.clearfix
-    %li.nav-item-link-prev
-      =link_to do
-        %i.icon-arrow-left
-          Roger&Raw デニムシャツ
-    %li.nav-item-link-next
-      =link_to do
-        トイストーリー4  メタリック下敷き
-        %i.icon-arrow-right
-  .item-social-media-box
-    .text-center
-      .fb-save.fb_iframe_widget
-    %ul.social-media-box
-      =link_to do
-        %li.share-btn
-      =link_to do
-        %li.share-btn
-      =link_to do
-        %li.social-hidden-item
-      =link_to do
-        %li.share-btn
   .items-in-user-profile
     %section.items-box-container.clearfix.related-item-column.items-in-user-profile
       %h2.items-box-head
         =link_to do
-          -# = @user.name + "さんのその他の出品"
-      .items-box-content.clearfix
-        = render 'items-box'
-        = render 'items-box'
-        = render 'items-box'
-        = render 'items-box'
-        = render 'items-box'
-        = render 'items-box'
-    %section.items-box-container.clearfix.related-item-column.items-in-user-profile
-      %h2.items-box-head
-        =link_to do
-          その他の出品
+          = @user.nickname + "さんのその他の出品"
       .items-box-content.clearfix
         = render 'items-box'
         = render 'items-box'

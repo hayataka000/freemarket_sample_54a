@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root 'item#index'
   get  'item/items'     =>  'item#items'
-  get  'item/show'      =>  'item#show'
   get '/item/show/:id', to: 'item#show'
   get '/user/show/:id', to: 'user#show'
   resources :profile, only: [:index]
