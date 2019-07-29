@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :cards, only: [:index, :new]
 
   post '/done'=> "item#_done"
+  get '/product_exhibition'=> "item#_product_exhibition"
   get '/product_purchase_confirmation'=> "item#_product_purchase_confirmation"
   get '/item/new/:id', to: 'item#new'
   get '/confirm/index'
