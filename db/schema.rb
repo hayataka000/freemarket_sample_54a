@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_28_035320) do
+ActiveRecord::Schema.define(version: 2019_07_29_071105) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -35,31 +35,41 @@ ActiveRecord::Schema.define(version: 2019_07_28_035320) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.integer "parent_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.string "iamge", null: false
     t.integer "price", null: false
-    t.string "size", null: false
-    t.string "condition", null: false
-    t.string "delivery_fee", null: false
-    t.string "delivery_date", null: false
-    t.string "delivery_method", null: false
-    t.string "shipping_area", null: false
-    t.string "content", null: false
+    t.string "size"
+    t.string "condition"
+    t.string "delivery_fee_id"
+    t.string "delivery_date"
+    t.string "delivery_method"
+    t.string "prefecture_id"
+    t.string "content"
     t.integer "user_id"
-    t.integer "category_id"
+    t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "brand"
+    t.integer "categeroy_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.string "first_name"
+    t.string "first_name_furigana"
+    t.string "last_name"
+    t.string "last_name_furigana"
+    t.string "nickname"
+    t.string "phone_number"
+    t.integer "birthday_year"
+    t.integer "birthday_month"
+    t.integer "birthday_day"
+    t.integer "adress_id"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -67,7 +77,6 @@ ActiveRecord::Schema.define(version: 2019_07_28_035320) do
     t.datetime "updated_at", null: false
     t.string "provider"
     t.string "uid"
-    t.string "introduction"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
