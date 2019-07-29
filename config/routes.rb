@@ -26,7 +26,7 @@ Rails.application.routes.draw do
 
   resources :cards, only: [:index] do
   end
-  resources :mypages,only:[:index] 
+  resources :mypages,only:[:index]
   resources :exhibition,only:[:index]
   resources :confirm, only: [:index] do
   end
@@ -46,4 +46,5 @@ Rails.application.routes.draw do
   end
   resources :logout, only: [:index] do  #koyama2
   end
+end
 end
