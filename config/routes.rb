@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root 'item#index'
   get  'item/items'     =>  'item#items'
-  get  'item/show'      =>  'item#show'
   resources :profile, only: [:index]
   resources :cards, only: [:index, :new]
 
@@ -32,7 +31,7 @@ Rails.application.routes.draw do
   resources :profile, only: [:index] do
   end
 
-  resources :item, only: [:create,:new,:update,:edit] do
+  resources :item, only: [:create,:new,:update,:edit,:show] do
   end
 
   resources :item, only: [:create] do
