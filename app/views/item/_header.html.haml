@@ -12,13 +12,17 @@
           .inner__nav__box-right
             .inner__nav__box-right-afterlogin
               .good-mark
-                = link_to 'いいね!一覧'
+                %i.far.fa-heart
+                  = link_to 'いいね!一覧', class: "a"
               .inform
-                = link_to 'お知らせ'
+                %i.far.fa-bell
+                  = link_to 'お知らせ', class:"a"
               .must-list
-                = link_to 'やることリスト'
+                %i.far.fa-check-square
+                  = link_to 'やることリスト', class: "a"
               .mypage
-                = link_to 'マイページ', '/mypages'
+                %i.far.fa-user
+                  = link_to 'マイページ', '/mypages', class: "a"
         - else
           .inner__nav__box-right
             .inner__nav__box-right-signup
