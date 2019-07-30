@@ -27,6 +27,7 @@ class ItemController < ApplicationController
   def show
     @item = Item.find(params[:id])
     @user = @item.user
+    @items = Item.where(user_id: @user.id).limit(6).where.not(id: @item.id )
   end
 
   def edit  
