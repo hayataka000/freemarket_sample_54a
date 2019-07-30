@@ -41,16 +41,6 @@
             %td
               =link_to do
                 = @user.nickname
-              %div
-                .item-user-ratings
-                  %i.icon-good
-                    %span 0
-                .item-user-ratings
-                  %i.icon-normal
-                    %span 0
-                .item-user-ratings
-                  %i.icon-bad
-                    %span 0
           %tr
             %th カテゴリー
             %td
@@ -81,6 +71,7 @@
               = @item.delivery_date
     .item-price-box.text-center
       %span.item-price.bold 
+        ¥
         = @item.price 
       %span.item-tax (税込)
       %span.item-shipping-fee 送料込み
@@ -91,22 +82,6 @@
     .item-description.f14
       %p.item-description-inner 
         = @item.content
-    .item-button-container.clearfix
-      .item-button-left
-        =link_to do
-          .item-button.item-button-like
-            %i.icon-like-border
-              %span いいね!
-              %span 4
-        =link_to do
-          .item-button.item-button-report.clearfix
-            %i.icon-flag
-              %span 不適切な商品の報告
-      .item-button-right
-        =link_to do
-          .item-button.item-button-like
-            %i.icon-lock
-              %span あんしん・あんぜんへの取り組み
   .item-detail-message
     .message-container
   %ul.nav-item-link-prev-next.clearfix
