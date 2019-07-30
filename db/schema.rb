@@ -50,14 +50,9 @@ ActiveRecord::Schema.define(version: 2019_07_29_071105) do
     t.string "prefecture_id"
     t.string "content"
     t.integer "user_id"
-    t.string "category"
-
-    t.string "image", null: false
-
+    t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "brand"
-    t.integer "categeroy_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
