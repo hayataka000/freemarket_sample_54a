@@ -1,6 +1,6 @@
 -# 商品編集ページのフォーム
-=form_with model: @item, url: item_path do |f|
-  .main-buy-item
+.main-buy-item
+  =form_with model: @item, url: item_path do |f|
     .main-buy-item__container
       %h2.main-buy-item__container__head 商品の情報を入力
       %form.main-buy-item__container__form

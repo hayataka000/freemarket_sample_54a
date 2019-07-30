@@ -1,113 +1,111 @@
-.main{
-    .main-buy-item{
-        width:700px;
-        margin:0 auto;
-        &__container{
-            background-color:white;
-            text-align:center;
-            &__head{
-            font-size:22px;
-            padding:32px 16px;
-            }
-            &__form{
-                position:relative;
-                box-sizing:border-box;
-                border-top: 1px solid #eee;
-                border-bottom: 1px solid #eee;
-                &__box{
+.main-buy-item{
+    width:700px;
+    margin:0 auto;
+    &__container{
+        background-color:white;
+        text-align:center;
+        &__head{
+        font-size:22px;
+        padding:32px 16px;
+        }
+        &__form{
+            position:relative;
+            box-sizing:border-box;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            &__box{
+                width: 620px;
+                padding: 40px;
+                &__picture{
+                    text-align:left;
+                    font-size:16px;
+                }
+                span{
+                    background-color:red;
+                    color:white;
+                    font-size:14px;
+                    position:absolute;
+                    padding:2px 4px;
+                }
+                &__upload{
+                    padding-right:310px;
+                    padding-top:10px;
+                }
+                &__drag-and-drop{
+                    display: block;
                     width: 620px;
-                    padding: 40px;
-                    &__picture{
-                        text-align:left;
-                        font-size:16px;
-                    }
-                    span{
-                        background-color:red;
-                        color:white;
-                        font-size:14px;
-                        position:absolute;
-                        padding:2px 4px;
-                    }
-                    &__upload{
-                        padding-right:310px;
-                        padding-top:10px;
-                    }
-                    &__drag-and-drop{
+                    margin-top:16px;
+                    background-color:#f5f5f5;
+                    border: 1px dashed #ccc;
+                    margin: 16px auto 0;
+                    min-height: 162px;
+                    &__item{
+                        width:100%;
+                        padding:40px;
                         display: block;
-                        width: 620px;
-                        margin-top:16px;
-                        background-color:#f5f5f5;
-                        border: 1px dashed #ccc;
-                        margin: 16px auto 0;
-                        min-height: 162px;
-                        &__item{
-                            width:100%;
-                            padding:40px;
-                            display: block;
-                            cursor: pointer;
-                            position: relative;
-                            &__img {
-                                display: none;
-                            }
-                            &__font{
-                                position: absolute;
-                                top: 50%;
-                                left: 16px;
-                                right: 16px;
-                                text-align: center;
-                                font-size: 14px;
-                                line-height: 1.5;
-                            }
+                        cursor: pointer;
+                        position: relative;
+                        &__img {
+                            display: none;
+                        }
+                        &__font{
+                            position: absolute;
+                            top: 50%;
+                            left: 16px;
+                            right: 16px;
+                            text-align: center;
+                            font-size: 14px;
+                            line-height: 1.5;
                         }
                     }
                 }
             }
-            .main-buy-item__container-product-datails{
-                position:relative;
-                padding:40px;
-                &__form{
-                    h3{
-                        float: left;
-                    }
-                    span{
-                        float:left;
-                        background-color:red;
-                        color:white;
-                        font-size:14px;
-                    }
+        }
+        .main-buy-item__container-product-datails{
+            position:relative;
+            padding:40px;
+            &__form{
+                h3{
+                    float: left;
                 }
-                .item_name{
-                    width: 100%;
-                    margin: 8px 0 0;
-                    height:48px;
-                    font-size:16px;
-                    padding: 10px 16px 8px;
-                    border: 1px solid #ccc;
-                }
-                &__description{
-                    margin-top:40px;
-                    h3{
-                        float: left;
-                    }
-                    span{
-                    position:absolute;
-                    left:130px;
-                    top:150px;
+                span{
+                    float:left;
                     background-color:red;
                     color:white;
                     font-size:14px;
-                    padding:2px 4px;
-                    }
                 }
-                &__textarea{
-                    margin-top:8px;
-                    width: 100%;
-                    padding: 10px;
-                    border: 1px solid #ccc;
-                    background: #fff;
-                    font-size: 16px;
-                    line-height: 1.5;
+            }
+            .item_name{
+                width: 100%;
+                margin: 8px 0 0;
+                height:48px;
+                font-size:16px;
+                padding: 10px 16px 8px;
+                border: 1px solid #ccc;
+            }
+            &__description{
+                margin-top:40px;
+                h3{
+                    float: left;
                 }
+                span{
+                position:absolute;
+                left:130px;
+                top:150px;
+                background-color:red;
+                color:white;
+                font-size:14px;
+                padding:2px 4px;
+                }
+            }
+            &__textarea{
+                margin-top:8px;
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                background: #fff;
+                font-size: 16px;
+                line-height: 1.5;
             }
         }
     }
