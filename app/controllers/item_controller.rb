@@ -1,6 +1,6 @@
 class ItemController < ApplicationController
 before_action :set_item ,only: [:edit,:update]
-
+before_action :authenticate_user!,except: [:show,:index]
   def set_item
     @item = Item.find(params[:id])
   end
