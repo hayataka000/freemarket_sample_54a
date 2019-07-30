@@ -46,7 +46,10 @@ before_action :set_item ,only: [:edit,:update]
     :currency => 'jpy',
     )
   end
-
+  def show
+    @item = Item.find(params[:id])
+    @user = @item.user
+  end
 
   def edit
   end
@@ -60,14 +63,7 @@ before_action :set_item ,only: [:edit,:update]
     end
   end
     private 
-  
-  
-  def show
-    @item = Item.find(params[:id])
-    @user = @item.user
-  end
-  
-  def item_params
+       def item_params
     params.require(:item).permit(:image, :prefecture_id, :delivery_fee_id, :name,  :price, :size, :condition, :delivery_fee_id, :delivery_date, :delivery_method, :content, :category).merge(user_id: current_user.id)
   end
 end
