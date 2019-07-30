@@ -7,9 +7,16 @@ before_action :set_item ,only: [:edit,:update]
 
 
   def index
-    @items = Item.includes(:user).order("created_at DESC").limit(4)
-    @mens = Item.where(category_id: 2).order("created_at DESC").limit(4)
-    @ladies = Item.where(category_id: 1).order("created_at DESC").limit(4)
+    # @items = Item.includes(:user).order("created_at DESC").limit(4)
+    @mens = Item.where(category_id: 1).order("created_at DESC").limit(4)
+    @ladies = Item.where(category_id: 2).order("created_at DESC").limit(4)
+    @kids = Item.where(category_id: 3).order("created_at DESC").limit(4)
+    @kosume = Item.where(category_id: 4).order("created_at DESC").limit(4)
+    @chanel = Item.where(category_id: 5).order("created_at DESC").limit(4)
+    @vuitton = Item.where(category_id: 6).order("created_at DESC").limit(4)
+    @supreme = Item.where(category_id: 7).order("created_at DESC").limit(4)
+    @nike = Item.where(category_id: 8).order("created_at DESC").limit(4)
+    
 
   end
 
@@ -45,7 +52,10 @@ before_action :set_item ,only: [:edit,:update]
     :currency => 'jpy',
     )
   end
-
+  def show
+    @item = Item.find(params[:id])
+    @user = @item.user
+  end
 
   def edit
   end
@@ -59,15 +69,8 @@ before_action :set_item ,only: [:edit,:update]
     end
   end
     private 
-  
-  
-  def show
-    @item = Item.find(params[:id])
-    @user = @item.user
-  end
-  
-  def item_params
-    params.require(:item).permit(:image, :prefecture_id, :delivery_fee_id, :name,  :price, :size, :condition, :delivery_fee_id, :delivery_date, :delivery_method, :content, :category).merge(user_id: current_user.id)
+       def item_params
+    params.require(:item).permit(:category_id,:image, :prefecture_id, :delivery_fee_id, :name,  :price, :size, :condition, :delivery_fee_id, :delivery_date, :delivery_method, :content, :category).merge(user_id: current_user.id)
   end
 end
 
