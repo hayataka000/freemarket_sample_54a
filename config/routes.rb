@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   post '/done'=> "item#_done"
   get '/product_purchase_confirmation'=> "item#_product_purchase_confirmation"
-  get '/item/new/:id', to: 'item#new'
+  get '/item/new', to: 'item#new'
   get '/confirm/index'
   get '/registrations/new' => 'registrations#new'
 
@@ -26,11 +26,14 @@ Rails.application.routes.draw do
 
   resources :cards, only: [:index] do
   end
-  resources :mypages,only:[:index] 
+  resources :mypages,only:[:index]
   resources :exhibition,only:[:index]
   resources :confirm, only: [:index] do
   end
   resources :profile, only: [:index] do
+  end
+
+  resources :item, only: [:create,:new,:update,:edit,:show] do
   end
 
   resources :item, only: [:create] do
@@ -38,6 +41,7 @@ Rails.application.routes.draw do
       post 'pay', to: 'item#pay'
     end
   end
+
   resources :purchase_confirmation, only: [:index] do  #nishimura2
   end
   resources :logout, only: [:index] do  #koyama2
