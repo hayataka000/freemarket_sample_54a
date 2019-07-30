@@ -1,4 +1,11 @@
 class ItemController < ApplicationController
+before_action :set_item ,only: [:edit,:update]
+
+  def set_item
+    @item = Item.find(params[:id])
+  end
+
+
   def index
     @items = Item.includes(:user).order("created_at DESC").limit(4)
   end
@@ -24,13 +31,24 @@ class ItemController < ApplicationController
     )
   end
 
+
+  def edit
+  end
+
+
+  def update
+    if @item.update(item_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+  
+  
   def show
     @item = Item.find(params[:id])
     @user = @item.user
     @items = Item.where(user_id: @user.id).limit(6).where.not(id: @item.id )
-  end
-
-  def edit  
   end
 
   private 
