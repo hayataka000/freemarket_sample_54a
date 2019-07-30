@@ -27,8 +27,6 @@ Rails.application.routes.draw do
   resources :cards, only: [:index] do
   end
   resources :mypages,only:[:index]
-  resources :exhibition,only:[:show] do
-  end
   resources :confirm, only: [:index] do
   end
   resources :profile, only: [:index] do
