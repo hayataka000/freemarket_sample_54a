@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :profile, only: [:index]
   resources :cards, only: [:index, :new]
   resources :item, only: [:create,:new,:update,:edit,:show] 
+  resources :exhibition,only: [:edit]
   post '/done'=> "item#_done"
   get '/product_purchase_confirmation'=> "item#_product_purchase_confirmation"
   get '/item/new', to: 'item#new'
