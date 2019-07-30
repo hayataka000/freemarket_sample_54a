@@ -26,11 +26,9 @@ Rails.application.routes.draw do
   end
   resources :mypages,only:[:index]
   resources :exhibition,only:[:index]
-  resources :confirm, only: [:index] do
-  end
+  resources :confirm, only: [:index] 
   resources :profile, only: [:index] do
   end
-
   resources :item, only: [:create,:edit,:destroy] do
 
 
