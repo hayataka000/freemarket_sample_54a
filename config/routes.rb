@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/user/show/:id', to: 'user#show'
   resources :profile, only: [:index]
   resources :cards, only: [:index, :new]
-
+  resources :item, only: [:create,:new,:update,:edit,:show] 
   post '/done'=> "item#_done"
   get '/product_purchase_confirmation'=> "item#_product_purchase_confirmation"
   get '/item/new', to: 'item#new'
@@ -20,22 +20,22 @@ Rails.application.routes.draw do
   devise_scope :user do
     get 'sign_up', to: 'users/registrations#new'
     get 'sign_in', to: 'users/sessions#new'
+    delete 'sign_out', to: 'devise/sessions#destroy'
     get 'sign_in_index', to: 'users/sessions#index'
-    get 'sign_out', to: 'devise/sessions#destroy'
   end
 
   resources :cards, only: [:index] do
   end
   resources :mypages,only:[:index]
-  resources :confirm, only: [:index] do
-  end
+
+  resources :exhibition,only:[:index]
+  resources :confirm, only: [:index] 
+
   resources :profile, only: [:index] do
   end
+  resources :item, only: [:create,:edit,:destroy] do
 
-  resources :item, only: [:create,:new,:update,:edit,:show] do
-  end
 
-  resources :item, only: [:create] do
     member do
       post 'pay', to: 'item#pay'
     end
@@ -43,6 +43,12 @@ Rails.application.routes.draw do
 
   resources :purchase_confirmation, only: [:index] do  #nishimura2
   end
-  resources :logout, only: [:index] do  #koyama2
+  
+  resources :logout, only: [:index] do
+  end
+  resources :purchase_confirmation, only: [:index] do  #nishimura2
   end
 end
+
+
+

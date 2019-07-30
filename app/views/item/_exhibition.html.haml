@@ -58,6 +58,7 @@
                 .item-user-ratings
                   %i.icon-bad
                     %span 
+
           %tr
             %th カテゴリー
             %td
@@ -66,7 +67,8 @@
                   = @item.category
           %tr
             %th 商品の状態
-            %td やや傷や汚れあり
+            %td 
+              = @item.condition
           %tr
             %th 
               = @item.delivery_fee.name
