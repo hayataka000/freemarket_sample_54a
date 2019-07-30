@@ -39,7 +39,6 @@
             %span.category
               必須
             .main-buy-item__container-product-condition__state__box__category__select
-
               = f.select :category, [["---", "---"], ["レディース", "レディース"], ["メンズ", "メンズ"], ["ベビー・キッズ", "ベビー・キッズ"], ["おもちゃ・ホビー・グッズ", "おもちゃ・ホビー・グッズ"], [" 本・音楽・ゲーム", " 本・音楽・ゲーム"],["コスメ・香水・美容", "コスメ・香水・美容"],["家電・スマホ・カメラ", "家電・スマホ・カメラ"],["スポーツ・レジャー", "スポーツ・レジャー"],["ハンドメイド", "ハンドメイド"],["チケット", "チケット"],["自動車・オートバイ", "自動車・オートバイ"],["その他", "その他"]] ,class:"category-select"
           .main-buy-item__container-product-condition__state__box__condition
             %h3
@@ -47,7 +46,6 @@
             %span.condition
               必須
             .main-buy-item__container-product-condition__state__box__condition__select
-
               = f.select :condition, [["---", "---"],["新品、未使用", "新品、未使用"], ["未使用に近い", "未使用に近い"], ["目立った傷や汚れなし", "目立った傷や汚れなし"], ["やや傷や汚れあり", "やや傷や汚れあり"], ["傷や汚れあり", "傷や汚れあり"], ["全体的に状態が悪い", "全体的に状態が悪い"]] ,class:"category-select"
     .main-buy-item__container-product-condition__delivery
       %h3.main-buy-item__container-product-condition__delivery__sub
@@ -68,7 +66,6 @@
           %span.b
             必須
         .main-buy-item__container-product-condition__delivery__form__select
-
           = f.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt: "--", class: 'input'
         .main-buy-item__container-product-condition__delivery__form__group__third
           %h3
@@ -76,7 +73,6 @@
           %span.c
             必須
         .main-buy-item__container-product-condition__delivery__form__select
-
           = f.select :delivery_date, [["---", "---"], ["1~2日で発送", "1~2日で発送"], ["2~3日で発送", "2~3日で発送"],["4~7日で発送", "4~7日で発送"]] ,class:"category-selec"
     .main-buy-item__container-product-condition__price
       %h3.price 販売価格(300~9,999,999)
@@ -118,4 +114,4 @@
         に同意したことになります。
       .btn-default.btn-red
         = f.submit "編集する"
-      .btn-default.btn-gray  キャンセル 
+      .btn-default.btn-gray  キャンセル
