@@ -74,10 +74,6 @@
                         background-color:red;
                         color:white;
                         font-size:14px;
-                        position:absolute;
-                        top:38px;
-                        left:95px;
-                        padding:2px 4px;
                     }
                 }
                 .item_name{
@@ -243,7 +239,7 @@
                 margin-left:15px;
             }
         }
-        &__group__second{    
+        &__group__second{
             margin-top:40px;
             h3{
                 margin-bottom:10px;
@@ -391,7 +387,7 @@
                 }
             }
         }
-    }    
+    }
 }
 .main-buy-item__container-product-condition__price__btn{
     padding:40px;
@@ -438,8 +434,8 @@
 .hidden{
     display:none;
 }
-#select{   
-    font-size:16px; 
+#select{
+    font-size:16px;
     padding:0 16p;
     border: 1px solid #ccc;
     width:400px;
