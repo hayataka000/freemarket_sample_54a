@@ -7,7 +7,7 @@ before_action :set_item ,only: [:edit,:update]
 
 
   def index
-    # @items = Item.includes(:user).order("created_at DESC").limit(4)
+    @items = Item.includes(:user).order("created_at DESC").limit(4)
     @mens = Item.where(category_id: 1).order("created_at DESC").limit(4)
     @ladies = Item.where(category_id: 2).order("created_at DESC").limit(4)
     @kids = Item.where(category_id: 3).order("created_at DESC").limit(4)
@@ -26,7 +26,6 @@ before_action :set_item ,only: [:edit,:update]
 
   def create
      @item = Item.new(item_params)
-
     if @item.save
       redirect_to root_path
     else

@@ -125,13 +125,13 @@ i.fa-tags {
     padding: 0 10px;
     line-height: 30px;
     display: inline-flex;
-    margin-top: 5px;
+    margin-top: 5px;  
   }
   
   .signup__btn-red {
     background: #ea352d;
     border: 1px solid #ea352d;
-    color: #fff;
+    color:red;
     padding: 0 10px;
     line-height: 30px;
     display: list-item;
@@ -139,6 +139,8 @@ i.fa-tags {
     width: 106px;
     height: 32px;
     border-radius: 5px 5px 5px 5px;
+    z-index: 20;
+    list-style: none;
   }
 
   .login__btn-blue {
@@ -150,6 +152,7 @@ i.fa-tags {
     margin-left: 8px;
     padding: 0 10px;
     border-radius: 5px 5px 5px 5px;
+    z-index: 20;
   }
   
   .header__bottom{
@@ -186,7 +189,29 @@ line-height: 1;
 }
 span{
     font-size:14px;
-    vertical-align: 7px;
+    vertical-align: 3px;
     color:black;
     font-weight:bold;
+}
+
+.inner__nav__box-right-afterlogin {
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 100;
+  .good-mark {
+    margin: 0 10px 0 0;
+  }
+
+  .inform {
+    margin: 0 10px 0 0;
+  }
+
+  .must-list {
+    margin: 0 10px 0 0;
+  }
+
+  .mypage {
+    margin: 0 10px 0 0;
+  }
 }
