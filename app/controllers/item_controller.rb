@@ -10,6 +10,7 @@ before_action :set_item ,only: [:edit,:update]
     @items = Item.includes(:user).order("created_at DESC").limit(4)
     @mens = Item.where(category_id: 2).order("created_at DESC").limit(4)
     @ladies = Item.where(category_id: 1).order("created_at DESC").limit(4)
+    
 
   end
 
