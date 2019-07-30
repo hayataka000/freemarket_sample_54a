@@ -29,7 +29,7 @@ Rails.application.routes.draw do
   resources :profile, only: [:index] do
   end
 
-  resources :item, only: [:new,:create] do
+  resources :item, only: [:create] do
   end
   resources :logout, only: [:index] do
   end
