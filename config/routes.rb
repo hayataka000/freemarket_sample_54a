@@ -31,10 +31,10 @@ Rails.application.routes.draw do
   resources :profile, only: [:index] do
   end
 
+  resources :item, only: [:create,:edit,:destroy] do
   resources :item, only: [:create,:new,:update,:edit,:show] do
   end
 
-  resources :item, only: [:create] do
     member do
       post 'pay', to: 'item#pay'
     end
