@@ -52,14 +52,9 @@ before_action :set_item ,only: [:edit,:update]
     :currency => 'jpy',
     )
   end
-  def show
-    @item = Item.find(params[:id])
-    @user = @item.user
-  end
 
   def edit
   end
-
 
   def update
     if @item.update(item_params)
@@ -68,8 +63,15 @@ before_action :set_item ,only: [:edit,:update]
       render :edit
     end
   end
-    private 
-       def item_params
+  
+  def show
+    @item = Item.find(params[:id])
+    @user = @item.user
+    @items = Item.where(user_id: @user.id).limit(6).where.not(id: @item.id )
+  end
+
+  private 
+  def item_params
     params.require(:item).permit(:category_id,:image, :prefecture_id, :delivery_fee_id, :name,  :price, :size, :condition, :delivery_fee_id, :delivery_date, :delivery_method, :content, :category).merge(user_id: current_user.id)
   end
 end

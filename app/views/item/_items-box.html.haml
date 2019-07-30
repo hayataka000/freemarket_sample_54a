@@ -1,0 +1,13 @@
+- @items.each do |item|
+  %section.items-box
+    =link_to do
+      %figure.items-box-photo
+        = image_tag item.image.variant(resize:'200x200').processed
+      .items-box-body
+        %h3.items-box-name.font-2
+          = simple_format(item.name)
+        .items-box-num
+          .items-box-price.font-5
+            ¥
+            = (item.price)
+        
