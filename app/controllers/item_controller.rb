@@ -22,8 +22,14 @@ before_action :set_item ,only: [:edit,:update]
     end
   end
 
+  # product_purchase_confirmation用のアクションで @item を1件特定しておく
+  def product_purchase_confirmation
+    @item = Item.find(params[:id])
+  end
   def pay
-    Payjp.api_key = 'sk_test_9d1fbd9003b1e3df4725c6fb'
+    @item = Item.find(params[:id])
+    # params[:id] を使って 商品を特定し、@itemとして定義する
+    Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
     charge = Payjp::Charge.create(
     :amount => @item.price,
     :card => params['payjp-token'],
