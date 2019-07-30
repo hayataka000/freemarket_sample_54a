@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2019_07_29_071105) do
     t.string "prefecture_id"
     t.string "content"
     t.integer "user_id"
-    t.string "category"
+    t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
