@@ -11,9 +11,9 @@
         %p.main-buy-item__container__form__box__upload 最大10枚までアップロードできます
         .main-buy-item__container__form__box__drag-and-drop
           %input#comment_image.hidden{name: "comment[image]", type: "file"}/
-          .main-buy-item__container__form__box__drag-and-drop__item
-            %p.main-buy-item__container__form__box__drag-and-drop__item__font
-            = f.file_field :image
+          %per.main-buy-item__container__form__box__drag-and-drop__item__font
+          ドラッグアンドドロップまたはクリックしてファイルをアップロード
+          = f.file_field :image
       .main-buy-item__container-product-datails
         .main-buy-item__container-product-datails__form
           %h3
