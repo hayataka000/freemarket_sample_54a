@@ -9,7 +9,8 @@
     .center__item__buy
       .center__item__buy__inner
         %h3.center__item__buy__inner__image
-          %img.center__item__buy__inner__image__item{alt: "item", src: "https://static.mercdn.net/thumb/photos/m24504139973_1.jpg?1563145720", }/
+          .center__item__buy__inner__image__item
+            = image_tag @item.image.variant(resize: '64').processed
         %p.center__item__buy__inner__item-name 
           =@item.name
         .buy-form
