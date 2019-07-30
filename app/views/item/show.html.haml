@@ -44,11 +44,7 @@
         %span.item-tax (税込)
         %span.item-shipping-fee 送料込み
       %section.visible-sp
-        =link_to class: 'item-buy-btn.f18-24' do
-          購入画面に進む
-        .item-btn-float-area
-          =link_to class: 'item-btn-client' do
-            .visible 購入画面に進む
+        =link_to '購入画面に進む',"/confirm/index", class: 'item-buy-btn.f18-24'
       %table.item-detail-table
         %tbody
           %tr
@@ -104,8 +100,8 @@
       %span.item-tax (税込)
       %span.item-shipping-fee 送料込み
     .item-buy-btn.f18-24
-      =link_to class: 'item-buy.f18-24' do
-        購入画面に進む
+      %div{"data-turbolinks" => "false"}
+        =link_to '購入画面に進む',"/product_purchase_confirmation",{class: 'item-buy.f18-24'}
     .item-btn-client
     .item-description.f14
       %p.item-description-inner 所々に擦り傷、色剥げ、スカーフに黄ばみ、少し形崩れもあります。この状態をご理解頂いての、ご購入で宜しくお願いします。そして長財布は、入りません。縦…約12cm横…約20cmマチ…約5cm神経質な方は、ご遠慮ください。
