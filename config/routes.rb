@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get  'item/items'     =>  'item#items'
   resources :profile, only: [:index]
   resources :cards, only: [:index, :new]
-
+  resources :item, only: [:create,:new,:update,:edit,:show] 
   post '/done'=> "item#_done"
   get '/product_purchase_confirmation'=> "item#_product_purchase_confirmation"
   get '/item/new/:id', to: 'item#new'
@@ -32,8 +32,7 @@ Rails.application.routes.draw do
   end
 
   resources :item, only: [:create,:edit,:destroy] do
-  resources :item, only: [:create,:new,:update,:edit,:show] do
-  end
+
 
     member do
       post 'pay', to: 'item#pay'

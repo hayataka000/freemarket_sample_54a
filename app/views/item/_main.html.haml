@@ -114,7 +114,7 @@
           %a{href: ""} メンズ 新着アイテム
         - @ladies.each do |item|
           %section.items__box
-            %a{href: ""}
+            =link_to item_path(item.id), class: "items__box__btn" do
               %figure.items__box__photo
                 = image_tag item.image
               .items__box__body
