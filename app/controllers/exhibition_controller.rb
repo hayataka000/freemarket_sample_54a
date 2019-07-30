@@ -1,4 +1,8 @@
 class ExhibitionController < ApplicationController
-  def index
+ 
+  def show
+    @item = Item.find(params[:id])
+    @user = @item.user
   end
+
 end
