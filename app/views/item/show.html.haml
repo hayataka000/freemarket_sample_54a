@@ -86,10 +86,10 @@
           = @user.nickname + "さんのその他の出品"
       .items-box-content.clearfix
         = render 'items-box'
-        .breadcrumbs
+  .breadcrumbs
     = link_to 'メルカリ', root_path, class: "a"
     >
-    = link_to '商品詳細', class: "a"
+    = link_to @item.name, class: "a"
   = render 'aside'
 .footer
   .footer__top
