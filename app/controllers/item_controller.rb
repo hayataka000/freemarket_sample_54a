@@ -37,6 +37,7 @@ before_action :set_item ,only: [:edit,:update,:destroy,:show]
   
   def destroy
     if @item.user_id == current_user.id
+      @item.destroy
     end
   end
 
