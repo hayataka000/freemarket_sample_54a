@@ -29,7 +29,7 @@ before_action :set_item ,only: [:edit,:update]
   def pay
     @item = Item.find(params[:id])
     # params[:id] を使って 商品を特定し、@itemとして定義する
-    Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
+    Payjp.api_key = Rails.application.credentials.dig(:PAYJP_SECRET_KEY)
     charge = Payjp::Charge.create(
     :amount => @item.price,
     :card => params['payjp-token'],
