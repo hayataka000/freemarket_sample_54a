@@ -1,0 +1,7 @@
+= render 'item/header'
+%main.l-container
+  .mypage-side
+    = render 'mypages/mypages-side'
+  .logout-container
+    %a.btn-default.btn-red.sms-submit
+      =link_to 'ログアウト', sign_out_path, method: :delete

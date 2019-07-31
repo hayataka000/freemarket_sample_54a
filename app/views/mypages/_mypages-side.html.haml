@@ -2,7 +2,7 @@
 %nav.mypages-side-nav
   %ul.mypages-side-list
     %li
-      = link_to'マイページ',"/mypages#index",{class:"mypages-side-list-item active"}
+      = link_to'マイページ', mypages_path, {class:"mypages-side-list-item active"}
       %i.fas.fa-caret-right
     %li
       = link_to'お知らせ',"リンク",{class:"mypages-side-list-item"}
@@ -66,11 +66,11 @@
       = link_to'メール/パスワード',"リンク",{class:"mypages-side-list-item"}
       %i.fas.fa-caret-right
     %li
-      = link_to'本人情報',"/confirm/index",{class:"mypages-side-list-item"}
+      = link_to'本人情報', confirm_index_path, {class:"mypages-side-list-item"}
       %i.fas.fa-caret-right
     %li
       = link_to'電話番号の確認',"リンク",{class:"mypages-side-list-item"}
       %i.fas.fa-caret-right
     %li
-      = link_to'ログアウト',"リンク",{class:"mypages-side-list-item"}
+      = link_to'ログアウト', logout_index_path, {class:"mypages-side-list-item"}
       %i.fas.fa-caret-right

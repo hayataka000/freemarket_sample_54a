@@ -11,5 +11,6 @@
             %button{class: "sign-up__btn--facebook", onclick: "location.href='sign_up'"}Facebookで登録する
           .google-btn
             %button{class: "sign-up__btn--google", onclick: "location.href='sign_up'"}Googleで登録する
-          = render "devise/shared/links"
+          = link_to 'facebook',  user_facebook_omniauth_authorize_path, method: "post"
+          = link_to 'google',  user_google_oauth2_omniauth_authorize_path, method: "post"
   = render 'sign-up-footer'

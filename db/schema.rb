@@ -33,12 +33,6 @@ ActiveRecord::Schema.define(version: 2019_07_28_035320) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.integer "price", null: false
@@ -50,7 +44,7 @@ ActiveRecord::Schema.define(version: 2019_07_28_035320) do
     t.string "prefecture_id"
     t.string "content"
     t.integer "user_id"
-    t.string "category"
+    t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
