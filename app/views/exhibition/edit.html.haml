@@ -4,14 +4,20 @@
     .under-exhibition-container
       .exhibition-container
         = render 'item/exhibition'
-      .edit-container
-        = link_to '商品の編集', 'https://www.mercari.com/jp/sell/edit/m18501881546/',class:"btn-default-btn-red" 
-        %p.text-center or
-        =link_to '商品の削除',item_path(@item.id),method: :delete,class:"btn-default.btn-gray"
-      .comment-container
-        %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
-        .text-form
-        %button.message-submit.btn-default.btn-gray コメントする
+      - if @item.user_id != current_user.id
+        .edit-container
+          = link_to '商品の編集', 'https://www.mercari.com/jp/sell/edit/m18501881546/',class:"btn-default-btn-red" 
+          %p.text-center or
+          =link_to '商品の削除',item_path(@item.id),method: :delete,class:"btn-default.btn-gray"
+        .comment-container
+          %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+          .text-form
+          %button.message-submit.btn-default.btn-gray コメントする
+      - else
+        .comment-container
+          %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+          .text-form
+          %button.message-submit.btn-default.btn-gray コメントする
 = render 'item/aside'
 .footer
   .footer__top
