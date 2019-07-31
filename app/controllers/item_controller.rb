@@ -7,7 +7,6 @@ before_action :authenticate_user!,except: [:show,:index]
 
 
   def index
-    # @items = Item.includes(:user).order("created_at DESC").limit(4)
     @mens = Item.where(category_id: 1).order("created_at DESC").limit(4)
     @ladies = Item.where(category_id: 2).order("created_at DESC").limit(4)
     @kids = Item.where(category_id: 3).order("created_at DESC").limit(4)
