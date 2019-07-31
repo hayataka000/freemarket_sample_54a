@@ -27,8 +27,7 @@ Rails.application.routes.draw do
 
   resources :cards, only: [:index] do
   end
-  resources :mypages,only:[:index]
-
+  get 'mypage/:id', to: 'mypages#index'
   resources :exhibition,only:[:index]
   resources :confirm, only: [:index] 
 
