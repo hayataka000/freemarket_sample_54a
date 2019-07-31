@@ -1,9 +1,8 @@
+- breadcrumb :mypage
 = render 'item/header' 
 %body
   .breadcrumbs
-    = link_to 'メルカリ', root_path, class: "a"
-    >
-    = link_to 'マイページ',"/mypage/#{current_user.id}", class: "a"
+    = breadcrumbs separator: '＞', class: 'breadcrumbs__font'
   %main.l-container.clearfix
     .l-content
       %section.mypage-user-icon

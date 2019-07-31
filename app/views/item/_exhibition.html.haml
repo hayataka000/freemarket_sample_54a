@@ -1,10 +1,7 @@
+- breadcrumb :exhibition, @item 
 .container
   .breadcrumbs
-    = link_to 'メルカリ',  root_path, class: "a"
-    >
-   
-    >
-    = link_to '出品商品画面', class: "a"
+    = breadcrumbs separator: '＞', class: 'breadcrumbs__font'
   %section.item-box-container
     %h1.item-name 
       = @item.name

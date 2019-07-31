@@ -33,6 +33,7 @@ before_action :authenticate_user!,except: [:show,:index]
   end
 
   def edit
+    @item = Item.find(params[:id])
   end
   
   def destroy

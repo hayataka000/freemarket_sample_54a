@@ -1,13 +1,8 @@
+- breadcrumb :new_card
 .container
   = render 'item/header'
   .breadcrumbs
-    = link_to 'メルカリ', root_path, class: "a"
-    >
-    = link_to 'マイページ', "/mypage/#{current_user.id}", class: "a"
-    >
-    = link_to '支払い方法', cards_path, class: "a"
-    >
-    = link_to 'クレジットカード情報入力', '', class: "a"
+    = breadcrumbs separator: '＞', class: 'breadcrumbs__font'
   = render 'card_information'
   %main.l-container.clearfix
     .mypages-side
