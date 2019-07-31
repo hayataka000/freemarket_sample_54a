@@ -27,8 +27,8 @@ crumb :new_card do
 end
 
 # Recursive parent categories
-crumb :exhibition do
-  link "出品商品画面", edit_exhibition_path
+crumb :exhibition do |item|
+  link "商品出品画面", edit_exhibition_path(item)
   parent :mypage
 end
 
