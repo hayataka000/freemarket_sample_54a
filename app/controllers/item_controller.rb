@@ -1,13 +1,12 @@
-class ItemController < ApplicationController
+class ItemController <Item:: ApplicationController
 before_action :set_item ,only: [:edit,:update]
-
+before_action :authenticate_user!,except: [:show,:index]
   def set_item
     @item = Item.find(params[:id])
   end
 
 
   def index
-    # @items = Item.includes(:user).order("created_at DESC").limit(4)
     @mens = Item.where(category_id: 1).order("created_at DESC").limit(4)
     @ladies = Item.where(category_id: 2).order("created_at DESC").limit(4)
     @kids = Item.where(category_id: 3).order("created_at DESC").limit(4)
@@ -35,7 +34,6 @@ before_action :set_item ,only: [:edit,:update]
 
   def edit
     @item = Item.find(params[:id])
-    
   end
   
   def destroy
