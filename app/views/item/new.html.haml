@@ -63,7 +63,7 @@
                 %span.a
                   必須
               .main-buy-item__container-product-condition__delivery__form__select
-                = f.collection_select :category_id, DeliveryFee.all, :id, :name, prompt: "--", class: 'input'
+                = f.collection_select :delivery_fee_id, DeliveryFee.all, :id, :name, prompt: "--", class: 'input'
             .main-buy-item__container-product-condition__delivery__form__group__second
               %h3
                 発送元の地域
