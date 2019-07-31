@@ -3,7 +3,7 @@
   .breadcrumbs
     = link_to 'メルカリ', root_path, class: "a"
     >
-    = link_to 'マイページ', mypages_path, class: "a"
+    = link_to 'マイページ',"/mypage/#{current_user.id}", class: "a"
     >
     = link_to '支払い方法', '', class: "a"
     
