@@ -1,12 +1,9 @@
+- breadcrumb :confirm
 = render 'item/header'
 
 .body
   .breadcrumbs
-    = link_to 'メルカリ', root_path, class: "a"
-    >
-    = link_to 'マイページ', mypages_path, class: "a"
-    >
-    = link_to '本人情報の登録', '', class: "a"
+    = breadcrumbs separator: '＞', class: 'breadcrumbs__font'
 
 
   .container
