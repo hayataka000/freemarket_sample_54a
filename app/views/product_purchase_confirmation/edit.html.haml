@@ -26,7 +26,6 @@
               ¥
               =(@item.price)
           .buy-form__error
-          -# @itemをpay_item_pathの引数に入れる
           = form_with(url: pay_item_path(@item), method: :POST, id: "charge-form") do
             %script.payjp-button{id:"payjp-button", :src => "https://checkout.pay.jp", :type => "text/javascript" ,"data-text" => "購入する" ,"data-key" => "pk_test_6d636ecdcab8c61c72bee55b"}
     .buy-user
