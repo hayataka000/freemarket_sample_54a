@@ -1,0 +1,149 @@
+%header
+  .top
+    %h1.top__setting
+      %a{href: "https://www.mercari.com/jp/"}
+        %img.top__image{alt: "mercari", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?2927923569"}/
+.main
+=form_with model: @item, url:   item_index_path do |f|
+  .main-buy-item
+    .main-buy-item__container
+  
+      %h2.main-buy-item__container__head 商品の情報を入力
+      %form.main-buy-item__container__form
+        .main-buy-item__container__form__box
+          %h3.main-buy-item__container__form__box__picture
+            出品画像
+          %span
+            必須
+          %p.main-buy-item__container__form__box__upload 最大10枚までアップロードできます
+          .main-buy-item__container__form__box__drag-and-drop
+            %input#comment_image.hidden{name: "comment[image]", type: "file"}/
+            .main-buy-item__container__form__box__drag-and-drop__item
+              %p.main-buy-item__container__form__box__drag-and-drop__item__font
+                ドラッグアンドドロップ
+                %br/
+                またはクリックしてファイルをアップロード
+                = f.file_field :image
+      .main-buy-item__container-product-datails
+        .main-buy-item__container-product-datails__form
+          %h3
+            商品名
+            = f.text_field :name, class: 'item_name', placeholder: '商品名を入力してください(40字まで)'
+          %span
+            必須
+        .main-buy-item__container-product-datails__description
+        
+          %h3
+            商品の説明
+            = f.text_area :content, class: 'item_datail', placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+          %span
+            必須
+    .main-buy-item__container-product-condition
+      .main-buy-item__container-product-condition__state
+        %h3
+          商品の詳細
+        .main-buy-item__container-product-condition__state__box
+          .main-buy-item__container-product-condition__state__box__category
+            %h3
+              カテゴリー
+            %span.category
+              必須
+            .main-buy-item__container-product-condition__state__box__category__select
+              = f.collection_select :category_id, Category.all, :id, :name, prompt: "--", class: 'input'
+          .main-buy-item__container-product-condition__state__box__condition
+            %h3
+              商品の状態
+            %span.condition
+              必須
+            .main-buy-item__container-product-condition__state__box__condition__select
+            
+              = f.select :condition, [["---", "---"],["新品、未使用", "新品、未使用"], ["未使用に近い", "未使用に近い"], ["目立った傷や汚れなし", "目立った傷や汚れなし"], ["やや傷や汚れあり", "やや傷や汚れあり"], ["傷や汚れあり", "傷や汚れあり"], ["全体的に状態が悪い", "全体的に状態が悪い"]] ,class:"category-select"
+    .main-buy-item__container-product-condition__delivery
+      %h3.main-buy-item__container-product-condition__delivery__sub
+        配送について
+        %a.main-buy-item__container-product-condition__delivery__sub__question{href: "/jp/help_center/article/68/", target: "_blank"} ?
+      .main-buy-item__container-product-condition__delivery__form
+        .main-buy-item__container-product-condition__delivery__form__group
+          %h3
+            配送料の負担
+          %span.a
+            必須
+        .main-buy-item__container-product-condition__delivery__form__select
+          = f.collection_select :delivery_fee_id, DeliveryFee.all, :id, :name, prompt: "--", class: 'input'
+        .main-buy-item__container-product-condition__delivery__form__group__second2
+          %h3
+            発送元の地域
+          %span.b
+            必須
+        .main-buy-item__container-product-condition__delivery__form__select
+          = f.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt: "--", class: 'input'
+        .main-buy-item__container-product-condition__delivery__form__group__third
+          %h3
+            発送までの日数
+          %span.c
+            必須
+        .main-buy-item__container-product-condition__delivery__form__select
+          
+          = f.select :delivery_date, [["---", "---"], ["1~2日で発送", "1~2日で発送"], ["2~3日で発送", "2~3日で発送"],["4~7日で発送", "4~7日で発送"]] ,class:"category-selec"
+    .main-buy-item__container-product-condition__price
+      %h3.price 販売価格(300~9,999,999)
+      .main-buy-item__container-product-condition__price__box
+        %ul.main-buy-item__container-product-condition__price__box__ul
+          %li.main-buy-item__container-product-condition__price__box__ul__price
+            %h3.main-buy-item__container-product-condition__price__box__ul__price__left
+              価格
+            %span
+              必須
+            .main-buy-item__container-product-condition__price__box__ul__price__right
+              .main-buy-item__container-product-condition__price__box__ul__price__right
+              
+                .main-buy-item__container-product-condition__price__box__ul__price__right__input
+                  ¥
+                = f.text_field :price, class: 'item_price', placeholder: '例）300'
+          %li.main-buy-item__container-product-condition__price__box__ul__fee
+            .main-buy-item__container-product-condition__price__box__ul__fee__left
+              販売手数料
+            .main-buy-item__container-product-condition__price__box__ul__fee__right
+              %h3 -
+          %li.main-buy-item__container-product-condition__price__box__ul__profit
+            .main-buy-item__container-product-condition__price__box__ul__profit__profit 販売利益
+            .main-buy-item__container-product-condition__price__box__ul__profit__- -
+    .main-buy-item__container-product-condition__price__btn
+      .main-buy-item__container-product-condition__price__btn__box
+      %p
+        %a{href: "/jp/help_center/getting_started/prohibited_items/", target: "_blank"} 禁止されている出品
+        、
+        %a{href: "/jp/help_center/getting_started/prohibited_conduct/", target: "_blank"} 行為
+        を必ずご確認ください
+      %p
+        またブランド品でシリアルナンバー等がある場合はご記載ください。
+        %a{href: "/jp/help_center/getting_started/counterfeit_goods/", target: "_blank"} 偽ブランドの販売
+        は犯罪あり処罰される可能性があります。
+      %p
+        また、出品をもちまして
+        %a{href: "/jp/seller_terms/"} 加盟店規約
+        に同意したことになります。
+      .btn-default.btn-red
+      
+        = f.submit "出品する"
+      .btn-default.btn-gray もどる
+
+  .bottom
+    %ul.bottom__list
+      %li.bottom__list__Exclusion
+        %a{href: "https://www.mercari.com/jp/privacy/"} プライバシーポリシー
+      %li.bottom__list__margin
+        %a{href: "https://www.mercari.com/jp/tos/"} メルカリ利用規約
+      %li.bottom__list__margin
+        %a{href: "https://www.mercari.com/jp/tokutei/"} 特定商取引に関する表記
+    %a.bottom__logo{href: "https://www.mercari.com/jp/"}
+      %img{alt: "mercari", height: "65", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2927923569", width: "80"}/
+    %p.bottom__mercari © 2019 Mercari
+
+    .sell-dropbox-container.clearfix.state-image-number-10
+      .sell-upload-items-container
+        .sell-upload-items.have-item-0
+          %ul
+      .sell-upload-drop-box.have-item-0
+        %input.sell-upload-drop-file{multiple: "multiple", name: "image1", style: "display: none;", type: "file"}/
+        %pre.visible-pc
