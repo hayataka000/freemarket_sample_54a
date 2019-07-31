@@ -1,7 +1,15 @@
 = render 'item/header'
-%main.l-container
-  .mypage-side
+.container
+  .breadcrumbs
+    = link_to 'メルカリ', root_path, class: "a"
+    >
+    = link_to 'マイページ', mypages_path, class: "a"
+    >
+    = link_to 'プロフィール', '', class: "a"
+%main.l-container.clearfix
+  .mypages-side
     = render 'mypages/mypages-side'
   .logout-container
-    %a.btn-default.btn-red.sms-submit
+    .btn-default
       =link_to 'ログアウト', sign_out_path, method: :delete
+= render 'item/footer'
