@@ -12,7 +12,6 @@ set :unicorn_rack_env, "production"
 # server "db.example.com", user: "deploy", roles: %w{db}
 
 
-
 # role-based syntax
 # ==================
 
