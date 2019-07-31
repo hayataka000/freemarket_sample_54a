@@ -2,7 +2,8 @@
   .header
     .inner
       .inner__top
-        %img{:alt => "mercari", :height => "36", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?4104386162", :width => "134"}/
+        %a{:href => '/'}
+          %img{:alt => "mercari", :height => "36", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?4104386162", :width => "134"}/
         .inner__top-form
           %input.input-default{:name => "keyword", :placeholder => "何をお探しですか？", :type => "search", :value => ""}/
           %i.icon-search
@@ -23,7 +24,7 @@
           .inner__nav__box-right
             .inner__nav__box-right-signup
               .signup__btn-red
-                = link_to '新規会員登録', new_user_session_path
+                = link_to '新規会員登録', sign_in_index_path
               .login__btn-blue
                 = link_to 'ログイン', new_user_session_path
 
