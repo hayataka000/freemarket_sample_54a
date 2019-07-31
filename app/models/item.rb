@@ -6,4 +6,7 @@ belongs_to_active_hash :prefecture,optional:true
 belongs_to_active_hash :delivery_fee,optional:true
 has_one_attached :image
 belongs_to_active_hash :category
+
+
+
 end
