@@ -3,7 +3,7 @@
   .breadcrumbs
     = link_to 'メルカリ', root_path, class: "a"
     >
-    = link_to 'マイページ', '', class: "a"
+    = link_to 'マイページ',"/mypage/#{current_user.id}", class: "a"
   %main.l-container.clearfix
     .l-content
       %section.mypage-user-icon
