@@ -1,9 +1,5 @@
 class ItemController < ApplicationController
-before_action :set_item ,only: [:edit,:update]
-
-  def set_item
-    @item = Item.find(params[:id])
-  end
+before_action :set_item ,only: [:edit,:update,:destroy,:show]
 
 
   def index
@@ -34,14 +30,13 @@ before_action :set_item ,only: [:edit,:update]
   end
 
   def edit
-    @item = Item.find(params[:id])
-    
+    if @item.user_id != current_user.id
+      redirect_to root_path
+    end
   end
   
   def destroy
-    item = Item.find(params[:id])
-    if item.user_id == current_user.id
-      item.destroy
+    if @item.user_id == current_user.id
     end
   end
 
@@ -55,6 +50,8 @@ before_action :set_item ,only: [:edit,:update]
   end
 
   def update
+
+    redirect_to root_path if @item.user_id != current_user.id
     if @item.update(item_params)
       redirect_to root_path
     else
@@ -63,12 +60,15 @@ before_action :set_item ,only: [:edit,:update]
   end
   
   def show
-    @item = Item.find(params[:id])
     @user = @item.user
     @items = Item.where(user_id: @user.id).limit(6).where.not(id: @item.id )
   end
 
   private 
+
+  def set_item
+    @item = Item.find(params[:id])
+  end
   
   def item_params
     params.require(:item).permit(:category_id,:image, :prefecture_id, :delivery_fee_id, :name,  :price, :size, :condition, :delivery_fee_id, :delivery_date, :delivery_method, :content, :category).merge(user_id: current_user.id)
