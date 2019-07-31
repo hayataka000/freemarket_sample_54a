@@ -1,23 +1,8 @@
 .container
   = render 'item/header'
-  .breadcrumbs
-    = link_to 'メルカリ', root_path, class: "a"
-    >
-    = link_to '商品', '', class: "a"
-
   %section.item-box-container
-    %h1.item-name COACH コーチ ショルダーバッグ
-    %p.item-wording
-      『COACH コーチ ショルダーバッグ』は、821回の取引実績を持つ
-      =link_to do
-        ３児mama☆(プロフィール必読!!)
-      さんから出品されました。
-      =link_to do
-        コーチ
-      （
-      =link_to do
-        ショルダーバッグ/レディース
-      ）の商品で、岡山県から4~7日で発送されます。
+    %h1.item-name  
+      = @item.name
     .item-main-content.clearfix
       .item-photo
         .owl-carousel
@@ -26,7 +11,7 @@
               .owl-item
               .owl-item.active
                 .owl-item-inner
-                  = image_tag '', size: '300×300'
+                  = image_tag @item.image, size: '300×300'
           .owl-nav.disabled
             .owl-prev prev
             .owl-next next
@@ -44,29 +29,24 @@
         %span.item-tax (税込)
         %span.item-shipping-fee 送料込み
       %section.visible-sp
-        =link_to '購入画面に進む',"/confirm/index", class: 'item-buy-btn.f18-24'
+        =link_to class: 'item-buy-btn.f18-24' do
+          購入画面に進む
+        .item-btn-float-area
+          =link_to class: 'item-btn-client' do
+            .visible 購入画面に進む
       %table.item-detail-table
         %tbody
           %tr
             %th 出品者
             %td
               =link_to do
-                ３児mama☆(プロフィール必読!!)
-              %div
-                .item-user-ratings
-                  %i.icon-good
-                    %span 821
-                .item-user-ratings
-                  %i.icon-normal
-                    %span 2
-                .item-user-ratings
-                  %i.icon-bad
-                    %span 0
+                = @user.nickname
           %tr
             %th カテゴリー
             %td
               =link_to do
-                %div レディース
+                %div 
+                  = @item.category.name
               =link_to do
                 .item-detail-table-sub-category
                   %i.icon-arrow-right バッグ
@@ -74,29 +54,25 @@
                 .item-detail-table-sub-sub-category
                   %i.icon-arrow-right ショルダーバッグ
           %tr
-            %th ブランド
-            %td
-              =link_to do
-                %div コーチ
-          %tr
             %th 商品の状態
-            %td やや傷や汚れあり
+            %td
+              = @item.condition
           %tr
             %th 配送料の負担
-            %td 送料込み(出品者負担)
-          %tr
-            %th 配送の方法
-            %td らくらくメルカリ便
+            %td
+              = @item.delivery_fee.name
           %tr
             %th 配送元地域
             %td
-              =link_to do
-                岡山県
+              = @item.prefecture.name
           %tr
             %th 発送日の目安
-            %td 4~7日で発送
+            %td 
+              = @item.delivery_date
     .item-price-box.text-center
-      %span.item-price.bold ¥ 2,500
+      %span.item-price.bold 
+        ¥
+        = @item.price 
       %span.item-tax (税込)
       %span.item-shipping-fee 送料込み
     .item-buy-btn.f18-24
@@ -104,188 +80,95 @@
         =link_to '購入画面に進む' ,edit_product_purchase_confirmation_path(@item.id),{class: 'item-buy.f18-24'}
     .item-btn-client
     .item-description.f14
-      %p.item-description-inner 所々に擦り傷、色剥げ、スカーフに黄ばみ、少し形崩れもあります。この状態をご理解頂いての、ご購入で宜しくお願いします。そして長財布は、入りません。縦…約12cm横…約20cmマチ…約5cm神経質な方は、ご遠慮ください。
-    .item-button-container.clearfix
-      .item-button-left
-        =link_to do
-          .item-button.item-button-like
-            %i.icon-like-border
-              %span いいね!
-              %span 4
-        =link_to do
-          .item-button.item-button-report.clearfix
-            %i.icon-flag
-              %span 不適切な商品の報告
-      .item-button-right
-        =link_to do
-          .item-button.item-button-like
-            %i.icon-lock
-              %span あんしん・あんぜんへの取り組み
+      %p.item-description-inner 
+        = @item.content
   .item-detail-message
     .message-container
   %ul.nav-item-link-prev-next.clearfix
-    %li.nav-item-link-prev
-      =link_to do
-        %i.icon-arrow-left
-          Roger&Raw デニムシャツ
-    %li.nav-item-link-next
-      =link_to do
-        トイストーリー4  メタリック下敷き
-        %i.icon-arrow-right
-  .item-social-media-box
-    .text-center
-      .fb-save.fb_iframe_widget
-    %ul.social-media-box
-      =link_to do
-        %li.share-btn
-      =link_to do
-        %li.share-btn
-      =link_to do
-        %li.social-hidden-item
-      =link_to do
-        %li.share-btn
   .items-in-user-profile
     %section.items-box-container.clearfix.related-item-column.items-in-user-profile
       %h2.items-box-head
         =link_to do
-          = "３児mama☆(プロフィール必読!!)さんのその他の出品"
+          = @user.nickname + "さんのその他の出品"
       .items-box-content.clearfix
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag '', size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag '', size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag '', size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag '', size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag '', size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag '', size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
-    %section.items-box-container.clearfix.related-item-column.items-in-user-profile
-      %h2.items-box-head
-        =link_to do
-          ３児mama☆(プロフィール必読!!)さんのその他の出品
-      .items-box-content.clearfix
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag '', size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag '', size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag '', size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag '', size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag '', size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
-        %section.items-box
-          =link_to do
-            %figure.items-box-photo
-              = image_tag '', size: '220×220', class: 'lazyloaded'
-            .items-box-body
-              %h3.items-box-name.font-2 x-girl  ショルダーバッグ
-              .items-box-num
-                .items-box-price.font-5 ¥ 3,000
-                .font-2
-                  .icon-like-border
-                    %span 4
+        = render 'items-box'
   = render 'aside'
-  = render "footer"
+.footer
+  .footer__top
+  %nav.clearfix
+    .footer__top--head
+      %h2.footer__top--head--head メルカリについて
+      %ul
+        %li
+          %a{href:""} 会社概要（運営会社）
+        %li
+          %a{href:""} 採用情報
+        %li
+          %a{href:""} プレスリリース
+        %li
+          %a{href:""} 公式ブログ
+        %li
+          %a{href: ""} メルカリロゴ利用ガイドライン
+        %li.footer-link
+          %a{href: "https://twitter.com/mercari_jp", target: "_blank"}
+            %i.fab.fa-twitter
+        %li.footer-link
+          %a{href: "https://www.facebook.com/mercarijp", target: "_blank"}
+            %i.fab.fa-facebook-square
+    .footer__top--head
+      %h2.footer__top--head--head ヘルプ＆ガイド
+      %ul
+        %li
+          %a{href: ""} メルカリガイド
+        %li
+          %a{href: ""} らくらくメルカリ便
+        %li
+          %a{href: ""} ゆうゆうメルカリ便
+        %li
+          %a{href: ""} 大型メルカリ便
+        %li
+          %a{href: ""} 車体取引ガイド
+        %li
+          %a{href: ""} メルカリあんしん・あんぜん宣言！
+        %li
+          %a{href: ""} 偽ブランド品撲滅への取り組み
+        %li
+          %a{href: ""} メルカリボックス
+    .footer__top--head.width
+      %h2.footer__top--head--head プライバシーと利用規約
+      .footer__top--head--inner
+        %ul
+          %li
+            %a{href: ""} プライバシーポリシー
+          %li
+            %a{href: ""} メルカリ利用規約
+          %li
+            %a{href: ""} あんしんスマホサポート制度に関する利用特約
+          %li
+            %a{href: ""} コンプライアンスポリシー
+      .footer__top--head--inner
+        %ul
+          %li
+            %a{href: ""} 個人データの安全管理に係る基本方針
+          %li
+            %a{href: ""} 特定商取引に関する表記
+          %li
+            %a{href: ""} 資金決済法に基づく表示
+          %li
+            %a{href: ""} 法令順守と犯罪抑止のために
+          %li
+            %a{href: ""} 返品・返金ポリシー
+    .footer__top--head.footer-nav-lang
+      %h2.footer__top--head--head 国
+      %ul
+        %li
+          %a{href: ""} 日本
+        %li
+          %a{href: ""} United States
+  
+  .footer__bottom
+    .footer__bottom--icon
+      %a.footer-logo{href: "https://www.mercari.com/jp/"}
+        %img{alt: "mercari",height: "33",src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-white.svg?2927923569",width: "124"}/
+    %span.footer__bottom--copyright
+      %small © 2019 Mercari
