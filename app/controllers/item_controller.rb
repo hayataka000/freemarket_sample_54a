@@ -35,6 +35,7 @@ before_action :set_item ,only: [:edit,:update]
 
   def edit
     @item = Item.find(params[:id])
+    
   end
   
   def destroy
