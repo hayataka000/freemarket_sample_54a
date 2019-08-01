@@ -164,7 +164,7 @@
         .view-all
     %section.main__items.clearfix
       %h3.main__text
-        %a{href: ""} シャネル 新着アイテム
+        %a{href: ""} 本・音楽・ゲーム 新着アイテム
       - @chanel.each do |item|
         %section.items__box
           =link_to item_path(item.id), class: "items__box__btn" do
@@ -182,7 +182,7 @@
           .view-all
     %section.main__items.clearfix
       %h3.main__text
-        %a{href: ""} ルイ ヴィトン 新着アイテム
+        %a{href: ""} おもちゃ・ホビー・グッズ 新着アイテム
       - @vuitton.each do |item|
         %section.items__box
           =link_to item_path(item.id), class: "items__box__btn" do
@@ -200,7 +200,7 @@
               .view-all
     %section.main__items.clearfix
       %h3.main__text
-        %a{href: ""} 'シュプリーム 新着アイテム
+        %a{href: ""} スポーツ・レジャー 新着アイテム
       - @supreme.each do |item|
         %section.items__box
           =link_to item_path(item.id), class: "items__box__btn" do
@@ -218,7 +218,7 @@
                 .view-all
     %section.main__items.clearfix
       %h3.main__text
-        %a{href: ""}  NIKE 新着アイテム
+        %a{href: ""}  その他 新着アイテム
       - @nike.each do |item|
         %section.items__box
           =link_to item_path(item.id), class: "items__box__btn" do

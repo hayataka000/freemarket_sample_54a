@@ -1,5 +1,6 @@
 class ExhibitionController < ApplicationController
     def edit
         @item = Item.find(params[:id])
-      end
+        @user = @item.user
+    end
 end
