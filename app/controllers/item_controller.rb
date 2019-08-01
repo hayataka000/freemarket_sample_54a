@@ -1,6 +1,6 @@
 class ItemController < ApplicationController
 before_action :set_item ,only: [:edit,:update,:destroy,:show]
-before_action :authenticate_user!,except: [:show,:index]
+skip_before_action :authenticate_user!, only: [:show,:index]
 
   def index
     @mens = Item.where(category_id: 1, status: 0).order("created_at DESC").limit(4)
