@@ -5,9 +5,9 @@
       .exhibition-container
         = render 'item/exhibition'
       .edit-container
-        = link_to '商品の編集', '#',class:"btn-default-btn-red"
+        = link_to '商品の編集', edit_item_path(@item.id), method: :get,class:"btn-default-btn-red"
         %p.text-center or
-        =link_to '商品の削除',item_path(@item.id),method: :delete,class:"btn-default.btn-gray"
+        = link_to '商品の削除',item_path(@item.id),method: :delete,class:"btn-default.btn-gray"
       .comment-container
         %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
         .text-form
