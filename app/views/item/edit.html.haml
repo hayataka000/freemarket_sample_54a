@@ -1,7 +1,7 @@
 %header
   .top
     %h1.top__setting
-    = link_to image_tag("mercari_icon.png"),""
+    = link_to image_tag("mercari_icon.png"),"/"
 .main
   = render 'form'
   .bottom
@@ -12,7 +12,7 @@
         = link_to 'メルカリ利用規約', ''
       %li.bottom__list__margin
         = link_to '特定商取引に関する表記', ''
-    %a.bottom__logo{href: ""}
+    %a.bottom__logo{href: "/"}
       %img{alt: "mercari", height: "65", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2927923569", width: "80"}/
     %p.bottom__mercari © 2019 Mercari
     .sell-dropbox-container.clearfix.state-image-number-10
