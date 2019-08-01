@@ -97,6 +97,9 @@
           -if current_user.id == item.user.id
             %section.items__box
               =link_to item_path(item.id), class: "items__box__btn" do
+          -else
+            %section.items__box
+              =link_to item_path(item.id), class: "items__box__btn" do
                 %figure.items__box__photo
                   = image_tag item.image.variant(resize:'200x200').processed
                 .items__box__body
