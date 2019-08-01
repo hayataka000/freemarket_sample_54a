@@ -24,12 +24,12 @@ Rails.application.routes.draw do
   get 'mypage/:id', to: 'mypages#index'
 
   resources :exhibition,only:[:index]
-  
-  resources :confirm, only: [:index] 
+
+  resources :confirm, only: [:index]
 
   resources :logout, only: [:index] do
   end
-  
+
   resources :product_purchase_confirmation, only: [:edit] do
   end
 

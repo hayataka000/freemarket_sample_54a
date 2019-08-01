@@ -3,13 +3,13 @@
   .sign-up-main-box
     .sign-up-main-box__content
       .no-account
-        .sign-up-btn
-          %button{class: "sign-up__new-user", onclick: "location.href='sign_up'"}新規会員登録
+        .sign-up__new-user
+          = link_to 'メールアドレスで登録する', sign_up_path
       .auth-sns
-        .facebook-btn
-          %button{class: "sign-up__btn--facebook"}Facebookでログインする
-        .google-btn
-          %button{class: "sign-up__btn--google"}Googleでログインする
+        .sign-up__btn--facebook
+          = link_to 'Facebookでログインする',  user_facebook_omniauth_authorize_path, method: "post"
+        .sign-up__btn--google
+          = link_to 'Googleでログインする',  user_google_oauth2_omniauth_authorize_path, method: "post"
       .login-form
         .login-form__main
         = form_with model: User, url: user_session_path, method: :post, local: true do |f|

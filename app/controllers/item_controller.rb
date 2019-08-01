@@ -1,13 +1,8 @@
-class ItemController <Item:: ApplicationController
-before_action :set_item ,only: [:edit,:update]
+class ItemController < ApplicationController
+before_action :set_item ,only: [:edit,:update,:destroy,:show]
 before_action :authenticate_user!,except: [:show,:index]
-  def set_item
-    @item = Item.find(params[:id])
-  end
-
 
   def index
-    # @items = Item.includes(:user).order("created_at DESC").limit(4)
     @mens = Item.where(category_id: 1, status: 0).order("created_at DESC").limit(4)
     @ladies = Item.where(category_id: 2, status: 0).order("created_at DESC").limit(4)
     @kids = Item.where(category_id: 3, status: 0).order("created_at DESC").limit(4)
@@ -33,16 +28,14 @@ before_action :authenticate_user!,except: [:show,:index]
 
 
   def edit
-    @item = Item.find(params[:id])
-    if @item.user.id != current_user.id
+    if @item.user_id != current_user.id
       redirect_to root_path
-      end
+    end
   end
 
   def destroy
-    item = Item.find(params[:id])
-    if item.user_id == current_user.id
-      item.destroy
+    if @item.user_id == current_user.id
+      @item.destroy
     end
   end
 
@@ -59,6 +52,8 @@ before_action :authenticate_user!,except: [:show,:index]
   end
 
   def update
+
+    redirect_to root_path if @item.user_id != current_user.id
     if @item.update(item_params)
       redirect_to root_path
     else
@@ -67,15 +62,17 @@ before_action :authenticate_user!,except: [:show,:index]
   end
 
   def show
-    @item = Item.find(params[:id])
     @user = @item.user
     @items = Item.where(user_id: @user.id).limit(6).where.not(id: @item.id )
   end
 
-  private
+  private 
 
+  def set_item
+    @item = Item.find(params[:id])
+  end
+  
   def item_params
     params.require(:item).permit(:category_id,:image, :prefecture_id, :delivery_fee_id, :name,  :price, :size, :condition, :delivery_fee_id, :delivery_date, :delivery_method, :content, :category).merge(user_id: current_user.id)
   end
 end
-

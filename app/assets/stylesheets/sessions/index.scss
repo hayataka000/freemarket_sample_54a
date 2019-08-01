@@ -37,7 +37,7 @@
           max-width: 343px;
           margin: 0 auto;
 
-          button.sign-up__btn {
+          .sign-up__btn {
             width: 100%;
             position: relative;
             background: #ea352d;
@@ -52,7 +52,7 @@
             border-radius: 5px
           }
 
-          button.sign-up__btn--facebook {
+          .sign-up__btn--facebook {
             margin: 16px 0 0;
             background: #385185;
             color: #fff;
@@ -68,7 +68,7 @@
             border-radius: 5px;
           }
 
-          button.sign-up__btn--google {
+          .sign-up__btn--google {
             margin: 16px 0 0;
             background: #fff no-repeat 3px top;
             border: #979797 solid 1px;
