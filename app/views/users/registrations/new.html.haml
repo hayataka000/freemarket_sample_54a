@@ -12,6 +12,7 @@
         .form__inner
           .form__inner-group
             = f.label :nickname, "ニックネーム"
+            %span.form-require 必須
             = f.text_field :nickname, class: "input-default", placeholder: "例) メルカリ太郎", type: "text"
           .form__inner-group
             = f.label :email, "メールアドレス"
@@ -33,12 +34,14 @@
           .form__inner-group2
             .group2-top
               %label お名前(全角)
+              %span.form-require 必須
           .group2-input-box
             = f.text_field :last_name, class: "input-default-half", placeholder: "例) 山田", type: "text"
             = f.text_field :first_name, class: "input-default-half", placeholder: "例) 彩", type: "text"
           .form__inner-group2
             .group2-top
               = f.label "お名前カナ(全角)", id: "last_name"
+              %span.form-require 必須
           .group2-input-box
             = f.text_field :last_name_furigana, class: "input-default-half", placeholder: "例) ヤマダ", type: "text"
             = f.text_field :first_name_furigana, class: "input-default-half", placeholder: "例) アヤ", type: "text"

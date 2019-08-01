@@ -8,9 +8,9 @@
     background-color: white;
     padding: 30px;
     .no-account{
-      button.sign-up__new-user {
+      .sign-up__new-user {
         margin: 16px 0 0;
-        background: #0099e8;
+        background: #79d2ff;
         color: #fff;
         display: block;
         width: 100%;
@@ -26,7 +26,7 @@
     }
 
     .auth-sns{
-      button.sign-up__btn--facebook {
+      .sign-up__btn--facebook {
         margin: 16px 0 0;
         background: #385185;
         color: #fff;
@@ -42,7 +42,7 @@
         border-radius: 5px;
       }
 
-      button.sign-up__btn--google {
+      .sign-up__btn--google {
         margin: 16px 0 0;
         background: #fff no-repeat 3px top;
         border: #979797 solid 1px;

@@ -95,18 +95,32 @@
       .items.clearfix
         - @mens.each do |item|
           %section.items__box
-            =link_to item_path(item.id), class: "items__box__btn" do
-              %figure.items__box__photo
-                = image_tag item.image.variant(resize:'200x200').processed
-              .items__box__body
-                %h3.items__box-name.font-2
-                  = simple_format(item.name)
-                .items__box__num
-                  .items__box__num__price.font-5
-                    ¥
-                    = (item.price)
-                  .font-2
-                  %span
+            -if current_user.id == item.user.id
+              =link_to item_path(item.id), class: "items__box__btn" do
+                %figure.items__box__photo
+                  = image_tag item.image.variant(resize:'200x200').processed
+                .items__box__body
+                  %h3.items__box-name.font-2
+                    = simple_format(item.name)
+                  .items__box__num
+                    .items__box__num__price.font-5
+                      ¥
+                      = (item.price)
+                    .font-2
+                    %span
+            -else
+              =link_to item_path(item.id), class: "items__box__btn" do
+                %figure.items__box__photo
+                  = image_tag item.image.variant(resize:'200x200').processed
+                .items__box__body
+                  %h3.items__box-name.font-2
+                    = simple_format(item.name)
+                  .items__box__num
+                    .items__box__num__price.font-5
+                      ¥
+                      = (item.price)
+                    .font-2
+                    %span
         .view-all
       %section.main__items.clearfix
         %h3.main__text

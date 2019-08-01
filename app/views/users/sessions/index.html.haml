@@ -5,12 +5,10 @@
       .sign-up-main__content__head 新規会員登録
       .sign-up-main__content__bottom
         .sign-up-main__content__bottom-inner
-          .mail-btn
-            %button{class: "sign-up__btn", onclick: "location.href='sign_up'"}メールアドレスで登録する
-          .facebook-btn
-            %button{class: "sign-up__btn--facebook", onclick: "location.href='sign_up'"}Facebookで登録する
-          .google-btn
-            %button{class: "sign-up__btn--google", onclick: "location.href='sign_up'"}Googleで登録する
-          = link_to 'facebook',  user_facebook_omniauth_authorize_path, method: "post"
-          = link_to 'google',  user_google_oauth2_omniauth_authorize_path, method: "post"
+          .sign-up__btn
+            = link_to 'メールアドレスで登録する', sign_up_path
+          .sign-up__btn--facebook
+            = link_to 'Facebookで登録する',  user_facebook_omniauth_authorize_path, method: "post"
+          .sign-up__btn--google
+            = link_to 'Googleで登録する',  user_google_oauth2_omniauth_authorize_path, method: "post"
   = render 'sign-up-footer'
