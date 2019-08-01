@@ -26,6 +26,7 @@ margin:80px 180px 0px 340px;
     margin-left:0px;
     margin: 16px 0 16px 0;
     font-size:14px;
+    display: block;
   }
   p{
     height:10px;
@@ -49,9 +50,13 @@ margin:80px 180px 0px 340px;
     margin-left:0px;
     margin: 16px 0 16px 0;
     font-size:14px;
+    display: block;
   }
 }
-
+.gray {
+  display: block;
+  color: white;
+}
 .exhibition-container .item-box-container{
   margin:80px 180px 0px 340px;
 }
