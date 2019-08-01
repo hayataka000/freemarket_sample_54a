@@ -9,19 +9,24 @@
     .center__item__buy
       .center__item__buy__inner
         %h3.center__item__buy__inner__image
-          %img.center__item__buy__inner__image__item{alt: "item", src: "https://static.mercdn.net/thumb/photos/m24504139973_1.jpg?1563145720", }/
-        %p.center__item__buy__inner__item-name 新品未使用！計40kg ダンベルセット
+          .center__item__buy__inner__image__item
+            = image_tag @item.image.variant(resize: '64').processed
+        %p.center__item__buy__inner__item-name 
+          =@item.name
         .buy-form
           %p.buy-form__price
-            ¥ 6,900
+            ¥
+            =(@item.price)
             %span.buy-form__price__cost 送料込み
           .buy-form__point
             .buy-form__point__font ポイントはありません
           .buy-form__row
             .buy-form__row__price 支払い金額
-            .buy-form__row__price-2 ￥ 6,900
+            .buy-form__row__price-2 
+              ¥
+              =(@item.price)
           .buy-form__error
-          = form_with(url: done_path, method: :POST, id: "charge-form") do
+          = form_with(url: pay_item_path(@item), method: :POST, id: "charge-form") do
             %script.payjp-button{id:"payjp-button", :src => "https://checkout.pay.jp", :type => "text/javascript" ,"data-text" => "購入する" ,"data-key" => "pk_test_6d636ecdcab8c61c72bee55b"}
     .buy-user
       .buy-user__info
