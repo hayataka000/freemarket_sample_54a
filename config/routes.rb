@@ -19,13 +19,14 @@ Rails.application.routes.draw do
     delete 'sign_out', to: 'devise/sessions#destroy'
     get 'sign_in_index', to: 'users/sessions#index'
   end
-
-  resources :mypages,only:[:index]
-
+  resources :cards, only: [:index] do
+  end
+  get 'mypage/:id', to: 'mypages#index'
+ 
+  resources :exhibition,only:[:index]
+  
   resources :confirm, only: [:index] 
 
-  
-  
   resources :logout, only: [:index] do
   end
   
