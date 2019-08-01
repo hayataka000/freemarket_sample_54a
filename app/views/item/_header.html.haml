@@ -19,7 +19,7 @@
               .must-list
                 = link_to 'やることリスト'
               .mypage
-                = link_to 'マイページ', '/mypages'
+                = link_to 'マイページ', "/mypage/#{current_user.id}"
         - else
           .inner__nav__box-right
             .inner__nav__box-right-signup
@@ -35,11 +35,11 @@
                 %h2
                   .header__bottom__left__nav__icon
                     %i.fas.fa-list-ul
-                      = link_to '', 'https://www.mercari.com/jp/category/'
+                      = link_to '', ''
                       %span カテゴリーから探す
               %li
                 %h2
                   .header__bottom__left__nav__icon2
                     %i.fas.fa-tags
-                      = link_to '', 'https://www.mercari.com/jp/brand/'
+                      = link_to '', ''
                       %span ブランドから探す

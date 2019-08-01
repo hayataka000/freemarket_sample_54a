@@ -37,14 +37,15 @@ ActiveRecord::Schema.define(version: 2019_07_28_035320) do
     t.string "name", null: false
     t.integer "price", null: false
     t.string "size"
-    t.string "condition"
-    t.string "delivery_fee_id"
-    t.string "delivery_date"
+    t.string "condition", null: false
+    t.string "delivery_fee_id", null: false
+    t.string "delivery_date", null: false
     t.string "delivery_method"
-    t.string "prefecture_id"
-    t.string "content"
-    t.integer "user_id"
-    t.integer "category_id"
+    t.string "prefecture_id", null: false
+    t.string "content", null: false
+    t.integer "user_id", null: false
+    t.integer "category_id", null: false
+    t.integer "status", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -52,16 +53,11 @@ ActiveRecord::Schema.define(version: 2019_07_28_035320) do
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.string "first_name"
-    t.string "first_name_furigana"
-    t.string "last_name"
-    t.string "last_name_furigana"
-    t.string "nickname"
-    t.string "phone_number"
-    t.integer "birthday_year"
-    t.integer "birthday_month"
-    t.integer "birthday_day"
-    t.integer "adress_id"
+    t.string "first_name", null: false
+    t.string "first_name_furigana", null: false
+    t.string "last_name", null: false
+    t.string "last_name_furigana", null: false
+    t.string "nickname", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

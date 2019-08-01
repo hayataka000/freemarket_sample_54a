@@ -47,12 +47,6 @@
               =link_to do
                 %div 
                   = @item.category.name
-              =link_to do
-                .item-detail-table-sub-category
-                  %i.icon-arrow-right バッグ
-              =link_to do
-                .item-detail-table-sub-sub-category
-                  %i.icon-arrow-right ショルダーバッグ
           %tr
             %th 商品の状態
             %td
@@ -75,9 +69,11 @@
         = @item.price 
       %span.item-tax (税込)
       %span.item-shipping-fee 送料込み
-    .item-buy-btn.f18-24
-      %div{"data-turbolinks" => "false"}
-        =link_to '購入画面に進む' ,edit_product_purchase_confirmation_path(@item.id),{class: 'item-buy.f18-24'}
+    - if @item.user_id == current_user.id
+    - else
+      .item-buy-btn.f18-24
+        %div{"data-turbolinks" => "false"}
+          =link_to '購入画面に進む' ,edit_product_purchase_confirmation_path(@item.id),{class: 'item-buy.f18-24'}
     .item-btn-client
     .item-description.f14
       %p.item-description-inner 
@@ -110,10 +106,10 @@
         %li
           %a{href: ""} メルカリロゴ利用ガイドライン
         %li.footer-link
-          %a{href: "https://twitter.com/mercari_jp", target: "_blank"}
+          %a{href: ""}
             %i.fab.fa-twitter
         %li.footer-link
-          %a{href: "https://www.facebook.com/mercarijp", target: "_blank"}
+          %a{href: ""}
             %i.fab.fa-facebook-square
     .footer__top--head
       %h2.footer__top--head--head ヘルプ＆ガイド
@@ -168,7 +164,7 @@
   
   .footer__bottom
     .footer__bottom--icon
-      %a.footer-logo{href: "https://www.mercari.com/jp/"}
+      %a.footer-logo{href: ""}
         %img{alt: "mercari",height: "33",src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-white.svg?2927923569",width: "124"}/
     %span.footer__bottom--copyright
       %small © 2019 Mercari
