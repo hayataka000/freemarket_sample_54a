@@ -33,9 +33,6 @@ before_action :set_item ,only: [:edit,:update]
     end
   end
 
-  def product_purchase_confirmation
-    @item = Item.find(params[:id])
-  end
 
   def edit
     @item = Item.find(params[:id])
