@@ -95,7 +95,7 @@
       .items.clearfix
         - @mens.each do |item|
           %section.items__box
-            - if current_user.id == item.user.id
+            -if current_user.id == item.user.id
               =link_to item_path(item.id), class: "items__box__btn" do
                 %figure.items__box__photo
                   = image_tag item.image.variant(resize:'200x200').processed
@@ -108,8 +108,8 @@
                       = (item.price)
                     .font-2
                     %span
-            - else
-              =link_to edit_exhibition_path(item.id), class: "items__box__btn" do
+            -else
+              =link_to item_path(item.id), class: "items__box__btn" do
                 %figure.items__box__photo
                   = image_tag item.image.variant(resize:'200x200').processed
                 .items__box__body
