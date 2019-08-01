@@ -40,8 +40,7 @@
             %span.category
               必須
             .main-buy-item__container-product-condition__state__box__category__select
-
-              = f.select :category, [["---", "---"], ["レディース", "レディース"], ["メンズ", "メンズ"], ["ベビー・キッズ", "ベビー・キッズ"], ["おもちゃ・ホビー・グッズ", "おもちゃ・ホビー・グッズ"], [" 本・音楽・ゲーム", " 本・音楽・ゲーム"],["コスメ・香水・美容", "コスメ・香水・美容"],["家電・スマホ・カメラ", "家電・スマホ・カメラ"],["スポーツ・レジャー", "スポーツ・レジャー"],["ハンドメイド", "ハンドメイド"],["チケット", "チケット"],["自動車・オートバイ", "自動車・オートバイ"],["その他", "その他"]] ,class:"category-select"
+              = f.collection_select :category_id, Category.all, :id, :name, prompt: "--", class: 'input'
           .main-buy-item__container-product-condition__state__box__condition
             %h3
               商品の状態

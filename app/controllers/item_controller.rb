@@ -1,6 +1,6 @@
-class ItemController < ApplicationController
+class ItemController <Item:: ApplicationController
 before_action :set_item ,only: [:edit,:update]
-
+before_action :authenticate_user!,except: [:show,:index]
   def set_item
     @item = Item.find(params[:id])
   end
@@ -16,8 +16,6 @@ before_action :set_item ,only: [:edit,:update]
     @vuitton = Item.where(category_id: 6, status: 0).order("created_at DESC").limit(4)
     @supreme = Item.where(category_id: 7, status: 0).order("created_at DESC").limit(4)
     @nike = Item.where(category_id: 8, status: 0).order("created_at DESC").limit(4)
-
-
   end
 
   def new
@@ -25,7 +23,7 @@ before_action :set_item ,only: [:edit,:update]
   end
 
   def create
-     @item = Item.new(item_params)
+    @item = Item.new(item_params)
     if @item.save
       redirect_to root_path
     else
