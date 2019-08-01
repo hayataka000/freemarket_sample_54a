@@ -16,7 +16,6 @@ before_action :authenticate_user!,except: [:show,:index]
     @supreme = Item.where(category_id: 7).order("created_at DESC").limit(4)
     @nike = Item.where(category_id: 8).order("created_at DESC").limit(4)
     
-
   end
 
   def new
@@ -24,7 +23,7 @@ before_action :authenticate_user!,except: [:show,:index]
   end
 
   def create
-     @item = Item.new(item_params)
+    @item = Item.new(item_params)
     if @item.save
       redirect_to root_path
     else

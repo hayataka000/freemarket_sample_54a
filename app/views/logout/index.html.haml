@@ -1,10 +1,10 @@
 = render 'item/header'
 .container
   .breadcrumbs
-    = link_to 'メルカリ', root_path, class: "a"
-    >
-    = link_to 'マイページ', mypages_path, class: "a"
-    >
+    = link_to 'メルカリ', root_path, class: "a" 
+
+    = link_to 'マイページ', "/mypage/:id", class: "a"
+
     = link_to 'ログアウト', '', class: "a"
 %main.l-container.clearfix
   .mypages-side
