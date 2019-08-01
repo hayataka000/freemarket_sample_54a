@@ -5,7 +5,7 @@ end
 
 # Regular crumb
 crumb :mypage do
-  link "マイページ", mypages_path
+  link "マイページ", "/mypage/:id"
   parent :root
 end
 
