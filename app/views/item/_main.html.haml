@@ -192,32 +192,32 @@
           %a{href: ""} コスメ・香水・美容 新着アイテム
         - @kosume.each do |item|
           %section.items__box
-          -if user_signed_in? && current_user.id == item.user.id
-            =link_to edit_exhibition_path(item.id), class: "items__box__btn" do
-              %figure.items__box__photo
-                = image_tag item.image.variant(resize:'200x200').processed
-              .items__box__body
-                %h3.items__box-name.font-2
-                  = simple_format(item.name)
-                .items__box__num
-                  .items__box__num__price.font-5
-                    ¥
-                    = (item.price)
-                  .font-2
-                  %span
-          -else
-            =link_to item_path(item.id), class: "items__box__btn" do
-              %figure.items__box__photo
-                = image_tag item.image.variant(resize:'200x200').processed
-              .items__box__body
-                %h3.items__box-name.font-2
-                  = simple_format(item.name)
-                .items__box__num
-                  .items__box__num__price.font-5
-                    ¥
-                    = (item.price)
-                  .font-2
-                  %span
+            -if user_signed_in? && current_user.id == item.user.id
+              =link_to edit_exhibition_path(item.id), class: "items__box__btn" do
+                %figure.items__box__photo
+                  = image_tag item.image.variant(resize:'200x200').processed
+                .items__box__body
+                  %h3.items__box-name.font-2
+                    = simple_format(item.name)
+                  .items__box__num
+                    .items__box__num__price.font-5
+                      ¥
+                      = (item.price)
+                    .font-2
+                    %span
+            -else
+              =link_to item_path(item.id), class: "items__box__btn" do
+                %figure.items__box__photo
+                  = image_tag item.image.variant(resize:'200x200').processed
+                .items__box__body
+                  %h3.items__box-name.font-2
+                    = simple_format(item.name)
+                  .items__box__num
+                    .items__box__num__price.font-5
+                      ¥
+                      = (item.price)
+                    .font-2
+                    %span
           .view-all
         .view-all
     %section.main__items.clearfix
