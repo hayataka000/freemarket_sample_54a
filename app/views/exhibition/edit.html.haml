@@ -7,7 +7,7 @@
       .edit-container
         = link_to '商品の編集',edit_item_path(@item.id), method: :get,class:"btn-default-btn-red"
         %p.text-center or
-        =link_to '商品の削除',root_path(@item.id),method: :delete,class:"delete-btn"
+        =link_to '商品の削除',item_path(@item.id),method: :delete,class:"delete-btn"
       .comment-container
         %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
         .text-form
