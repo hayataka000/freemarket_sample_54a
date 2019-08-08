@@ -36,3 +36,8 @@ crumb :confirm do
   link "本人情報登録", confirm_index_path
   parent :mypage
 end
+
+crumb :logout do
+  link "ログアウト", logout_index_path
+  parent :mypage
+end

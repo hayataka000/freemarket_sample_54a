@@ -1,11 +1,8 @@
+- breadcrumb :logout
 = render 'item/header'
 .container
   .breadcrumbs
-    = link_to 'メルカリ', root_path, class: "a" 
-
-    = link_to 'マイページ', "/mypage/:id", class: "a"
-
-    = link_to 'ログアウト', '', class: "a"
+    = breadcrumbs separator: '＞', class: 'breadcrumbs__font'
 %main.l-container.clearfix
   .mypages-side
     = render 'mypages/mypages-side'
