@@ -1,9 +1,13 @@
 .breadcrumbs {
   width: 100%;
-  height:30px;
-  padding-left: 190px;
-  margin-bottom: 10px;
+  height:50px;
+  padding: 18px 0 0px 220px;
+  margin: 0;
   display: flex;
+  background-color: white;
+  border-top: 1px solid #eee;
+  vertical-align: middle;
+  box-shadow: 0 0 5px 0;
 
   &__font {
     font-size: 14px;
